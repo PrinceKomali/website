@@ -1,0 +1,81 @@
+#inputcontainer {
+    width: 0;
+    height: 0;
+}
+#vcontainer {
+    margin: 0;
+    width: 25%;
+}
+#vid {
+    border: solid rgba(26, 124, 226,.7) 3px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5); 
+}
+@font-face {
+    font-family: hyliaserif;
+    src: url(HyliaSerifBeta-Regular.otf);
+}
+
+.outline {
+    font-size: 20px;
+    text-shadow: -1px -1px 0 #1a7ce2, 1px -1px 0 #1a7ce2, -1px 1px 0 #1a7ce2, 1px 1px 0 #1a7ce2;
+}
+input[type='number']{
+    width: 40px;
+} 
+.buttonoutline {
+    font-family: 'hyliaserif';
+    background-image: url("background.png");
+    box-shadow: inset 0 0 0 1000px rgba(4, 0, 255, 0.5);
+    background-color: #ffffff;
+    border: solid #1a7ce2 2px;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #1a7ce2, 1px -1px 0 #1a7ce2, -1px 1px 0 #1a7ce2, 1px 1px 0 #1a7ce2;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+body {
+    color: white;
+    background-image: url('background.png');
+}
+
+h1 {
+    font-family: 'hyliaserif';
+    color: white;
+}
+p, a, b, h4, .seg, #loading {
+    font-family: 'hyliaserif';
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin:0;
+    cursor: pointer;
+}
+
+button {
+    font-size: 16px;
+}
+
+label {
+    font-size: 30px
+}
+
+button, label {
+    font-family: 'hyliaserif';
+    background-color: #c9b783;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}

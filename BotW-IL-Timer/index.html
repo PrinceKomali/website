@@ -1,0 +1,215 @@
+<head>
+    <meta name="description" content="A timing tool for Breath of the Wild Individual Level runs">
+    <title> Breath of the Wild IL Timer V3</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<!--
+
+-->
+
+<body>
+    <label for="vidfile" class="btn">Open Run</label> 
+    <span class="buttonoutline" onclick="usage()">How to use</span>
+    <div id="inputcontainer">
+        <input id="vidfile" type="file" style="visibility:hidden;" />
+    </div>
+
+    <input type="text" placeholder="https://youtu.be/XXXXXXXXXXX" id="url"><button onclick="load()">Open from Youtube</button> <span id="loading"></span>
+    <br>
+    
+    <div class="seg"><input type="checkbox" id="segmentcheck"> Check this if timing a segment (e.g. BTT segment) </div><br>
+
+    <b>Current Timestamp: <span id="current_time">0.000</span> 
+      | Video length: <span id = "vidlength">0.000</span>
+    <br>
+    
+    <p> Start Time: 
+      <span id="start">0.000</span> 
+      | End time: 
+      <span id="end">0.000</span> 
+      | <span class="outline">Framecount: 
+      <span id="total">0.033</span></span>
+    </p><br>
+    </b> 
+    <button onclick="frame_advance(150)">Forward 5s</button>
+    <button onclick="frame_advance(-150)">Backwards 5s</button> <br>
+    <button onclick="frame_advance(1)">Frame Advance</button>
+    <button onclick="frame_advance(-1)">Frame Reverse</button> <br>
+    <button onclick="frame_advance(15)">+15 frames</button> 
+    <button onclick="frame_advance(-15)">-15 frames</button> <br>
+    <button onclick="jump_to_end()">Jump to start</button>
+    <button onclick="jump_to_end(1)">Jump to end</button> <br>
+    <button class="buttonoutline" onclick="start()">Set Start</button>
+    <button class="buttonoutline" onclick="end()">Set End</button>
+
+    <p>Advance 
+      <input type="number" id="advanceminute" size="1" />m 
+      <input type="number" id="advancesecond" size="1" />s 
+      <input type="number" id="advanceframe" size="1" />f 
+      <button onclick="custom_frame_advance()">Go!</button>
+    </p>
+    <p>Go to Timestamp 
+      <input type="number" id="gotominute" size="1" />m 
+      <input type="number" id="gotosecond" size="1" />s
+      <input type="number" id="gotoframe" size="1" />f 
+      <button onclick="timestamp()">Go!</button>
+    </p>
+        <br><video id="vid" controls="false" src="#" width=640 height=360></video><br>
+    <br>
+    <br><br><br>
+    <script>
+        let __INIT__ = false;
+
+        var vid = document.getElementById("vid"); 
+        var segcheck = document.getElementById("segmentcheck");
+        let usage = () => {alert("How To Use:\n1) Import your video file at the top of the page.\n2) Use the Frame Advance buttons (or the arrow keys) to find the first fade-in frame Link is visible after the elevator cutscene\n3) Click \"Set Start\"\n4) Use the Frame Advance buttons again to find the first frame the A button lights up when clicking the \"Examine\" prompt\n5) Click \"Set End\".\nYour framecount should be labled at the top!")}
+        let zero = (t) => ('0' + t).slice(-2);
+        function format_time(f) { // Why did I not make this in v1/v2?
+            let time_to_format = (f/30);
+            return `${ 
+                time_to_format >= 3600 ? `${Math.floor(time_to_format/3600)}:` : ""
+            }${
+                time_to_format >= 60 ? `${
+                  time_to_format >= 3600 ? 
+                    zero(Math.floor(time_to_format/60)%60)
+                  :
+                    Math.floor(time_to_format/60)%60
+                }:` : ""
+            }${
+                `${
+                    time_to_format >= 60 ? 
+                      zero(Math.floor(time_to_format%60))
+                    :
+                      Math.floor(time_to_format%60)
+                  }.`
+            }${
+                time_to_format.toString().includes(".") ? 
+                  (time_to_format%1).toFixed(3).toString().split(".")[1] 
+                : "000"
+            }`;
+        }
+
+        function load() { //HTTP request for the youtube downloader
+            var loading = document.getElementById("loading");
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var vid = document.getElementById("vid");
+                    if(this.responseText.includes("Error")) return loading.innerText = "Request failed; please check your URL";
+                    vid.src = this.responseText;
+                    loading.innerText = "Done!";
+                    jump_to_end();
+                }
+            };
+            var video_url = document.getElementById("url");
+            if(video_url.value == "") return alert("[!] Please input a url!");
+            xhr.open("GET", "https://expressytdl.komali09.repl.co/dl?url=" + video_url.value, true); //https://www.npmjs.com/package/ytdl-core
+            xhr.send();
+            loading.innerText = "XHR Fetching...";
+        }
+
+        segcheck.onchange = function () { total(); }
+
+        document.body.onkeydown = function (key) {
+            if (key.keyCode == 39) { // ->
+                frame_advance(1);
+            }
+            if (key.keyCode == 37) { // <-
+                frame_advance(-1);
+            }
+        }
+
+        
+        var currentTimeElement = document.getElementById("current_time");
+        window.onload =  function () {
+            vid.removeAttribute("controls")
+        };
+        document.getElementById("vidfile").onchange = function () {
+          vid.removeAttribute("controls")
+          if (this.files && this.files[0]) {
+            vid.src = URL.createObjectURL(this.files[0]);
+            jump_to_end();
+          }
+        };
+        vid.onloadedmetadata = function () {
+          __INIT__ = true;
+          document.getElementById("vidlength").innerText = format_time(Math.floor(vid.duration*30));
+        }
+        var time = 0;
+        var START = 0;
+        var END = 0;
+
+        function jump_to_end(n) {
+            if(n == 1) {
+              time = Math.floor(vid.duration*30);
+              vid.currentTime = time;
+              currentTimeElement.innerHTML = format_time(time);
+            } else {
+              vid.currentTime = 0;
+              time = 0;
+              currentTimeElement.innerHTML = "0.000";
+            }
+        }
+
+
+        function frame_advance(z) {
+            vid.pause();
+            if(!__INIT__) return; 
+            if(time + z < 0) {
+              time = 0;
+              vid.currentTime = time;
+              currentTimeElement.innerHTML = format_time(time);
+              return;
+            }
+            if(time + z > Math.floor(vid.duration*30)) {
+              time = Math.floor(vid.duration*30);
+              vid.currentTime = time;
+              currentTimeElement.innerHTML = format_time(time);
+              return
+            }
+            
+            time += z;
+            vid.currentTime = time / 30;
+            currentTimeElement.innerHTML = format_time(time);
+        }
+
+
+        function timestamp() {
+            var _frames = parseInt(document.getElementById("gotoframe").value);
+            var _seconds = parseInt(document.getElementById("gotosecond").value)
+            var _minutes = parseInt(document.getElementById("gotominute").value)
+
+            time = _frames + (_seconds * 30) + (_minutes * 1800);
+            vid.currentTime = time/30;
+
+            currentTimeElement.innerHTML = format_time(time);
+
+        }
+
+        function custom_frame_advance() {
+            var _frames = parseInt(document.getElementById("advanceframe").value);
+            var _seconds = parseInt(document.getElementById("advancesecond").value);
+            var _minutes = parseInt(document.getElementById("advanceminute").value);
+
+            frame_advance(_frames + (_seconds * 30) + (_minutes * 1800));
+        }
+
+        function start() {
+            START = time;
+            total();
+            document.getElementById("start").innerHTML = format_time(START);
+        }
+
+        function end() {
+            END = time;
+            total();
+            document.getElementById("end").innerHTML = format_time(END);
+        }
+
+        function total() {
+            var calculated = END - START + +!segcheck.checked;
+            document.getElementById("total").innerHTML =  format_time(calculated);
+        }
+    </script>
+</body>

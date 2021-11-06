@@ -1,0 +1,123 @@
+<head>
+    <meta name="description" content="KAGL - Komali.dev">
+    <title>Komali.dev</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<script src="/styling.js"></script>
+<style>
+  
+  pre.code > div{
+      border: solid #1e1e1e 7px;
+      border-radius: 5px;
+      color: white;
+      font-family: monospace;
+      background-color: #1e1e1e;
+  }
+.num {
+  color: #b8d7a3;      
+}
+.def {
+ color: #569cd6;
+}
+.print {
+ color: #4ec9b0;
+}
+.fn {
+  color: #dbd67b;
+}
+.string {
+  color: #d69d85;
+}
+.comment {
+  color: #57a64a;
+}
+.yellow {
+   color:#d8eb34;   
+  }
+  a {
+    text-shadow: none;
+    color: white;
+  }
+</style>
+<body>
+  <h1>Komali's Awful Golfing Language (KAGL)</h1>
+  <p><a href="c">Try it here!</a></p>
+  <p>This is a coding language I've been working on in my free time. It's not intended for serious use but it could potentially be used for golfing or something</p>
+  <p>The compiler itself is written in Javascript, and transpiles said code to (you guessed it) Javascript. For example, the code</p>
+  <pre class="code"><div><span class="def"> V</span>i|<span class="num">0</span>;<span class="def">F</span>foo|<span class="print">P</span>i++;}<span class="fn">^foo</span>;
+</div></pre>
+  <p>turns into </p>
+  <pre class="code"><div><span class="def"> var </span>i = <span class="num">0</span>;<br><span class="def"> function </span><span class="fn">foo</span>()<br>   <span class="print">console</span>.log(i++);<br> }<br> <span class="fn">foo</span>();
+</div></pre>
+ <br><br>
+  <h2>Syntax:</h2>
+
+  <h3>Printing</h3>
+  <p>To print something, use the character P</p>
+  <pre class="code"><div><span class="print">P</span><span class="num">0</span>;</div></pre>
+  <p>Simple as that</p>
+      <h3>Variables:</h3>
+      <p>Variables are defined with V</p>
+  <pre class="code"><div><span class="def">V</span><span class="comment">{{name}}</span>|<span class="comment">{{value}}</span>;</div></pre>
+  Empty variables are set to 0
+  <pre class="code"><div><span class="def">V</span>i;<span class="print">P</span>i;</div></pre> (prints 0)
+
+  <h3>Strings</h3>
+  <p>Strings are defined with double quotes</p>
+  <pre class="code"><div><span class="def">V</span>str|<span class="string">"Hello, World!"</span>;</div></pre>
+  <p>Parentheses are used to make replacements</p>
+  <pre class="code"><div><span class="def">V</span>n|<span class="num">43</span>;<span class="print">P</span><span class="string">"The value of n is </span>(n)<span class="string">!"</span>;</div></pre> 
+  <h3>If/Else</h3>
+  <p>The syntax for an if statement is</p>
+  <pre class="code"><div><span class="def">I</span><span class="comment">{{condition}}</span>|<span class="comment">{{action}}</span>}</div></pre>
+  <p>Else is simply</p>
+  <pre class="code"><div><span class="def">E</span><span class="comment">{{action}}</span>}</div></pre>
+  <p>Example:</p>
+  <pre class="code"><div><span class="def">V</span>i|<span class="string">"foo"</span>;<span class="def">I</span>i==<span class="string">"foo"</span>|<span class="print">P</span><span class="string">"foo"</span>;}<span class="def">E</span><span class="print">P</span><span class="string">"bar"</span>;}</div></pre>
+
+  <h3>Repetition</h3>
+  <p>You can use a { to denote repetition</p>
+  <pre class="code"><div><span class="def">{</span><span class="comment">{{count}}</span>|<span class="comment">{{action}}</span>}</div></pre>
+  <p>For example<p>
+  <pre class="code"><div><span class="def">{</span><span class="num">10</span>|<span class="print">P</span><span class="string">"Hello!"</span>;}</div></pre>
+  <p>You can also supply an argument after the repetition count</p>
+  <pre class="code"><div><span class="def">V</span>i;<span class="def">{</span><span class="num">10</span>,i|<span class="print">P</span>i;}</div></pre>
+  <p>(prints 0-9)</p>
+  <p>Unfortunately, nested loops are not implemented yet</p>
+
+  <h3>Functions</h3>
+  <p>Functions are defined with an F</p>
+  <pre class="code"><div><span class="def">F</span><span class="comment">{{comment}}</span>|<span class="comment">{{action}}</span>}</div></pre>
+  <p>And are executed with a ^</p>
+  <pre class="code"><div><span class="fn">^foo</span>;</div></pre>
+  <p>Therefore recursion is possible</p>
+  <pre class="code"><div><span class="def">F</span>r|<span class="fn">^r</span>;}<span class="fn">^r</span>;</div></pre>
+  <p>(Overloads the program)</p>
+
+  <h3>Other variables</h3>
+  <pre class="code"><div>
+<span class="print">L</span><span class="comment">{{n}}</span>;   |      <span class="print">Math</span>.<span class="fn">floor</span>(<span class="comment">{{n}}</span>)<br>
+<span class="print">R</span>         |      <span class="print">Math</span>.<span class="fn">random</span>()<br>
+<span class="print">D</span>         |      <span class="print">Date</span>.<span class="fn">now</span>()<br>
+<span class="comment">{{n}}</span>K    |      <span class="comment">{{n}}</span>*<span class="num">1000</span><br>
+<span class="comment">{{s}}</span>.l   |      <span class="comment">{{s}}</span>.<span class="fn">length</span><br>
+/<span class="string">A</span>        |      [ <span class="string">"A"</span>,<span class="string">"B"</span>,<span class="string">"C"</span>, ... <span class="string">"X"</span>,<span class="string">"Y"</span>,<span class="string">"Z"</span> ]<br>
+/<span class="string">a</span>        |      [ <span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>, ... <span class="string">"x"</span>,<span class="string">"y"</span>,<span class="string">"z"</span> ]<br>
+<span class="comment">{{e}}</span>.c   |      [<span class="string">"constructor"</span>]<br>
+<span class="comment">{{e}}</span>.s   |      <span class="comment">{{e}}</span>.<span class="fn">toString</span>()<br>
+/<span class="string">i</span>        |      <span class="comment">{{input specified with -i}}</span> <br>
+<span class="comment">{{e}}</span>.t   |      [<span class="string">"constructor"</span>].<span class="fn">toString</span>().<span class="fn">split</span>(<span class="string">" "</span>)[<span class="num">1</span>].<span class="fn">split</span>(<span class="string">"("</span>)[<span class="num">0</span>]   <span class="comment">/* similar to <span class="def">typeof</span> */ </span><br>
+
+<br><br><span class="comment">{{a}}</span>J<span class="comment">{{s}}</span>;     |   [<span class="print">Array</span>].<span class="fn">join</span>(<span class="comment">{{s}}</span>)
+<span class="comment">{{a}}</span>.f<span class="comment">{{s}}</span>;    |   [<span class="print">Array</span>].<span class="fn">fill</span>(<span class="comment">{{s}}</span>)
+<span class="comment">{{s}}</span>.x<span class="comment">{{s}}</span>;    |   [<span class="print">String</span>].<span class="fn">split</span>(<span class="comment">{{s}}</span>)
+<span class="comment">{{s}}</span>.r<span class="comment">{{n}}</span>;    |   [<span class="print">String</span>].<span class="fn">repeat</span>(<span class="comment">{{n}}</span>)
+</div></pre>
+
+  <h3>Flags</h3>
+  <pre class="code"><div><span class="yellow">-script</span>  |      Shows the executed script, before and after transpilation<br>
+<span class="yellow">-s</span>       |      Adds <span class="string">"use strict"</span>;\n to the top of the script<br>
+<span class="yellow">-i</span>       |      Supplies input for /<span class="string">i</span>; if both <span class="yellow">-s</span> and /<span class="string">i</span> are used, it is required<br>
+<span class="yellow">-g</span>       |      Shows the steps taken to get to the final code<br>
+</div></pre>
+</body>

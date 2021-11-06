@@ -1,17 +1,16 @@
-<style>
+ <style>
     body {
         background-color: white;
     }
 </style>
-<textarea id="inp" placeholder="Code"></textarea><br>
-<input id="inp2" type="text" placeholder="Headers" />
+<textarea id="inp" placeholder="Code" style="width:50%"></textarea><br>
+<input id="inp2" type="text" placeholder="Headers"/>
 
-<script src="/styling.js"></script>
 <button onclick="go()">Go</button>
 <pre><div id="output" style="border-radius:5px;background-color:black;color:white;width:800px;height:500px;border:solid black 3px;overflow-y:auto">
 </div></pre>
 <script>
-    function _output(e) {
+    function _print_(e) {
         document.getElementById("output").innerHTML += e + "\n";
     }
 
@@ -19,23 +18,36 @@
         document.getElementById("output").innerHTML = "";
 
         const throwError = (e) => {
-            _output("> " + e);
-            throw new Error();
+            _print_("> " + e);
+            throw new Error(e);
         };
-        const flags = ["-s", "-o", "-script", "-indx"];
+        const flags = ["-s", "-o", "-i", "-script", "-g"];
         let scriptToRun = document.getElementById("inp").value;
         let hasFile = false;
         let _script = false;
         let _s = false;
+        let _g = false;
+        let _i = "";
         let _o = false;
-        let argv = document.getElementById("inp2").value.split(" ");
-        console.log(argv);
-        for (let i in argv) {
-            let arg = argv[i];
+        let argv = document.getElementById("inp2").value.match(/(?:[^\s"]+|"[^"]*")+/g);
+        if(argv) for(let i = 0; i < argv.length;i++) {
+          let arg = argv[i];
+             if (arg.startsWith("-") && !flags.includes(arg)) throwError(`CommandLineError: <span style="color: #EEE705">Unknown argument: </span><span style="color:#BE2525">${arg}</span>`);
+            if (arg == "-i") {
+              if(argv.length - 1 == i || (argv[+i+1].startsWith("-"))) throwError(`CommandLineError: <span style="color: #EEE705">Please provide another argument for <span style="color:#BE2525">-i</span>`);
+              if(argv[i+1].startsWith("\"")) argv[i+1] = argv[i+1].substring(1,argv[i+1].length);
+              if(argv[i+1].endsWith("\"")) argv[i+1] = argv[i+1].substring(0,argv[i+1].length - 1);
+              _i = argv[i+1];
+             continue;
+            }
 
             if (arg.startsWith("-") && !flags.includes(arg)) throwError(`CommandLineError: <span style="color: #EEE705">Unknown argument: </span><span style="color:#BE2525">${arg}</span>`);
             if (arg == "-s") {
                 _s = true;
+                continue;
+            }
+            if (arg == "-g") {
+                _g = true;
                 continue;
             }
             if (arg == "-script") {
@@ -61,6 +73,7 @@
         let _isString = false;
         let _fnRun = false;
         let _rpt_i = false;
+        let _split = false;
         let _floor = false;
         let _join = false;
         let _srpt = false;
@@ -68,9 +81,10 @@
         let _forv = randomStr();
         let rptd = "";
         for (let i in [...scriptToRun]) {
+            if(_g) _print_(scriptToInterpret)
             let char = scriptToRun[i];
             let previousChar = i == 0 ? "" : scriptToRun[i - 1];
-            if (char == ":" && previousChar != "\\") char = "\n";
+            // if (char == ":" && previousChar != "\\") char = "\n"; //Why did i add that
             if (char.toLowerCase() != char.toUpperCase() && char == char.toUpperCase() && !validCapitals.includes(char) && !_isString) throwError("Invalid Captital " + char + " at position " + i);
             if (char == "V") {
                 scriptToInterpret += "var ";
@@ -98,19 +112,29 @@
                 continue;
             }
             if (char == "P" && !_isString) {
-                if (previousChar == "-") {
-                    scriptToInterpret = scriptToInterpret.slice(0, -1);
-                    scriptToInterpret += ";window.stdout.write(";
-                    _print = true;
-                } else {
-                    scriptToInterpret += ";_output(";
-                    _print = true;
-                }
+                scriptToInterpret += ";_print_(";
+                _print = true;
                 continue;
             }
             if (char == "r" && previousChar == "." && (!_isString || _isInString)) {
                 scriptToInterpret = scriptToInterpret.slice(0, -1) + ".repeat(";
                 _srpt = true;
+                continue;
+            }
+            if (char == "x" && previousChar == "." && (!_isString || _isInString)) {
+                scriptToInterpret = scriptToInterpret.slice(0, -1) + ".split(";
+                _split = true;
+                continue;
+            }
+            if (char == "i" && previousChar == "/" && (!_isString || _isInString)) {
+              if(!_i && _s) return throwError(`CommandLineError: <span style="color:#BE2525">You must specify an input with <span style="color: #EEE705">-i</span> to use <span style="color: #EEE705">/i</span> in strict mode</span>`);
+                scriptToInterpret = scriptToInterpret.slice(0, -1);
+                if((_i.startsWith("[") && endsWith("]")) || !isNaN(_i)) {
+                  scriptToInterpret += _i;
+                } 
+                else {
+                  scriptToInterpret += `"${_i}"`;
+                }
                 continue;
             }
             if (char == "a" && previousChar == "/" && (!_isString || _isInString)) {
@@ -126,6 +150,11 @@
             if (char == "c" && previousChar == "." && (!_isString || _isInString)) {
                 scriptToInterpret = scriptToInterpret.slice(0, -1);
                 scriptToInterpret += '["constructor"]';
+                continue;
+            }
+            if (char == "t" && previousChar == "." && (!_isString || _isInString)) {
+                scriptToInterpret = scriptToInterpret.slice(0, -1);
+                scriptToInterpret += '["constructor"].toString().split(" ")[1].split("(")[0]';
                 continue;
             }
             if (char == "s" && previousChar == "." && (!_isString || _isInString)) {
@@ -203,7 +232,7 @@
                 continue;
             }
             if (_print && !_isString && char == ";") {
-                if (!(_fill || _isInString || _floor || _join)) {
+                if (!(_split || _srpt || _fill || _isInString || _floor || _join)) {
                     scriptToInterpret += ");\n";
                     _print = false;
                     continue;
@@ -213,6 +242,13 @@
                 if (char == ";") {
                     scriptToInterpret += ")";
                     _floor = false;
+                    continue;
+                }
+            }
+            if (_split) {
+                if (char == ";") {
+                    scriptToInterpret += ")";
+                    _srpt = false;
                     continue;
                 }
             }
@@ -349,7 +385,7 @@
             scriptToInterpret += char;
             continue;
         }
-        if (_script) _output(`Script: <span style="color:#B325BE">${scriptToRun}<\/span><br>Transpiled: \<span style="color:#2593BE">${scriptToInterpret.trim()}<\/span><br>`);
+        if (_script) _print_(`Script: <span style="color:#B325BE">${scriptToRun}<\/span><br>Transpiled: \<span style="color:#2593BE">${scriptToInterpret.trim()}<\/span><br>`);
         try {
             eval(scriptToInterpret);
         } catch (e) {

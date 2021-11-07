@@ -176,9 +176,9 @@
 
 
         function timestamp() {
-            var _frames = parseInt(document.getElementById("gotoframe").value);
-            var _seconds = parseInt(document.getElementById("gotosecond").value)
-            var _minutes = parseInt(document.getElementById("gotominute").value)
+            var _frames = +!!parseInt(document.getElementById("gotoframe").value);
+            var _seconds = +!!parseInt(document.getElementById("gotosecond").value)
+            var _minutes = +!!parseInt(document.getElementById("gotominute").value)
 
             time = _frames + (_seconds * 30) + (_minutes * 1800);
             vid.currentTime = time/30;
@@ -188,10 +188,9 @@
         }
 
         function custom_frame_advance() {
-            var _frames = parseInt(document.getElementById("advanceframe").value);
-            var _seconds = parseInt(document.getElementById("advancesecond").value);
-            var _minutes = parseInt(document.getElementById("advanceminute").value);
-
+            var _frames = +!!parseInt(document.getElementById("advanceframe").value);
+            var _seconds = +!!parseInt(document.getElementById("advancesecond").value);
+            var _minutes = +!!parseInt(document.getElementById("advanceminute").value);
             frame_advance(_frames + (_seconds * 30) + (_minutes * 1800));
         }
 

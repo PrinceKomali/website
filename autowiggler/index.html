@@ -1,0 +1,117 @@
+<head>
+    <meta name="description" content="Autowiggler - Komali.dev">
+    <title>Autowiggler - Komali.dev</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/custom_hljs.css" />
+    <script src="/styling.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+  img,video {
+border-radius: 30px;
+  }
+  a {
+  text-shadow: none;
+  color: white;
+    }
+    </style>
+</head>
+<body>
+    <h1>The Autowiggler</h1>
+    <p>Breath of the Wild has a trick known as Bow Lift Smuggle Sliding (BLSS) which involves one having to wiggle the stick back and forth rapidly in order to gain speed<br>
+    Unfortunately I am terrible at this so one day I created a tool to help me with this (mostly out of boredom)<br><br>
+    Here it is in action:</p>
+
+    <video controls width="500px" src="103.mp4"></video>
+    <p>It also works well in the Wind Waker HD/Twilight Princess HD with spectacular results (video <a href="superswimming">here</a>)<br><br>
+    To achieved this I used the Python modules <a href="https://pypi.org/project/pygame/">pygame</a> (for controller input) and <a href="https://pypi.org/project/vgamepad/">vgamepad</a> (as the virtual controller), as <br>
+    I didn't want to take the time to learn the C++ api for ViGEm (Perhaps I will in the future but the python version works perfectly well for me at the moment). I use a similar concept in my <a href="https://github.com/PrinceKomali/tasscript-cemu"> TAS-Script interpreter</a><br><br></p>
+    <p>I've set the trigger for wiggling as D-Pad down; the Y position of the left stick behaves like normal but the X position alternates between left and right at the rate specified in line 12 of the code</p><br>
+    <p>Usage on Cemu or other emulators/games is simple enough but for Switch/Console I use <a href="https://www.consoletuner.com/products/titan-one/">this adapter</a></p><br>
+    <h2>The code</h2>
+    <p>The code is quite simple as it doesn't need to be 100% stable at the moment. However if anyone wants to use it the current script is as follows:</p>
+    <pre><code class="py">import vgamepad as vg 
+import sys
+from math import*
+import pygame
+clock = pygame.time.Clock()
+
+
+pygame.init()
+joysticks = []
+keepPlaying = True
+pro = 1 # Set to 0 if using an xbox controller or something; I used a Pro Controller with BetterJoy so there are 2 controller instances
+
+WIGGLEDELAY = 4
+"""
+Change this to fit how many frames you want for the stick to make one iteration
+For BotW I like 4 (2 left, 2 right) but for other games (WW/TP/etc.) 2 is usually better
+"""
+
+print(pygame.joystick.get_count())
+for i in range(pro, pygame.joystick.get_count()):
+  joysticks.append(pygame.joystick.Joystick(i))
+  joysticks[-1].init()
+  print ("Detected joystick "),joysticks[-1].get_name(),"'"
+
+gamepad = vg.VX360Gamepad()
+l=[0,0]
+i=0
+b=False
+while keepPlaying:
+  pygame.event.get()
+  clock.tick(30)
+  i=(i+1)%8
+  gamepad.reset()
+  if joysticks[0].get_button(0):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+  if joysticks[0].get_button(1):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+  if joysticks[0].get_button(2):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
+  if joysticks[0].get_button(3):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_Y)
+    
+  if joysticks[0].get_button(4):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_LEFT_SHOULDER)
+  if joysticks[0].get_button(5):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_RIGHT_SHOULDER)
+
+  if joysticks[0].get_button(6):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_BACK)
+  if joysticks[0].get_button(7):
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_START)
+    
+  if joysticks[0].get_hat(0)[0] == 1:
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
+  if joysticks[0].get_hat(0)[1] == 1:
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_UP)
+  if joysticks[0].get_hat(0)[0] == -1:
+    gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
+  # if joysticks[0].get_hat(0)[1] == -1:
+    # gamepad.press_button(vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
+
+    #IN USE FOR WIGGLING
+  if joysticks[0].get_axis(4) > 0:
+    gamepad.left_trigger_float(value_float=1)
+  if joysticks[0].get_axis(5) > 0:
+    gamepad.right_trigger_float(value_float=1)
+  
+
+
+  if joysticks[0].get_hat(0)[1] == -1:
+    b=True
+  else:
+    b=False
+
+  if not b:
+    l = [joysticks[0].get_axis(0), -1*joysticks[0].get_axis(1)]
+  else:
+    n = -1 if i%WIGGLEDELAY>(WIGGLEDELAY/2 - 1) else 1
+    l = [n ,-1*joysticks[0].get_axis(1)]
+    
+  gamepad.left_joystick_float(l[0], l[1])
+  gamepad.right_joystick_float(joysticks[0].get_axis(2), -1*joysticks[0].get_axis(3))
+  gamepad.update()</code></pre>
+  <p>As you can see it is quite crude but it does the job :)</p>
+</body>

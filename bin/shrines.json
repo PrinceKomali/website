@@ -1,0 +1,1251 @@
+{
+  "Katosa Aug": {
+    "puzzle_name": " Katosa Aug Apparatus",
+    "region": "Akkala",
+    "chests": {
+      "1": "Great Frostblade"
+    },
+    "enemies": null
+  },
+  "Ze Kasho": {
+    "puzzle_name": " Ze Kasho Apparatus",
+    "region": "Akkala",
+    "chests": {
+      "1": "Silverscale Spear"
+    },
+    "enemies": null
+  },
+  "Ka'am Ya'tak": {
+    "puzzle_name": " Trial of Power",
+    "region": "Central",
+    "chests": {
+      "1": "Ancient Core",
+      "2": "Knight's Broadsword",
+      "3": "Silver Rupee",
+      "4": "Edge of Duality",
+      "5": "Diamond"
+    },
+    "enemies": {
+      "Guardian Scout II": 4
+    }
+  },
+  "Rota Ooh": {
+    "puzzle_name": " Passing of the Gates",
+    "region": "Central",
+    "chests": {
+      "1": "Feathered Edge",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Wahgo Katta": {
+    "puzzle_name": " Metal Connections",
+    "region": "Central",
+    "chests": {
+      "1": "Amber"
+    },
+    "enemies": null
+  },
+  "Bosh Kala": {
+    "puzzle_name": " The Wind Guides You",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Amber",
+      "2": "Soldier's Claymore"
+    },
+    "enemies": null
+  },
+  "Ha Dahamar": {
+    "puzzle_name": " The Water Guides",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Purple Rupee"
+    },
+    "enemies": null
+  },
+  "Hila Rao": {
+    "puzzle_name": " Drifting",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Opal",
+      "2": "Ice Arrow x5"
+    },
+    "enemies": null
+  },
+  "Ta'loh Naeg": {
+    "puzzle_name": " Ta'loh Naeg's Teaching",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Eightfold  Blade",
+      "2": "Shield of the Mind's Eye",
+      "3": "Opal"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Ree Dahee": {
+    "puzzle_name": " Timing is Critical",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Climber's Bandanna"
+    },
+    "enemies": null
+  },
+  "Shee Vaneer": {
+    "puzzle_name": " Twin Memories",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Eightfold Longblade"
+    },
+    "enemies": null
+  },
+  "Shee Venath": {
+    "puzzle_name": " Twin Memories",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Serpentine Spear"
+    },
+    "enemies": null
+  },
+  "Toto Sah": {
+    "puzzle_name": " Toto Sah Apparatus",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Shield of the Mind's Eye",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Daqa Koh": {
+    "puzzle_name": " Stalled Flight",
+    "region": "Eldin",
+    "chests": {
+      "1": "Silver Rupee"
+    },
+    "enemies": null
+  },
+  "Kayra Mah": {
+    "puzzle_name": " Greedy Hill",
+    "region": "Eldin",
+    "chests": {
+      "1": "Ruby",
+      "2": "Bomb Arrow x5"
+    },
+    "enemies": null
+  },
+  "Mo'a Keet": {
+    "puzzle_name": " Metal Makes a Path",
+    "region": "Eldin",
+    "chests": {
+      "1": "Ruby",
+      "2": "Knight's Broadsword"
+    },
+    "enemies": null
+  },
+  "Qua Raym": {
+    "puzzle_name": " A Balanced Approach",
+    "region": "Eldin",
+    "chests": {
+      "1": "Knight's Claymore",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Sah Dahaj": {
+    "puzzle_name": " Power of Fire",
+    "region": "Eldin",
+    "chests": {
+      "1": "Knight's Bow"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Shae Mo'sah": {
+    "puzzle_name": " Swinging Flames",
+    "region": "Eldin",
+    "chests": {
+      "1": "Ruby",
+      "2": "Stone Smasher",
+      "3": "Ice Arrow x10",
+      "4": "Small Key"
+    },
+    "enemies": {
+      "Guardian Scout I": 2,
+      "Guardian Scout II": 1
+    }
+  },
+  "Shora Hah": {
+    "puzzle_name": " Blue Flame",
+    "region": "Eldin",
+    "chests": {
+      "1": "Silver Rupee",
+      "2": "Great Flameblade",
+      "3": "Ice Arrow x10",
+      "4": "Giant Ancient Core",
+      "5": "Forest Dweller's Bow",
+      "6": "Royal Bow"
+    },
+    "enemies": {
+      "Guardian Scout I": 4,
+      "Guardian Scout II": 3
+    }
+  },
+  "Tah Muhl": {
+    "puzzle_name": " Passing the Flame",
+    "region": "Eldin",
+    "chests": {
+      "1": "Opal",
+      "2": "Ruby",
+      "3": "Cobble Crusher",
+      "4": "Small Key"
+    },
+    "enemies": null
+  },
+  "Kah Yah": {
+    "puzzle_name": " Quick Thinking",
+    "region": "Faron",
+    "chests": {
+      "1": "Knight's Claymore",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Shai Utoh": {
+    "puzzle_name": " Halt the Tilt",
+    "region": "Faron",
+    "chests": {
+      "1": "Traveler's Sword",
+      "2": "Ancient Core"
+    },
+    "enemies": null
+  },
+  "Shoda Sah": {
+    "puzzle_name": " Impeccable Timing",
+    "region": "Faron",
+    "chests": {
+      "1": "Ice Arrow x5",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Yah Rin": {
+    "puzzle_name": " A Weighty Decision",
+    "region": "Faron",
+    "chests": {
+      "1": "Knight's Broadsword",
+      "2": "Opal"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Joloo Nah": {
+    "puzzle_name": " Joloo Nah Apparatus",
+    "region": "Gerudo",
+    "chests": {
+      "1": "Gerudo Spear",
+      "2": "Golden Claymore"
+    },
+    "enemies": null
+  },
+  "Kuh Takkar": {
+    "puzzle_name": " Melting Ice Hazard",
+    "region": "Gerudo",
+    "chests": {
+      "1": "Frostblade"
+    },
+    "enemies": null
+  },
+  "Sho Dantu": {
+    "puzzle_name": " Two Bombs",
+    "region": "Gerudo",
+    "chests": {
+      "1": "Silver Rupee"
+    },
+    "enemies": null
+  },
+  "Ja Baij": {
+    "puzzle_name": " Bombs Trial",
+    "region": "Great Plateau",
+    "chests": {
+      "1": "Traveler's Claymore",
+      "2": "Amber"
+    },
+    "enemies": null
+  },
+  "Keh Namut": {
+    "puzzle_name": " Cryonis Trial ",
+    "region": "Great Plateau",
+    "chests": {
+      "1": "Traveler's Spear"
+    },
+    "enemies": {
+      "Guardian Scout I": 1
+    }
+  },
+  "Oman Au": {
+    "puzzle_name": " Magnesis Trial ",
+    "region": "Great Plateau",
+    "chests": {
+      "1": "Traveler's Bow"
+    },
+    "enemies": {
+      "Guardian Scout I": 1
+    }
+  },
+  "Owa Daim": {
+    "puzzle_name": " Stasis Trial",
+    "region": "Great Plateau",
+    "chests": {
+      "1": "Traveler's Shield"
+    },
+    "enemies": null
+  },
+
+  "Dow Na'eh": {
+    "puzzle_name": " Three Boxes",
+    "region": "Hateno",
+    "chests": {
+      "1": "Opal",
+      "2": "Zora Sword",
+      "3": "Amber"
+    },
+    "enemies": null
+  },
+  "Kam Urog": {
+    "puzzle_name": " Trial of Passage",
+    "region": "Hateno",
+    "chests": {
+      "1": "Soldier's Spear",
+      "2": "Opal"
+    },
+    "enemies": null
+  },
+  "Mezza Lo": {
+    "puzzle_name": " Ancient Trifecta",
+    "region": "Hateno",
+    "chests": {
+      "1": "Thunderblade"
+    },
+    "enemies": null
+  },
+  "Myahm Agana": {
+    "puzzle_name": " Myahm Agana Apparatus",
+    "region": "Hateno",
+    "chests": {
+      "1": "Phrenic Bow"
+    },
+    "enemies": null
+  },
+  "Dunba Taag": {
+    "puzzle_name": " Build and Release",
+    "region": "Hebra",
+    "chests": {
+      "1": "Great Thunderblade",
+      "2": "Falcon Bow"
+    },
+    "enemies": null
+  },
+  "Gee Ha'rah": {
+    "puzzle_name": " Tandem",
+    "region": "Hebra",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": null
+  },
+  "Maka Rah": {
+    "puzzle_name": "Steady thy Heart",
+    "region": "Hebra",
+    "chests": {
+      "1": "Ancient Core",
+      "2": "Diamond",
+      "3": "Bomb Arrow x10"
+    },
+    "enemies": {
+      "Guardian Scout I": 4
+    }
+  },
+  "Rin Oyaa": {
+    "puzzle_name": " Directing the Wind",
+    "region": "Hebra",
+    "chests": {
+      "1": "Ancient Core"
+    },
+    "enemies": null
+  },
+  "Rok Uwog": {
+    "puzzle_name": " Power of Reach",
+    "region": "Hebra",
+    "chests": {
+      "1": "Drillshaft",
+      "2": "Small Key"
+    },
+    "enemies": {
+      "Guardian Scout II": 2
+    }
+  },
+  "Sha Ghema": {
+    "puzzle_name": " Shift and Lock",
+    "region": "Hebra",
+    "chests": {
+      "1": "Royal Broadsword",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Shada Naw": {
+    "puzzle_name": " Red Giveaway",
+    "region": "Hebra",
+    "chests": {
+      "1": "Great Frostblade"
+    },
+    "enemies": null
+  },
+  "I﻿shto Soh": {
+    "puzzle_name": " Bravery's Grasp",
+    "region": "Lake",
+    "chests": {
+      "1": "Topaz",
+      "2": "Ancient Core"
+    },
+    "enemies": null
+  },
+  "Ka'o Makagh": {
+    "puzzle_name": " Metal Doors Open the Way",
+    "region": "Lake",
+    "chests": {
+      "1": "Opal",
+      "2": "Gold Rupee",
+      "3": "Traveler's Bow"
+    },
+    "enemies": {
+      "Guardian Scout I": 1,
+      "Guardian Scout II": 1
+    }
+  },
+  "Ya Naga": {
+    "puzzle_name": " Shatter the Heavens",
+    "region": "Lake",
+    "chests": {
+      "1": "Eightfold Blade"
+    },
+    "enemies": null
+  },
+  "Daka Tuss": {
+    "puzzle_name": " Sunken Scoop",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Silver Longsword"
+    },
+    "enemies": null
+  },
+  "Kah Mael": {
+    "puzzle_name": " Drop And Rise",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": null
+
+  },
+  "Kaya Wan": {
+    "puzzle_name": " Shields From Water",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Knight's Broadsword",
+      "2": "Ancient Core"
+    },
+    "enemies": {
+      "Guardian Scout I": 3
+    }
+  },
+  "Ne'ez Yohma": {
+    "puzzle_name": " Pushing Power",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Zora Spear"
+    },
+    "enemies": null
+  },
+  "Rucco Maag": {
+    "puzzle_name": " Five Flames",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Silver Bow",
+      "2": "Opal"
+    },
+    "enemies": null
+  },
+  "Sheh Rata": {
+    "puzzle_name": " Speed of Light",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Giant Boomerang",
+      "2": "Opal"
+    },
+    "enemies": null
+  },
+  "Mogg Latan": {
+    "puzzle_name": " Synced Swing",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Gold Rupee",
+      "2": "Forest Dweller's Spear",
+      "3": "Forest Dweller's Bow"
+    },
+    "enemies": null
+  },
+  "Shae Loya": {
+    "puzzle_name": "Aim For the Moment",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Topaz",
+      "2": "Falcon Bow"
+    },
+    "enemies": null
+  },
+  "Sheem Dagoze": {
+    "puzzle_name": " Moving in Parallel",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Great Thunderblade"
+    },
+    "enemies": null
+  },
+  "Toh Yahsa": {
+    "puzzle_name": " Buried Secrets",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Opal",
+      "2": "Rubber Armor"
+    },
+    "enemies": null
+  },
+  "Zalta Wa": {
+    "puzzle_name": " Two Orbs to Guide You",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Knight's Bow"
+    },
+    "enemies": null
+  },
+  "Akh Va'quot": {
+    "puzzle_name": " Windmills",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Ancient Core",
+      "2": "Feathered Spear",
+      "3": "Sapphire"
+    },
+    "enemies": null
+  },
+  "Bareeda Naag": {
+    "puzzle_name": " Cannon",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Swallow Bow",
+      "2": "Diamond"
+    },
+    "enemies": null
+  },
+  "Kah Okeo": {
+    "puzzle_name": "Wind Guide",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Korok Leaf",
+      "2": "Gold Rupee",
+      "3": "Giant Ancient Core",
+      "4": "Forest Dweller's Sword",
+      "5": "Thunderspear",
+      "6": "Small Key"
+    },
+    "enemies": {
+      "Guardian Scout I": 1,
+      "Guardian Scout II": 3
+    }
+  },
+  "Sha Warvo": {
+    "puzzle_name": " Path of Hidden Winds",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Knight's Bow",
+      "2": "Purple Rupee"
+    },
+    "enemies": {
+      "Guardian Scout I": 1
+    }
+  },
+  "Voo Lota": {
+    "puzzle_name": " The Winding Route",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Flameblade",
+      "2": "Small Key"
+    },
+    "enemies": null
+  },
+  "Dako Tah": {
+    "puzzle_name": " Electric Path",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Silver Rupee",
+      "2": "Ancient Core",
+      "3": "Radiant Shield",
+      "4": "Moonlight Scimitar"
+    },
+    "enemies": {
+      "Guardian Scout I": 3
+    }
+  },
+  "Daqo Chisay": {
+    "puzzle_name": " The Whole Picture",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Thunderblade"
+    },
+    "enemies": null
+  },
+  "Hawa Koth": {
+    "puzzle_name": "The Current Solution",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Sapphire",
+      "2": "Gold Rupee",
+      "3": "Ancient Core"
+    },
+    "enemies": {
+      "Guardian Scout I": 3
+    }
+  },
+  "Jee Noh": {
+    "puzzle_name": "On the Move",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Opal"
+    },
+    "enemies": {
+      "Guardian Scout I": 2
+    }
+  },
+  "Kay Noh": {
+    "puzzle_name": " Power of Electricity",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Gerudo Scimitar",
+      "2": "Small Key"
+    },
+    "enemies": {
+      "Guardian Scout I": 1,
+      "Guardian Scout II": 2
+    }
+  },
+  "Kema Zoos": {
+    "puzzle_name": " A Delayed Puzzle",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Moonlight Scimitar"
+    },
+    "enemies": null
+  },
+  "Keo Ruug": {
+    "puzzle_name": "Fateful Stars",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Knight's Claymore"
+    },
+    "enemies": null
+  },
+  "Mirro Shaz": {
+    "puzzle_name": "Tempered Power",
+    "region": "Woodland",
+    "chests": {
+      "1": "Iron Sledgehammer",
+      "2": "Iron Sledgehammer",
+      "3": "Giant Ancient Core"
+    },
+    "enemies": null
+  },
+  "Monya Toma": {
+    "puzzle_name": " Drawing Parabolas",
+    "region": "Woodland",
+    "chests": {
+      "1": "Thunderblade"
+    },
+    "enemies": null
+  },
+  "Etsu Korima": {
+    "puzzle_name": " Path of Light",
+    "region": "Great Plateau (One Hit Obliterator)",
+    "chests": {
+      "1": "Gold Rupee"
+    },
+    "enemies": {
+      "Guardian Scout I": 3
+    }
+  },
+  "Rohta Chigah": {
+    "puzzle_name": " Stop to Start",
+    "region": "Great Plateau (One Hit Obliterator)",
+    "chests": {
+      "1": "Forest Dweller's Shield"
+    },
+    "enemies": null
+  },
+  "Ruvo Korbah": {
+    "puzzle_name": " A Major Test of Strength +",
+    "region": "Great Plateau (One Hit Obliterator)",
+    "chests": {
+      "1": "Giant Ancient Core",
+      "2": "Bomb Arrow x10",
+      "3": "Small Key"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1,
+      "Guardian Scout III": 3,
+      "Guardian Scout II": 2,
+      "Guardian Scout I": 5
+    }
+  },
+  "Yowaka Ita": {
+    "puzzle_name": " Collected Soul",
+    "region": "Great Plateau (One Hit Obliterator)",
+    "chests": {
+      "1": "Phrenic Bow",
+      "2": "Bomb Arrow x5"
+    },
+    "enemies": null
+  },
+  "Kamia Omuna": {
+    "puzzle_name": " Moving Targets",
+    "region": "Eldin (Daruk's Song)",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": null
+  },
+  "Rinu Honika": {
+    "puzzle_name": " Block the Blaze",
+    "region": "Eldin (Daruk's Song)",
+    "chests": {
+      "1": "Stone Smasher"
+    },
+    "enemies": null
+  },
+  "Sharo Lun": {
+    "puzzle_name": " Blind Spots",
+    "region": "Eldin (Daruk's Song)",
+    "chests": {
+      "1": "Great Flameblade"
+    },
+    "enemies": {
+      "Guardian Scout 1": 3
+    }
+  },
+  "Kee Dafunia": {
+    "puzzle_name": " The Melting Point",
+    "region": "Lanayru (Mipha's Song)",
+    "chests": {
+      "1": "Frostblade"
+    },
+    "enemies": null
+  },
+  "Mah Eliya": {
+    "puzzle_name": " Secret Stairway",
+    "region": "Lanayru (Mipha's Song)",
+    "chests": {
+      "1": "Royal Shield"
+    },
+    "enemies": null
+  },
+  "Sato Koda": {
+    "puzzle_name": " Support and Guidance",
+    "region": "Lanayru (Mipha's Song)",
+    "chests": {
+      "1": "Giant Ancient Core"
+    },
+    "enemies": null
+  },
+  "Kiah Toza": {
+    "puzzle_name": " Master the Orb",
+    "region": "Hebra (Revali's Song)",
+    "chests": {
+      "1": "Falcon Bow"
+    },
+    "enemies": null
+  },
+  "Noe Rajee": {
+    "puzzle_name": " The Four Winds",
+    "region": "Tabantha (Revali's Song)",
+    "chests": {
+      "1": "Shield of the Mind's Eye"
+    },
+    "enemies": null
+  },
+  "Shira Gomar": {
+    "puzzle_name": " Aim for Stillness",
+    "region": "Ridgeland (Revali's Song)",
+    "chests": {
+      "1": "Bomb Arrow x10"
+    },
+    "enemies": null
+  },
+  "Keive Tala": {
+    "puzzle_name": " Big or Small",
+    "region": "Wasteland (Urbosa's Song)",
+    "chests": {
+      "1": "Radiant Shield"
+    },
+    "enemies": null
+  },
+  "Kihiro Moh": {
+    "puzzle_name": " Inside the Box",
+    "region": "Wasteland (Urbosa's Song)",
+    "chests": {
+      "1": "Thunderspear"
+    },
+    "enemies": null
+  },
+  "Takama Shiri": {
+    "puzzle_name": " Dual Purpose",
+    "region": "Wasteland (Urbosa's Song)",
+    "chests": {
+      "1": "Royal Bow"
+    },
+    "enemies": null
+  },
+  "Hia Miu": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Hebra",
+    "chests": {
+      "1": "Sapphire"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Goma Asaagh": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Hebra",
+    "chests": {
+      "1": "Royal Claymore"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Mozo Shenno": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Hebra",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Tenah Ko'sah": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Tabantha",
+    "chests": {
+      "1": "Knight's Halberd"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Kema Kosassa": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Gerudo",
+    "chests": {
+      "1": "Silver Rupee"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Saas Ko'sah": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Central",
+    "chests": {
+      "1": "Flameblade"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Tutsuwa Nima": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Akkala",
+    "chests": {
+      "1": "Flamespear"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Chaas Qeta": {
+    "puzzle_name": "A Major Test of Strength",
+    "region": "Hateno",
+    "chests": {
+      "1": "Climbing Gear"
+    },
+    "enemies": {
+      "Guardian Scout IV": 1
+    }
+  },
+  "Korgu Chideh": {
+    "puzzle_name": "Korgu Chideh's Blessing",
+    "region": "Faron",
+    "chests": {
+      "1": "Gold Rupee"
+    },
+    "enemies": null
+  },
+  "Mijah Rokee": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Frostblade"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Sasa Kai": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Gerudo",
+    "chests": {
+      "1": "Frostblade"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Shoqa Tatone": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Lake",
+    "chests": {
+      "1": "Royal Broadsword"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Namika Ozz": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Central",
+    "chests": {
+      "1": "Frostspear"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Muwo Jeem": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Faron",
+    "chests": {
+      "1": "Knight's Bow"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Ke'nai Shakah": {
+    "puzzle_name": "A Modest Test of Strength",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Sapphire"
+    },
+    "enemies": {
+      "Guardian Scout III": 1
+    }
+  },
+  "Dah Kaso": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Central",
+    "chests": {
+      "1": "Ancient Core"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Pumaag Nitae": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Lake",
+    "chests": {
+      "1": "Boomerang"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Katah Chuki": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Central",
+    "chests": {
+      "1": "Royal Halberd"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Noya Neha": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Central",
+    "chests": {
+      "1": "Knight's Shield"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Soh Kofi": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Knight's Bow"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Dah Hesho": {
+    "puzzle_name": "A Minor Test of Strength",
+    "region": "Akkala",
+    "chests": {
+      "1": "Giant Ancient Core"
+    },
+    "enemies": {
+      "Guardian Scout II": 1
+    }
+  },
+  "Qaza Tokki": {
+    "puzzle_name": "Qaza Tokki's Blessing",
+    "region": "Hebra",
+    "chests": {
+      "1": "Barbarian Leg Wraps"
+    },
+    "enemies": null
+  },
+  "Lanno Kooh": {
+    "puzzle_name": "Lanno Kooh's Blessing",
+    "region": "Hebra",
+    "chests": {
+      "1": "Gold Rupee"
+    },
+    "enemies": null
+  },
+  "To Quomo": {
+    "puzzle_name": "To Quomo's Blessing",
+    "region": "Hebra",
+    "chests": {
+      "1": "Royal Claymore"
+    },
+    "enemies": null
+  },
+  "Rona Katcha": {
+    "puzzle_name": "Rona Katcha's Blessing",
+    "region": "Woodland",
+    "chests": {
+      "1": "Great Flameblade"
+    },
+    "enemies": null
+  },
+  "Ketoh Wawai": {
+    "puzzle_name": "Ketoh Wawai's Blessing",
+    "region": "Woodland",
+    "chests": {
+      "1": "Ancient Core"
+    },
+    "enemies": null
+  },
+  "Daag Chokah": {
+    "puzzle_name": "Daag Chokah's Blessing",
+    "region": "Woodland",
+    "chests": {
+      "1": "Ancient Core"
+    },
+    "enemies": null
+  },
+  "Kuhn Sidajj": {
+    "puzzle_name": "Kuhn Sidajj's Blessing",
+    "region": "Woodland",
+    "chests": {
+      "1": "Giant Ancient Core"
+    },
+    "enemies": null
+  },
+  "Maag Halan": {
+    "puzzle_name": "Maag Halan's Blessing",
+    "region": "Woodland",
+    "chests": {
+      "1": "Giant Ancient Core"
+    },
+    "enemies": null
+  },
+  "Gorae Torr": {
+    "puzzle_name": "Gorae Torr's Blessing",
+    "region": "Eldin",
+    "chests": {
+      "1": "Great Frostblade"
+    },
+    "enemies": null
+  },
+  "Zuna Kai": {
+    "puzzle_name": "Zuna Kai's Blessing",
+    "region": "Akkala",
+    "chests": {
+      "1": "Flameblade"
+    },
+    "enemies": null
+  },
+  "Tu Ka'loh": {
+    "puzzle_name": "Tu Ka'loh's Blessing",
+    "region": "Akkala",
+    "chests": {
+      "1": "Barbarian Helm"
+    },
+    "enemies": null
+  },
+  "Ritaag Zumo": {
+    "puzzle_name": "Ritaag Zumo's Blessing",
+    "region": "Akkala",
+    "chests": {
+      "1": "Giant Ancient Core"
+    },
+    "enemies": null
+  },
+  "Shai Yota": {
+    "puzzle_name": "Shai Yota's Blessing",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Great Flameblade"
+    },
+    "enemies": null
+  },
+  "Dagah Keek": {
+    "puzzle_name": "Dagah Keek's Blessing",
+    "region": "Lanayru",
+    "chests": {
+      "1": "Silver Rupee"
+    },
+    "enemies": null
+  },
+  "Jitan Sa'mi": {
+    "puzzle_name": "Jitan Sa'mi's Blessing",
+    "region": "Hateno",
+    "chests": {
+      "1": "Frostspear"
+    },
+    "enemies": null
+  },
+  "Tahno O'ah": {
+    "puzzle_name": "Tahno O'ah's Blessing",
+    "region": "Hateno",
+    "chests": {
+      "1": "Climbing Boots"
+    },
+    "enemies": null
+  },
+  "Tawa Jinn": {
+    "puzzle_name": "Tawa Jinn's Blessing",
+    "region": "Faron",
+    "chests": {
+      "1": "Great Thunderblade"
+    },
+    "enemies": null
+  },
+  "Qukah Nata": {
+    "puzzle_name": "Qukah Nata's Blessing",
+    "region": "Faron",
+    "chests": {
+      "1": "Rubber Tights"
+    },
+    "enemies": null
+  },
+  "Lakna Rokee": {
+    "puzzle_name": "Lakna Rokee's Blessing",
+    "region": "Dueling Peaks",
+    "chests": {
+      "1": "Edge of Duality"
+    },
+    "enemies": null
+  },
+  "Shae Katha": {
+    "puzzle_name": "Shae Katha's Blessing",
+    "region": "Faron",
+    "chests": {
+      "1": "Thunderspear"
+    },
+    "enemies": null
+  },
+  "Suma Sahma": {
+    "puzzle_name": "Suma Sahma's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Moonlight Scimitar"
+    },
+    "enemies": null
+  },
+  "Dila Maag": {
+    "puzzle_name": "Dila Maag's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Barbarian Armor"
+    },
+    "enemies": null
+  },
+  "Korsh O'hu": {
+    "puzzle_name": "Korsh O'hu's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Flamespear"
+    },
+    "enemies": null
+  },
+  "Misae Suma": {
+    "puzzle_name": "Misae Suma's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": null
+  },
+  "Raqa Zunzo": {
+    "puzzle_name": "Raqa Zunzo's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Radiant Shield"
+    },
+    "enemies": null
+  },
+  "Tho Kayu": {
+    "puzzle_name": "Tho Kayu's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Golden Bow"
+    },
+    "enemies": null
+  },
+  "Keeha Yoog": {
+    "puzzle_name": "Keeha Yoog's Blessing",
+    "region": "Wasteland",
+    "chests": {
+      "1": "Diamond"
+    },
+    "enemies": null
+  },
+  "Maag No'rah": {
+    "puzzle_name": "Maag No'rah's Blessing",
+    "region": "Ridgeland",
+    "chests": {
+      "1": "Silver Rupee"
+    },
+    "enemies": null
+  }
+}

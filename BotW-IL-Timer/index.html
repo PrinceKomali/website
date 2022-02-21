@@ -59,6 +59,7 @@
     <br>
     <br><br><br>
     <script>
+        
         let __INIT__ = false;
 
         var vid = document.getElementById("vid"); 
@@ -123,6 +124,11 @@
         
         var currentTimeElement = document.getElementById("current_time");
         window.onload =  function () {
+            if (window.confirm('Try out the new IL Timer - It\'s better!') && !document.cookie.includes("check=true")) 
+            {
+                window.location.href='https://komali.dev/BotW-IL-Timer';
+            };
+            document.cookie = "check=true";
             vid.removeAttribute("controls")
         };
         document.getElementById("vidfile").onchange = function () {

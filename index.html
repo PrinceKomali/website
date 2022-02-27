@@ -1,47 +1,113 @@
 <head>
-    <meta name="description" content="Autowiggler - Komali.dev">
-    <title>Autowiggler - Komali.dev</title>
+    <meta name="description" content="Home - Komali.dev">
+    <title>Komali.dev</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/custom_hljs.css" />
-    <script src="/styling.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <style>
-        .hljs {
-            /* width: 100px; */
-            /* overflow: visible; */
-            /* display: inline; */
-            word-wrap: break-word;
-            white-space: pre-wrap;
-        }
-        
-        img,
-        video {
-            border-radius: 30px;
-        }
-        
-        div {
-            /* width: 500px; */
-            overflow-wrap: break-word;
-        }
-        
-        a {
-            text-shadow: none;
-            color: white;
-        }
-    </style>
 </head>
 
-<body>
-    <h1>Wordle Unlimited Speedrun Timer</h1>
-    <p>A while ago I got bored so I made a speedrun timer for <a href="//wordleunlimited.com">Wordle Unlimited</a></p>
-    <p>Here it is in action!</p>
-    <video controls width="500px" src="./demo.mp4"></video>
-    <p>To use it, take the following code (ran through a closure compiler and compressed)...</p>
-    <div><pre><code class='js'><span class="hljs-comment">javascript:</span>function _result(e){for(c=[],b=0,i=0;i&lt;(r=document.querySelectorAll(".RowL")).length&&[].concat($t.e(r[i].classList)).includes("RowL-locked-in");i++)b++,c.push([].concat($t.e(r[i].children)).map(function(e){return _y=e.classList[1].split("-")[1],"correct"==_y?"🟩":"elsewhere"==_y?"🟨":"⬛"}).join(""));_o=`Wordle Unlimited SR${b}/6\n${c.join("\n")}\nTotal Time: ${e}s `,document.querySelector(".fade.alert.alert-success").innerHTML=" &lt;textarea rows = 10 cols = 24&gt;$ { _o }&lt;/textarea&gt;"}$t=$t||{},$t.scope={},$t.a=function(e){return c=0,function(){return c&lt;e.length?{done:!1,value:e[c++]}:{done:!0}}},$t.b=function(e){return{next:$t.a(e)}},$t.c=function(e){return c="undefined"!=typeof Symbol&&Symbol.iterator&&e[Symbol.iterator],c?c.call(e):$t.b(e)},$t.d=function(e){for(c,b=[];!(c=e.next()).done;)b.push(c.value);return b},$t.e=function(e){return e instanceof Array?e:$t.d($t.c(e))},$t.defineProperty="function"==typeof Object.defineProperties?Object.defineProperty:function(e,t,n){e!=Array.prototype&&e!=Object.prototype&&(e[t]=n.value)},$t.g=function(e){return"undefined"!=typeof window&&window===e?e:"undefined"!=typeof global&&null!=global?global:e},$t.j=$t.g(this),$t.h=function(t,n,r,o){if(n){for(r=$t.j,t=t.split("."),o=0;o&lt;t.length-1;o++)e=t[o],e in r||(r[e]={}),r=r[e];(n=n(o=r[t=t[t.length-1]]))!=o&&null!=n&&$t.defineProperty(r,t,{configurable:!0,writable:!0,value:n})}},$t.h("Object.is",function(e){return e||function(e,t){return e===t?0!==e||1/e==1/t:e!=e&&t!=t}},"es6","es3"),$t.h("Array.prototype.includes",function(t){return t||function(t,n){for(c=this,c instanceof String&&(c=String(c)),e=c.length,0&gt;(n=n||0)&&(n=Math.max(n+e,0));n&lt;e;n++)if(f=c[n],f===t||Object.is(f,t))return!0;return!1}},"es7","es3"),$t.i=function(e,t,n){if(null==e)throw new TypeError;if(t instanceof RegExp)throw new TypeError;return e+""},$t.h("String.prototype.includes",function(e){return e||function(e,t){return-1!==$t.i(this,e,"includes").indexOf(e,t||0)}},"es6","es3"),_h1=document.createElement("h1"),_h1.style.fontFamily="monospace",_h1.style.fontWeight="bolder",_h1.classList.add("_timer"),document.querySelector(".App-container").appendChild(_h1),_s=!1,_a=null,_int=setInterval(function(e){if(e=document.querySelectorAll(".RowL-letter")[0],_s)for(_t=((new Date-_a)/1e3).toFixed(3),document.querySelector("._timer").innerText=_t,i=0;i&lt;(r=document.querySelectorAll(".RowL-locked-in")).length;i++)([].concat($t.e(r[i].children)).map(function(e){return[].concat($t.e(e.classList)).pop()}).every(function(e){return"letter-correct"==e})||document.querySelector(".fade.alert.alert-danger"))&&((q=document.querySelectorAll(".mt-3")[1])&&(q.innerHTML="&lt;b&gt;Time: "+_t+"s&lt;/b&gt;&lt;br&gt;&lt;button onclick='_result(\""+_t+"\")'&gt;Share Results&lt;/button&gt;"),_a=null,e.innerText="",_s=!1);else([].concat($t.e(e.classList))+[]).includes("letter-")||(document.querySelector("._timer").innerText="0.000"),e.innerText&&(console.log("START!"),_a=Date.now(),_s=!0)},0);</code></pre>
+<script src="styling.js"></script>
+<style>
+    .main {
+        /* width: 95%; */
+        /* height: 95%; */
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        right: 0;
+        margin: 20px;
+    }
+    
+    .lurk {
+        margin-right: 20px;
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        overflow: hidden;
+    }
+    
+    .stella {
+        width: 150px;
+        position: relative;
+        border-radius: 30px;
+        bottom: -58px;
+    }
+    
+    .widget {
+        position: relative;
+        margin-top: 10px;
+        width: 500px;
+        height: 100px;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, .3);
+    }
+    
+    .widget>img {
+        margin-left: 10px;
+        margin-top: 8px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    
+    .widget>a {
+        position: absolute;
+        left: 120px;
+        font-size: 30px;
+        color: white;
+        margin-top: 0;
+        top: 17px;
+        font-family: Calamity;
+        text-shadow: 2px 2px rgba(100, 150, 200, .7);
+    }
+    
+    .widget>p {
+        position: absolute;
+        left: 120px;
+        margin-top: 0;
+        top: 57px;
+    }
+</style>
+
+<div class="main">
+
+    <h1>Hello!</h1>
+    <p>There's not much here yet but here's some projects I've been working on</p>
+    <div class="widget">
+        <img src="BotW-IL-Timer/logo.png">
+        <a href="BotW-IL-Timer">BotW IL Timer</a>
+        <p>A tool to make timing runs easier</p>
     </div>
-    <p>...and either save it as a bookmark in your browser (in the URL section) or directly input it into the url bar</p>
-    <p>If you want to see the actual source, <a href="./code.js">click this link</a></p>
-</body>
+
+    <div class="widget">
+        <img src="kagl/logo.png">
+        <a href="/kagl">KAGL</a>
+        <p>A crude language I've been developing</p>
+    </div>
+
+    <div class="widget">
+        <img src="https://cdn.discordapp.com/avatars/702572373261680796/74321559a062e2ca0184adb28b61c2b2.png">
+        <a href="https://dumpingbox.komali09.repl.co">Komali Bot 2</a>
+        <p>BotW/Coding Bot I've been working on</p>
+    </div>
+
+    <div class="widget">
+        <img src="./toaster.jpg">
+        <a href="/toasterwars">Toaster's Challenge</a>
+        <p>Attempting to prove a friend wrong</p>
+    </div>
+
+    <div class="widget">
+        <img src="/autowiggler/logo.png">
+        <a href="/autowiggler">The Autowiggler</a>
+        <p>A workaround written in Python</p>
+    </div>
+    <p id="c" style="position:absolute;visibility:hidden;bottom:70px;right:40px">Yes, this is my cat. <br>Her name is Stella</p>
+    <div class="lurk" onclick="document.getElementById('c').style.visibility = 'visible'"><img class="stella" src="komali2Lurk.png" /></div>
+</div>
+
+<script>
+</script>

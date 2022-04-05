@@ -187,6 +187,16 @@
   "flags": "https://flagcdn.com/w320/gg.png",
   "name": "Guernsey",
   "capital": null
+},
+{
+  "flags": "https://flagcdn.com/w320/cw.png",
+  "name": "Curaçao",
+  "capital": null
+},
+{
+  "flags": "https://flagcdn.com/w320/bq.png",
+  "name": "Bonaire",
+  "capital": null
 }
 ]
 

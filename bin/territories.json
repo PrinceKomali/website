@@ -197,6 +197,16 @@
   "flags": "https://flagcdn.com/w320/bq.png",
   "name": "Bonaire",
   "capital": null
+},
+{
+  "flags": "https://flagcdn.com/w320/eh.png",
+  "name": "Sahrawi Arab Democratic Republic",
+  "capital": null
+},
+{
+  "flags": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/True_South_Antarctic_Flag.svg/1280px-True_South_Antarctic_Flag.svg.png",
+  "name": "Antarctica",
+  "capital": null
 }
 ]
 

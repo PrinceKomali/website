@@ -207,6 +207,11 @@
   "flags": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/True_South_Antarctic_Flag.svg/1280px-True_South_Antarctic_Flag.svg.png",
   "name": "Antarctica",
   "capital": null
-}
+},
+{
+  "flags": "https://flagcdn.com/w320/sx.png",
+"name": "Saint Martin/Sint Maarten",
+  "capital": null
+},
 ]
 

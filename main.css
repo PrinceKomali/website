@@ -1,0 +1,150 @@
+button {
+    border-color: #1a7ce2;
+    background-color: #eeefff;
+    font-family: 'Monospace','sans-serif';
+    font-style: italic;
+    font-weight: bold;
+}
+#txt {
+    font-size: 10px;
+    visibility: hidden;
+    display: block;
+    color: #fff;
+}
+.stella {
+    /* The most important part */
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}
+
+a:-webkit-any-link {
+    color: #1a7ce2;
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.background {
+    filter: sepia(100%) saturate(300%) brightness(50%) hue-rotate(198deg);
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+@font-face {font-family: Calamity;src: url(https://komali.dev/CALAMITY-BOLD.TTF);}
+.big1 {
+  font-size: 60px;
+  margin-top: 50px;  
+}
+
+body {
+    background-color: #000033;
+    font-family: 'Calamity','sans-serif';
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 55rem 1fr;
+    grid-template-rows: 0rem auto;
+}
+
+#main {
+    box-sizing: border-box;
+    display: block;
+
+    border-radius: .5rem;
+
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 55rem;
+}
+
+#inner {
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 10px;
+    /* width: 45rem;*/
+    background-color: white;
+    border-radius: 10px;
+
+
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 .2rem .2rem .2rem;
+
+    line-height: 28px;
+
+
+    position: relative;
+    z-index: 6;
+
+    height: auto;
+    overflow: hidden;
+    background-origin: border-box;
+}
+#flag {
+    height: 1rem;
+    border-radius: 4px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.icon {
+    height: 35px;
+    padding: 5px;
+}
+
+.icon:hover, a:hover, button:hover {
+    animation: flash 2s linear infinite;
+}
+
+.widget {
+    background-color: rgba(0,0,0,.3);
+    border-radius:10px;
+    display: inline-block;
+    align-items: center;
+    position: inherit;
+    height: 1.8rem;
+    padding-right: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+    vertical-align: middle;
+
+
+}
+.widget > img {
+    height: 70%;
+    vertical-align: -.21em;
+    
+}
+.crop {
+    border-radius: 100%;
+}
+.fadein {
+    animation: normal fadein 1s linear;
+}
+@keyframes flash {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+    
+}

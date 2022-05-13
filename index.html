@@ -1,119 +1,110 @@
-
 <head>
-    <meta name="description" content="Home - Komali.dev">
-    <title>Komali.dev</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css">
 </head>
 
-<script src="styling.js"></script>
-<style>
-    .main {
-        background-color: rgba(0,0,0,.3);
-        border-radius: 15px;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-        box-sizing: border-box;
-        right: 0; 
-        margin: 20px;
-    }
-    .lurk {
-        margin-right: 20px;
-        width: 150px;
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-        overflow: hidden;
-    }
-    .stella {
-        width: 150px;
-        position: relative;
-        border-radius: 30px;
-        bottom: -58px;
-    }
-    .widget {
-        position: relative;
-        margin-top: 10px;
-        width: 500px;
-        height: 100px;
-        border-radius: 15px;
-        background-color: rgba(0,0,0,.3);
-    }
-    .widget > img {
-        margin-left: 10px;
-        margin-top: 8px;
-        height: 80px;
-        border-radius: 50%;
-    }
-    .widget > a {
-        position: absolute;
-        left: 120px;
-        font-size: 30px;
-        color: white;
-        margin-top: 0;
-        top: 17px;
-        font-family: Calamity;
-        text-shadow: 2px 2px rgba(100, 150, 200, .7);
-    }
-    .widget > p {
-        position: absolute;
-        left: 120px;
-        margin-top: 0;
-        top: 57px;
-    }
+<body>
+    <img src="" id="bg_img" class="background" />
+    <img src="https://komali.dev/background_images/texture.png" class="background" style="opacity:.5" />
+    <div class="stella"><p id="txt">Yes, this my cat<br>Her name is Stella</p><img src="stella_lurk.png" onclick="show_cat()" /></div>
+        
+    <div id="main">
+        <a href='https://discord.gg/QWCcXMe'  target="_blank"><img src="resources/discord.png" class="icon" /></a>
+        <a href='https://youtube.com/c/KomaliPrinceOfRito'  target="_blank"><img src="resources/youtube.png" class="icon" /></a>
+        <a href='https://twitch.tv/komali09'  target="_blank"><img src="resources/twitch.png" class="icon" /></a>
+        <a href='https://github.com/PrinceKomali'  target="_blank"><img src="resources/gh.png" class="icon" /></a>
+        <a href='https://www.speedrun.com/user/Komali'  target="_blank"><img src="resources/src.png" class="icon" /></a>
+        <a href='https://codegolf.stackexchange.com/users/107262/komali'  target="_blank"><img src="resources/cgcc.png" class="icon" /></a>
+        <div id="inner">
+            <h1><span class='big1'>Hi!</span> I'm Komali</h1>
+            <p>I'm a Breath of the Wild speedrunner + leaderboard verifier and a self-taught coding nerd</p>
+            <p>I also like geography <img id='flag' /></p>
+            <hr />
+            <p>Popular Projects</p>
+            <a href='https://worldleunlimited.komali.dev'><div class="widget">
+                <img src="https://worldleunlimited.komali.dev/logo192.png" />
+                <span>Worldle Unlimited</span>
+            </div></a>
+            <a href='https://timer.komali.dev'><div class="widget">
+                <img src="https://komali.dev/BotW-IL-Timer/favicon.ico" />
+                <span>IL Timer</span>
+            </div></a>
+            <p>Other Projects</p>
+            <a href='https://komali.dev/autowiggler'><div class="widget">
+                <img src="https://komali.dev/autowiggler/logo.png" class='crop' />
+                <span>The Autowiggler</span>
+            </div></a>
+            <a href='https://komali.dev/toasterwars'><div class="widget">
+                <img src="https://komali.dev/toasterwars/toasterscat.jpg" class='crop' />
+                <span>Toaster's Challenge</span>
+            </div></a>
+            <p>Discontinued Projects</p>
+            <a href='https://kb.komali.dev/'><div class="widget">
+                <img src="https://komali.dev/komalibot.png" class='crop' />
+                <span>Komali Bot 2</span>
+            </div></a>
+            <a href='https://komali.dev/kagl'><div class="widget">
+                <img src="https://komali.dev/kagl/logo.png" class='crop' />
+                <span>KAGL</span>
+            </div></a>
+            <a href='https://komali.dev/wust'><div class="widget">
+                <img src="https://komali.dev/wust_icon.png" />
+                <span>WUST (Broken)</span>
+            </div></a>
+            <hr />
+            <p>Random Buttons and Things</p>
+            <button onclick="Button1()">Mic</button>
+            <button onclick="Button2()">Yes</button>
+            <button onclick="Button3()">Break Website</button>
+            <button onclick="Button4()">Fix Website</button>
+            <button onclick="Button5()">Change Flag</button>
+            <button onclick="Button6()">Tombo</button>
+            <script>
+                let NUMBER_OF_IMAGES = 13;
 
-</style>
+                window.onload = _ => {
+                    document.querySelector("#flag").src = `https://flagcdn.com/w320/${['pm','io','sc'][Date.now()%3]}.png`;
+                    let img_url = `https://komali.dev/background_images/${(Math.floor(Math.random()*NUMBER_OF_IMAGES) + 1)}.png`;
+                    let temp = new Image();
+                    temp.src = img_url;
+                    let bg = document.querySelector("#bg_img");
+                    temp.onload = _ => {
+                        bg.src = img_url;
+                        bg.classList.add('fadein');
+                        
+                    }
+                }
+                let show_cat = _ => {
+                    document.querySelector('#txt').style.visibility = 'visible';
+                }
 
-<div class="main">
-
-    <h1>Hello!</h1>
-    <p>There's not much here yet but here's some projects I've been working on</p>
-    <div class="widget">
-        <img src="BotW-IL-Timer/logo.png">
-        <a href="/BotW-IL-Timer">BotW IL Timer</a>
-        <p>A tool to make timing runs easier</p>
-    </div>
-
-    <div class="widget">
-        <img src="kagl/logo.png">
-        <a href="/kagl">KAGL</a>
-        <p>A crude language I've been developing</p>
-    </div>
-
-    <div class="widget">
-        <img src="komalibot.png">
-        <a href="https://kb.komali.dev/">Komali Bot 2</a>
-        <p>BotW/Coding Bot I've been working on</p>
-    </div>
-
-    <div class="widget">
-        <img src="toasterwars/toasterscat.jpg">
-        <a href="/toasterwars">Toaster's Challenge</a>
-        <p>Attempting to prove a friend wrong</p>
-    </div>
-    
-    <div class="widget">
-        <img src="autowiggler/logo.png">
-        <a href="/autowiggler">The Autowiggler</a>
-        <p>A workaround written in Python</p>
-    </div>
-    
-    <div class="widget">
-        <img src="/wust_icon.png">
-        <a href="/wust">WUST</a>
-        <p>Wordle Unlimited Speedrun Timer</p>
-    </div>
-    
-    <div class="widget">
-        <img src="https://worldleunlimited.komali.dev/logo192.png">
-        <a href="https://worldleunlimited.komali.dev">Worldle Unlimited</a>
-        <p>Worldle, but unlimited!</p>
-    </div>
-    <p id="c" style="position:absolute;visibility:hidden;bottom:70px;right:40px">Yes, this is my cat. <br>Her name is Stella</p>
-    <div class="lurk" onclick="document.getElementById('c').style.visibility = 'visible'"><img class="stella" src="komali2Lurk.png" /></div>
-</div>
-
-<script>
-</script>
+                let Button1 = _ => {
+                    navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+                }
+                let Button2 = _ => {
+                    [...document.querySelectorAll("*")].forEach(x=>x.style.animation = 'infinite flash linear 2s')
+                }
+                let Button3 = _ => setInterval(_=>{
+                    [...document.querySelectorAll("*")].forEach(x=>x.style.position=['fixed','absolute','relative'][~~(Math.random()*3)])
+                },1)
+                let Button4 = _ => {
+                    document.write("Hi, I'm Komali, and this is an example of a perfectly simply HTML Website");
+                }
+                let Button5 = _ => {
+                    fetch("https://restcountries.com/v3.1/all").then(x=>x.json()).then(x=>{
+                        x = x.map(x=>x.cca2);
+                        let c = x[Math.floor(Math.random()*x.length)];
+                        document.querySelector("#flag").src = `https://flagcdn.com/w320/${c.toLowerCase()}.png`;
+                    })
+                }
+                let Button6 = _ => {
+                    [...document.querySelectorAll("*")].forEach(x=>{
+                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName))x.innerText='tombo'
+                    })
+                }
+            
+            document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+            
+            </script>
+        </div>
+    </div>  
+</body>

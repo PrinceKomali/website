@@ -144,7 +144,7 @@ c2 = "";
       setTimeout(()=>{
         document.getElementsByTagName("code")[1].innerHTML += "<br>";
         setTimeout(()=>{
-        document.getElementsByTagName("code")[1].innerHTML += `{ <span class="js_str">'completed'</span>: <span class="js_bool"> false</span>, <span class="js_str">'code'</span>: <span class="js_str">''</span> }`;
+        document.getElementsByTagName("code")[1].innerHTML += `{ <span class="js_str">'completed'</span>: <span class="js_bool"> false</span>, <span class="js_str">'code'</span>: <span class="js_str">''</span>, <span class="js_str">'status'</span>: <span class="js_str">'Komali has won!'</span> }`;
           setTimeout(()=>{
             document.getElementsByTagName("code")[1].innerHTML += `<br><span class="usr_total"><span class="usr">${usr}</span><span id="colon">:</span></span><span class="path">${path}</span><span class="money">\$</span>`;
           },50)

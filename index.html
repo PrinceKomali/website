@@ -65,6 +65,7 @@
             <button onclick="Button4()">Fix Website</button>
             <button onclick="Button5()">Change Flag</button>
             <button onclick="Button6()">Tombo</button>
+            <button onclick="Button7()">Skew Bounce</button>
             <script>
                 let NUMBER_OF_IMAGES = 13;
 
@@ -108,6 +109,22 @@
                         if(["BUTTON","P","SPAN","H1"].includes(x.tagName))x.innerText='tombo'
                     })
                 }
+                let Button7 = _ => {
+                    let i = 0;
+                    let d = false;
+                    let interval = setInterval(_=>{
+                        if(i == 100) d = true;
+                        document.body.style.paddingTop = `${(d?i--:i++)*5}px`;
+                        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                        if(i < 0) {
+                            document.body.style.paddingTop = '';
+                            clearInterval(interval);
+                            
+                        }
+                    },1);
+                }
+            
             
             document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
             

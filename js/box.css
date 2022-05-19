@@ -1,0 +1,101 @@
+.warn_footer {
+  background - color: #eee;
+  position: absolute;
+  height: 25 % ;
+  width: 100 % ;
+  left: 0;
+  top: 75 % ;
+}
+.warn > img {
+    position: absolute;
+    top: 30 % ;
+    z - index: 10;
+    left: 22 px;
+    width: 40 px;
+    
+  }
+  .warn > button {
+    font - family: Tahoma;
+    position: absolute;
+    width: 80 px;
+    bottom: 10 px;
+    right: 10 px;
+    background - color: #eaeaea;
+    border: 1 px solid #eee;
+    box - shadow: 1 px 1 px 1 px rgba(0, 0, 0, .5);
+  }
+  .warn > button: hover {
+    background - color: #dddddd;
+  }
+  .warn > button: active {
+    background - color: #ccc;
+  }
+  .warn_inner {
+    
+    display: flex;
+    justify - content: center;
+    align - items: center;
+    
+    font - size: 13 px;
+    vertical - align: middle;
+    position: absolute;
+    width: calc(100 % -90 px);
+    left: 90 px;
+    top: 2 em;
+    height: 50 % ;
+    background - color: #fff;
+    
+  }
+  .x {
+    position: absolute;
+    right: 0 px;
+    top: 0 px;
+    font - size: 12 px;
+    padding - top: 5 px;
+    display: block;
+    font - family: monospace;
+    z - index: 10;
+    text - align: center;
+    vertical - align: 10 px;
+    width: 60 px;
+    height: 1.8 em;
+  }
+  .x: hover {
+    animation: 0.1 s linear f forwards;
+  }
+@keyframes f {
+  0 % {
+    background - color: rgba(0, 0, 0, 0);
+  }
+  100 % {
+    background - color: #e00
+  }
+}
+.warn {
+  
+  font - family: Tahoma;
+  height: 150 px;
+  position: fixed;
+  width: 440 px;
+  background - color: #fff;
+  border: 1 px solid #d3d3d3;
+  padding: 10 px;
+}
+.warn_header {
+  background - color: #fff;
+  height: 2 em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100 % ;
+  
+  font - size: 12 px;
+  cursor: move;
+}
+.warn_header > .path {
+  
+  position: absolute;
+  top: 5 px;
+  left: 5 px;
+}

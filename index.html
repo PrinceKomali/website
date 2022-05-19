@@ -68,6 +68,7 @@
             <button onclick="Button5()">Change Flag</button>
             <button onclick="Button6()">Tombo</button>
             <button onclick="Button7()">Skew Bounce</button>
+            <button onclick="Button8()">Parse Source (w/ regex)</button>
             <script>
                 let NUMBER_OF_IMAGES = 13;
 
@@ -126,6 +127,7 @@
                         }
                     },1);
                 }
+                let Button8 = parse_html_with_regex;
             
             
             document.querySelector('#inner').innerHTML += '<br>'.repeat(10);

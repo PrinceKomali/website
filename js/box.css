@@ -17,7 +17,9 @@
 }
 
 .warn>button {
-  font-family: Tahoma;
+  font-family: Tahoma !important;
+  font-style: normal;
+  font-weight: normal;
   position: absolute;
   width: 80px;
   bottom: 10px;

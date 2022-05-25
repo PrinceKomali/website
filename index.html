@@ -12,6 +12,7 @@
     <script src="js/regex_html_parser.js"></script>
     <script src="js/drag.js"></script>
     <script src="js/alert.js"></script>
+    <script src="js/specs.js"></script>
 </head>
 
 <body>
@@ -73,6 +74,7 @@
             <button onclick="Button7()">Skew Bounce</button>
             <button onclick="Button8()">Parse Source (w/ regex)</button>
             <button onclick="Button9()">Go to better site</button>
+            <button onclick="Button10()">Go to better site</button>
             <script>
                 let NUMBER_OF_IMAGES = 13;
 
@@ -133,8 +135,10 @@
                 }
                 let Button8 = parse_html_with_regex;
                 let Button9 = _ => window.location.href = "http://periwinkle.sh/";
-            
-            document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+                let Button10 = screenfetch;
+                
+                document.querySelector('#inner').innerHTML += '<br>'.repeat(10);
+                
             
             </script>
         </div>

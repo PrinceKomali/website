@@ -113,7 +113,7 @@
                 }
                 let Button6 = _ => {
                     [...document.querySelectorAll("*")].forEach(x=>{
-                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName))x.innerText='tombo'
+                        if(["BUTTON","P","SPAN","H1"].includes(x.tagName)) x.innerText = x.innerText.replace(/\w+/g,"tombo");
                     })
                 }
                 let Button7 = _ => {

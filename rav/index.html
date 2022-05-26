@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<title>Runs Awaiting Verification</title>
+<style>
+    body {
+        font-size: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000;
+        color: #fff;
+
+    }
+    button {
+        font-weight: bold;
+        margin: 5px;
+        padding: 5px;
+        background-color: #ddf;
+        border-width: 0;
+        border-radius: 10px;
+    }
+    .background {
+        filter: opacity(.5);
+        background: url("https://princekomali.github.io/BotW-IL-Timer/background.png"); 
+        background-repeat: repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .run {
+        display: block;
+        margin: 10px;
+    }
+
+    .date {
+        font-size: .6em;
+        vertical-align: middle;
+    }
+    .date:hover {
+        font-size: 1em;
+        vertical-align: baseline;
+    }
+
+    .container_header {
+
+        font-weight: bold;
+    }
+
+    .container {
+        margin-left: 20px;
+    }
+
+    .time {
+        color: #ddf;
+        text-decoration: none;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .flag {
+        height: .8em;
+        display: inline-block;
+        border-radius: 2px;
+    }
+</style>
+
+<body><div class="background"></div>
+    <button onclick="print_runs()">Sort by Newest</button>
+        <div class='inner'>
+        <span class='container_header' aria-label='Any%'></span>
+        <div id="Any" class="container"></div>
+        <span class='container_header' aria-label='Great Plateau Any%'></span>
+        <div id="GreatPlateauAny" class="container"></div>
+        <span class='container_header' aria-label='All Dungeons'></span>
+        <div id="AllDungeons" class="container"></div>
+        <span class='container_header' aria-label='Master Sword'></span>
+        <div id="MasterSword" class="container"></div>
+        <span class='container_header' aria-label='All Shrines'></span>
+        <div id="AllShrines" class="container"></div>
+        <span class='container_header' aria-label='All Main Quests'></span>
+        <div id="AllMainQuests" class="container"></div>
+        <span class='container_header' aria-label='Master Sword and Dungeons'></span>
+        <div id="MasterSwordandDungeons" class="container"></div>
+        <span class='container_header' aria-label='Best Ending'></span>
+        <div id="BestEnding" class="container"></div>
+        <span class='container_header' aria-label='100%'></span>
+        <div id="hundred" class="container"></div>
+        <span class='container_header' aria-label='Bug Limit Categories'></span>
+        <div id="BugLimitCategories" class="container"></div>
+        <span class='container_header' aria-label='ILs'></span>
+        <div id="IL" class="container"></div>
+
+    </div>
+</body>
+<script>
+    // No, I didn't feel like putting it in multiple scripts. Sue me :I
+    global = true;
+    let shrine_data = { "21gek5ml": "Katosa Aug", "jqzvo9ml": "Ze Kasho", "jqzvowgl": "Kaam Yatak", "gq79yovl": "Rota Ooh", "klrj892q": "Wahgo Katta", "4qy5km41": "Bosh Kala", "5q82n3gq": "Ha Dahamar", "klrj8djq": "Hila Rao", "21dvpn41": "Taloh Naeg", "9qjwpoe1": "Shee Vaneer", "mlndg701": "Ree Dahee", "jq6y8w31": "Shee Venath", "zqomzgp1": "Kayra Mah", "81002yw1": "Toto Sah", "013wzjdq": "Moa Keet", "5lm87ejq": "Qua Raym", "5le3p05q": "Sah Dahaj", "4lx0mk2l": "Shae Mosah", "81we6jo1": "Shora Hah", "rqv6j07l": "Tah Muhl", "0q5xdmm1": "Daqa Koh", "mlndgv01": "Kah Yah", "5q82nvgq": "Shai Utoh", "21dvp841": "Yah Rin", "4qy5k241": "Shoda Sah", "9qjwpme1": "Kuh Takkar", "jq6y8o31": "Sho Dantu", "81002nw1": "Joloo Nah", "81we62o1": "Keh Namut", "zqomzep1": "Oman Au", "5lm873jq": "Ja Baij", "013wzkdq": "Owa Daim", "4lx0m22l": "Kam Urog", "rqv6j27l": "Mezza Lo", "5le3py5q": "Myahm Agana", "814krm0l": "Dunba Taag", "0q5xdwm1": "Dow Naeh", "21gekznl": "Gee Harah", "gq79ymvl": "Maka Rah", "p12ogj7l": "Rok Uwog", "xqk9pwn1": "Sha Ghema", "jqzvozgl": "Ishto Soh", "klrj8ojq": "Kao Makagh", "z1950e0q": "Rin Oyaa", "81p4rkg1": "Shada Naw", "81we6xo1": "Kah Mael", "5le3p75q": "Daka Tuss", "013wzndq": "Neez Yohma", "4lxx3v3l": "Kaya Wan", "21dvpx41": "Ya Naga", "zqomz6p1": "Rucco Maag", "z1950o0q": "Mogg Latan", "rqv6j57l": "Sheh Rata", "0q5xdjm1": "Shae Loya", "814kr00l": "Sheem Dagoze", "4lx0m72l": "Toh Yahsa", "jqzvoogl": "Akh Vaquot", "81p4rmg1": "Bareeda Naag", "21gekknl": "Kah Okeo", "xqk9pyn1": "Sha Warvo", "gq79yyvl": "Voo Lota", "21dvpp41": "Dako Tah", "mlndgg01": "Hawa Koth", "013v7dkl": "Daqo Chisay", "p12ogy7l": "Zalta Wa", "5q82nngq": "Jee Noh", "klrj88jq": "Kema Zoos", "9qjwppe1": "Keo Ruug", "jq6y8831": "Mirro Shaz", "4qy5kk41": "Kay Noh", "810022w1": "Monya Toma", "zqoy8951": "Rohta Chigah", "013voprl": "Ruvo Korbah", "0q5o9p71": "Kamina Omuna", "81wmv9mq": "Yowaka Ita", "rqv4k9rq": "Etsu Kormia", "5lek65ml": "Rinu Honika", "4lxxv93l": "Sharo Lun", "814x5peq": "Kee Dafunia", "p1256pd1": "Sato Koda", "81p732v1": "Kiah Toza", "z194jkyl": "Mah Eliya", "gq7nvpp1": "Shira Gomar", "xqkrg5d1": "Noe Rajee", "21gjw561": "Keive Tala", "klrze9o1": "Kihiro Moh", "jqz6r921": "Takama Shiri" }
+    let Runs = [];
+
+    let runs_raw = [];
+    let FG_CATEGORIES = ["Any%", "All Dungeons", "All Shrines", "All Shrines", "Bug Limit Categories", "Master Sword", "Master Sword and Dungeons", "Great Plateau Any%", "100%", "Best Ending"];
+
+    function gradient(arr) {
+        return `background-image: -webkit-linear-gradient(right, ${arr.join(",")}); display: inline; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bolder`
+    }
+
+    let checkbox = document.querySelector("#checker")
+    
+    let bug_limit_data = {
+        "814vk9w1": "Any%",
+        "jq6xyvnq": "All Dungeons",
+        "5lm482yl": "All Main Quests",
+        "81wde79q": "AS",
+        "zqo3mjgq": "100%",
+        "21g4eex1": "MS",
+        "gq7499nq": "MSD",
+        "810m00jl": "GP 100%"
+    };
+
+    function primary_t(str) {
+
+        str = str.substring(2, str.length);
+
+        let t = [(str.match(/([^H]*)H/) || ['0'])[0],
+        (str.match(/([0-9]*)M/) || ['0'])[0],
+        (str.match(/([0-9\.]*)S/) || ['0'])[0]].map(x => +x.replace(/[HMS]/g, ''));
+        let s = t.pop();
+        if (('' + s).includes(".")) {
+            s = ('' + s).split(".");
+            s[1] = (s[1] + '000').substring(0, 3);
+            s = s.join(".");
+            s = ('000000' + s).slice(-6);
+
+        }
+        else s = ('0' + s).slice(-2);
+
+        t = t.map(x => ('0' + x).slice(-2));
+
+        let time_str = `${t.join(":")}:${s}`;
+
+        while (time_str.startsWith(":") || time_str.startsWith("0")) time_str = time_str.substring(1, time_str.length);
+        return time_str;
+    }
+
+    function player(url, callback) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "json";
+
+        xhr.send();
+        xhr.onload = _ => {
+            if (xhr.status == 200) {
+                let data = xhr.response.data;
+                let color_data = data["name-style"];
+
+                callback({
+                    "name": data.names.international,
+                    "cc": data.location ? data.location.country.code : null,
+                    "color": color_data.style == "gradient" ? [color_data["color-from"].dark, color_data["color-to"].dark] : [color_data.color.dark, color_data.color.dark] //that was fun
+                });
+            }
+        }
+    }
+    function category(run, url, callback) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "json";
+
+        xhr.send();
+        xhr.onload = _ => {
+            if (xhr.status == 200) {
+                let data = xhr.response.data;
+                let cat_name = data.name;
+                if (!FG_CATEGORIES.includes(cat_name)) {
+                    let shrine_name = shrine_data[Object.values(run.values)[0]];
+                    if (shrine_name) cat_name += ` - ${shrine_name}`;
+                }
+                else {
+                    if (cat_name == "Any%") {
+                        cat_name += ` (${run.values["gnxrr7gn"] == "21dyvv31" ? '' : "No "
+                            }Amiibo)`
+                    }
+                    else if (cat_name.includes("Master Sword")) {
+                        cat_name += ` (${run.values["jlz55vyl"] == "jq6xyynq" ? "Extended" : "Original"
+                            }, ${(run.values["wl334xol"] == "0q5g80nl" || run.values["ylpv6vdl"] == "5lek6zkl") ? "Restricted" : "Unrestricted"
+                            })`;
+                    }
+                    else if (cat_name == "Bug Limit Categories") {
+                        cat_name += ` - ${bug_limit_data[runs.values["38djj2e8"]]}`;
+                    }
+
+                }
+                callback(
+                    cat_name
+                )
+            }
+        }
+    }
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://www.speedrun.com/api/v1/runs?game=76rqjqd8&status=new&max=200", true);
+    xhr.responseType = "json";
+    xhr.onload = _ => {
+        if (xhr.status == 200) {
+            for (run of xhr.response.data) runs_raw.push(run);
+            parse_runs();
+        }
+    }
+
+    window.onload = _ => xhr.send();
+
+    function parse_runs() {
+        for (let i = 0; i < runs_raw.length; i++) {
+            let run = runs_raw[i];
+            (function (run, final_callback) {
+                let run_data = {
+                }
+                run_data.time = primary_t(run.times.primary);
+                player(run.players[0].uri, user_data => {
+                    run_data.user = user_data;
+                    category(run, run.links[+run.links.map(x => x.rel).includes("level") + 2].uri, cat_data => {
+                        run_data.category = cat_data;
+                        run_data.link = run.weblink;
+                        run_data.date = new Date(run.submitted)
+                        final_callback(run_data);
+                    })
+
+                })
+            })(run, d => {
+
+                Runs.push(d)
+                if (Runs.length == runs_raw.length) print_runs();
+            })
+        }
+
+    }
+    function print_runs() {
+        global = !global;
+        document.querySelector("button").innerText = global ? "Sort by Category" : "Sort by Newest";
+        [...document.querySelectorAll(".container_header")].forEach(x => x.innerText = global ? '' : x.ariaLabel);
+        [...document.querySelectorAll(".run")].forEach(x => x.innerHTML = x.outerHTML = '');
+        let sorted_runs = [...Runs].sort((a, b) => {
+            return +b.date - +a.date
+        });
+
+        for (r of sorted_runs) {
+            let cat_selector = r.category.split(/[\(-]/)[0].trim().replace(/[ '%]/g, '');
+            if (cat_selector == "100") cat_selector = "hundred";
+            if (!document.querySelector("#" + cat_selector)) cat_selector = "IL"
+
+            if (global) element = document.body;
+            else element = document.querySelector('#' + cat_selector);
+            element.innerHTML += `<div class='run'><span class='category'>${r.category}</span> in <a href='${r.link}' class='time'>${r.time}</a> by ${r.user.cc ? `<img class='flag' src='https://flagcdn.com/w320/${r.user.cc}.png'>` : ''
+                } <span class='name' style='${`background-image: -webkit-linear-gradient(right, ${r.user.color.join(",")}); display: inline; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bolder`
+                }'>${r.user.name}</span>&nbsp;&nbsp;<span class='date'>${r.date.toDateString()} at ${r.date.getHours()}:${('0' + r.date.getMinutes()).slice(-2)}</span></div>`
+        }
+    }
+</script>

@@ -75,6 +75,9 @@
             <button onclick="Button8()">Parse Source (w/ regex)</button>
             <button onclick="Button9()">Go to better site</button>
             <button onclick="Button10()">Komali's Specs</button>
+            <hr />
+            <p>Server Status: <span style="font-family:'Ubuntu Mono'" class="server_status">???</span></p>
+            <div class="http_stella"></div>
             <script>
                 let NUMBER_OF_IMAGES = 13;
 
@@ -89,6 +92,36 @@
                         bg.classList.add('fadein');
                         
                     }
+                    let fetch_link = "https://api.komali.dev/k2l?html=1";
+                    fetch(fetch_link).then(s=>{
+                        let stat = document.querySelector(".server_status");
+                        stat.innerText = s.status;
+                        if(s.status != 200) {
+                            stat.style.color = "#a00";
+                            return (new Promise(_=>_(null)));
+                        }
+                        else {
+                            stat.style.color = "#0d0";
+                            return s.text();
+                        }
+                    }).then(data => {
+                        if(data) document.querySelector(".http_stella").innerHTML = data + `<br><br><span style="display:block;margin-top:10px;font-size:12px;margin-left:.5em;font-family:'Ubuntu Mono'">Fetched ${
+                            (new TextEncoder(data)).encode(data).length.toLocaleString("en-US")
+                        } bytes of data from <a href="${
+                            fetch_link
+                        }">${fetch_link}</a></span>`;
+                        else {
+                            document.querySelector(".http_stella").innerHTML = `<span style="${[
+                                "color:rgb(222, 224, 252)",
+                                `background-color: hsla(235,85.6%,64.7%,0.6);`, //stolen from discord css
+                                'font-family: Whitney, \'Helvetica Neue\', Helvetica, Arial, sans-serif !important',
+                                "padding: 1px",
+                                "border-radius: 1px",
+                                "vertical-align: middle",
+                                "font-weight: bold"
+                            ].join(";")}">@Komali</span> go fix the site`
+                        }
+                    })
                 }
                 let show_cat = _ => {
                     document.querySelector('#txt').style.visibility = 'visible';

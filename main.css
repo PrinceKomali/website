@@ -17,6 +17,15 @@ button {
     bottom: 0;
     right: 10px;
 }
+.stella > img {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+.stella > p {
+    margin-bottom: 50px;
+    margin-right: 5px;;
+}
 
 a:-webkit-any-link {
     color: #1a7ce2;
@@ -112,8 +121,9 @@ body {
     margin-left: 20px;
     padding-left: 10px;
     vertical-align: middle;
-
-
+}
+a {
+    text-decoration: none;
 }
 .widget > img {
     height: 70%;

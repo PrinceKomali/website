@@ -20,7 +20,8 @@ button {
 .stella > img {
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: 1vw;
+    width: 10vw;
 }
 .stella > p {
     margin-bottom: 50px;
@@ -130,9 +131,14 @@ a {
     vertical-align: -.21em;
     
 }
+.square {
+    
+    overflow: hidden;
+}
 .crop {
     border-radius: 100%;
 }
+
 .fadein {
     animation: normal fadein 1s linear;
 }

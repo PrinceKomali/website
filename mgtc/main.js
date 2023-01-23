@@ -1135,6 +1135,10 @@ function get_people() {
             ]
         },
         {
+            name: "Spacewhale",
+            roles: [ "MKWii" ]
+        },
+        {
             name: "thomas",
             roles: ["MKWii"]
         },

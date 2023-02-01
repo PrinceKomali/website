@@ -15,19 +15,19 @@ function get_people() {
         },
         {
             "name": "Chunk",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "Burpman",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "Arkes",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "Arthur - GT",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "ATG",
@@ -64,11 +64,11 @@ function get_people() {
         },
         {
             "name": "Booshi",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Brokami",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Carl-bot",
@@ -78,7 +78,7 @@ function get_people() {
         },
         {
             "name": "Citrinitas",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "cookievm",
@@ -90,7 +90,7 @@ function get_people() {
         },
         {
             "name": "Crackhex",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "d3rpybi11z",
@@ -98,31 +98,31 @@ function get_people() {
         },
         {
             "name": "darthfrongo",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "DavidYogi",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "DwainiumB",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Eribetra",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Experge25A",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "FallBackITA27",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Gaberboo",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Gaminator",
@@ -132,7 +132,7 @@ function get_people() {
         },
         {
             "name": "GlitchGod",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "glug27",
@@ -151,7 +151,7 @@ function get_people() {
         },
         {
             "name": "hoogachakka",
-            "roles": [ "SM64DS" ]
+            "roles": ["SM64DS"]
         },
         {
             "name": "Idonthaveagun",
@@ -163,19 +163,19 @@ function get_people() {
         },
         {
             "name": "Jsap",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "KaiMK",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Kim",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "Komali",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "LAze",
@@ -191,23 +191,23 @@ function get_people() {
         },
         {
             "name": "LirWm",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Lud",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "maB_",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "Malleo",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Maximiliano",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Memphote1246",
@@ -215,11 +215,11 @@ function get_people() {
         },
         {
             "name": "Meowximum",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Miku",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "mine_pvpkill",
@@ -230,7 +230,7 @@ function get_people() {
         },
         {
             "name": "Minty",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Mr. Frosty",
@@ -241,32 +241,24 @@ function get_people() {
         {
             "name": "Noah-willy",
             "roles": [
-                "SM64DS",
-                "MKWii",
-                "BfBB",
-                "SMG",
-                "SMB1/2J",
-                "Trackmania",
-                "Red Ball",
-                "Minecraft",
-                "SM64"
+                "MKWii"
             ]
         },
         {
             "name": "Noci27",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "NOKKY",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "OliverSR",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "MCPfannkuchenYT",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "Pearce",
@@ -284,7 +276,7 @@ function get_people() {
         },
         {
             "name": "Rogue",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "sear",
@@ -296,11 +288,11 @@ function get_people() {
         },
         {
             "name": "ShadoXFM",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Shweetz",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "Skypeerer",
@@ -315,20 +307,16 @@ function get_people() {
             "roles": []
         },
         {
-            "name": "Spacewhale",
-            "roles": []
-        },
-        {
             "name": "Splooze",
             "roles": []
         },
         {
             "name": "Stuntlover",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "threadd",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "UsernamesAreHard",
@@ -340,11 +328,11 @@ function get_people() {
         },
         {
             "name": "vabold",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Wade7",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "warmCabin",
@@ -356,7 +344,7 @@ function get_people() {
         },
         {
             "name": "xnikmkw",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Yoshi",
@@ -367,7 +355,7 @@ function get_people() {
         },
         {
             "name": "Zyon",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "小貓與蜜糖",
@@ -382,7 +370,7 @@ function get_people() {
         },
         {
             "name": "!Hibyehello",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "108Pi",
@@ -392,23 +380,23 @@ function get_people() {
         },
         {
             "name": "??????",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Alexpalix1",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "AlmostTWD98»",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Alpha97",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "ancient",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "ashggg",
@@ -416,19 +404,19 @@ function get_people() {
         },
         {
             "name": "Aston",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "AStrongGuy",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Aylx",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Battery",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "BirdBanana",
@@ -443,7 +431,7 @@ function get_people() {
         },
         {
             "name": "bobbybob",
-            "roles": [ "SM64DS" ]
+            "roles": ["SM64DS"]
         },
         {
             "name": "Broxzier",
@@ -465,7 +453,7 @@ function get_people() {
         },
         {
             "name": "CHARL1E",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "chbld",
@@ -479,7 +467,7 @@ function get_people() {
         },
         {
             "name": "chriss",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "combo_pig38 alt",
@@ -501,7 +489,7 @@ function get_people() {
         },
         {
             "name": "CrizpyCheese",
-            "roles": [ "Trackmania" ]
+            "roles": ["Trackmania"]
         },
         {
             "name": "cryptanalyst",
@@ -509,7 +497,7 @@ function get_people() {
         },
         {
             "name": "César",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "DanPark/DeRockProject",
@@ -520,15 +508,15 @@ function get_people() {
         },
         {
             "name": "Dark-Crystal",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "DarkNight3141 (Superdavo0001)",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "DashQC",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "deleted",
@@ -542,11 +530,11 @@ function get_people() {
         },
         {
             "name": "Dyllon Stejakoski",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Ejay B",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "emoyosh",
@@ -570,11 +558,11 @@ function get_people() {
         },
         {
             "name": "FazDag",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "FeijoadaMolhada",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "fella8",
@@ -588,27 +576,27 @@ function get_people() {
         },
         {
             "name": "monion",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "FireBreather",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "flurry",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Frame",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "FriendsWithFun",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "galoomba",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Hl M0M",
@@ -634,7 +622,7 @@ function get_people() {
         },
         {
             "name": "Johnelway76",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Jthespedcuber",
@@ -657,7 +645,7 @@ function get_people() {
         },
         {
             "name": "[TAS] - λρ◆NJA",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "kristian",
@@ -669,7 +657,7 @@ function get_people() {
         },
         {
             "name": "LaseyApow",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Leon_green",
@@ -680,11 +668,11 @@ function get_people() {
         },
         {
             "name": "LeonGamer_real",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "LetsGoAway",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "lordmagecar",
@@ -696,11 +684,11 @@ function get_people() {
         },
         {
             "name": "LRFLEW",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "LSLees_",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "Lukalyc",
@@ -708,15 +696,15 @@ function get_people() {
         },
         {
             "name": "M4rkgmd",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Madghostek",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "MaG_NITud3",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "mcw4v3-x",
@@ -728,7 +716,7 @@ function get_people() {
         },
         {
             "name": "mkwLuke",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "mnmcat",
@@ -744,7 +732,7 @@ function get_people() {
         },
         {
             "name": "Nerdician",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "novego",
@@ -762,7 +750,7 @@ function get_people() {
         },
         {
             "name": "p_yoshi",
-            "roles": [ "SM64DS" ]
+            "roles": ["SM64DS"]
         },
         {
             "name": "param_r06",
@@ -789,7 +777,7 @@ function get_people() {
         },
         {
             "name": "Pyraminxstars",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "queenbea",
@@ -807,11 +795,11 @@ function get_people() {
         },
         {
             "name": "Really_Tall",
-            "roles": [ "SM64DS" ]
+            "roles": ["SM64DS"]
         },
         {
             "name": "reiner",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "RepressedButton",
@@ -819,7 +807,7 @@ function get_people() {
         },
         {
             "name": "RMED24",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "RoBoBoB",
@@ -827,11 +815,11 @@ function get_people() {
         },
         {
             "name": "RS",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "RSW",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "ruadath",
@@ -843,7 +831,7 @@ function get_people() {
         },
         {
             "name": "Ryzonno",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "SadEgg",
@@ -861,7 +849,7 @@ function get_people() {
         },
         {
             "name": "Scribble",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "Shadow64",
@@ -880,11 +868,11 @@ function get_people() {
         },
         {
             "name": "Smiley",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "Sniperlol",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Snowookis",
@@ -892,11 +880,11 @@ function get_people() {
         },
         {
             "name": "Soulbest",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "Spear960",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Speedrun",
@@ -908,7 +896,7 @@ function get_people() {
         },
         {
             "name": "Sreekar",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Starline",
@@ -922,7 +910,7 @@ function get_people() {
         },
         {
             "name": "SuperM789",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Tets",
@@ -930,11 +918,11 @@ function get_people() {
         },
         {
             "name": "ThatsSlick",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "The Tactical TASer",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "TheGreenPig321",
@@ -945,23 +933,23 @@ function get_people() {
         },
         {
             "name": "TheSecondTry (luigidasonic)",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "this is police",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Tillerson",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "tjk",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Tomothy",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Tonjiru",
@@ -969,27 +957,27 @@ function get_people() {
         },
         {
             "name": "Tonkao87",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Toogs",
-            "roles": [ "SMG" ]
+            "roles": ["SMG"]
         },
         {
             "name": "tormi",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "Unease",
-            "roles": [ "Minecraft" ]
+            "roles": ["Minecraft"]
         },
         {
             "name": "usernameispassword",
-            "roles": [ "SMG" ]
+            "roles": ["SMG"]
         },
         {
             "name": "Vbhnkl",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Vexxter",
@@ -997,7 +985,7 @@ function get_people() {
         },
         {
             "name": "VTMagno",
-            "roles": [ "SM64DS" ]
+            "roles": ["SM64DS"]
         },
         {
             "name": "Windows X",
@@ -1008,7 +996,7 @@ function get_people() {
         },
         {
             "name": "Wizardo",
-            "roles": [ "BfBB" ]
+            "roles": ["BfBB"]
         },
         {
             "name": "WowYouro",
@@ -1022,7 +1010,7 @@ function get_people() {
         },
         {
             "name": "Yentl",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "yesno",
@@ -1030,7 +1018,7 @@ function get_people() {
         },
         {
             "name": "Zappg",
-            "roles": [ "MKWii" ]
+            "roles": ["MKWii"]
         },
         {
             "name": "zcarp7220",
@@ -1038,7 +1026,7 @@ function get_people() {
         },
         {
             "name": "Zerolin (nathan10nathan)",
-            "roles": [ "SM64" ]
+            "roles": ["SM64"]
         },
         {
             "name": "Beluga",
@@ -1056,7 +1044,7 @@ function get_people() {
         },
         {
             name: "Spacewhale",
-            roles: [ "MKWii" ]
+            roles: ["MKWii"]
         },
         {
             name: "thomas",
@@ -1076,6 +1064,58 @@ function get_people() {
         },
         {
             name: "Marth",
+            roles: ["MKWii"]
+        },
+        {
+            name: "G-Force",
+            roles: ["MKWii"]
+        },
+        {
+            name: "brooke",
+            roles: ["MKWii"]
+        },
+        {
+            name: "AlmostTWD98",
+            roles: ["MKWii"]
+        },
+        {
+            name: "FalB",
+            roles: ["MKWii"]
+        },
+        {
+            name: "GaelLazerYT",
+            roles: ["MKWii"]
+        },
+        {
+            name: "Colt",
+            roles: ["MKWii"]
+        },
+        {
+            name: "aaron",
+            roles: ["MKWii"]
+        },
+        {
+            name: "Firefanged",
+            roles: ["MKWii"]
+        },
+        {
+            name: "Sparky",
+            roles: ["MKWii"]
+        },
+        {
+            name: "Fire05",
+            roles: ["MKWii"]
+        },
+        {
+            name: "marvus",
+            roles: ["MKWii"]
+        },
+        {
+            name: "CCB",
+            roles: ["MKWii"]
+        },
+        {
+            name: "Hibyehello",
             roles: ["MKWii"]
         }
     ]

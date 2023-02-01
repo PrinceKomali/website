@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("/UbuntuMono.ttf");
+}
 body {
     background-color: #333;
     color: #fff;
@@ -72,4 +76,13 @@ select {
     display: inline-block;
     width: 1em;
     height: 1em;
+}
+.task_img {
+    border-radius: .2em;
+    max-width: 75%;
+}
+code {
+    background-color: #222a;
+    padding: 3px;
+    font-family: "Ubuntu Mono", monospace;
 }

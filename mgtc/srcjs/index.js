@@ -15,11 +15,17 @@ window.onload = _ => {
     load_task(n);
     
 }
+select.onchange = function () {
+    load_task(parseInt(select.value.split(" ").pop()))
+}
 function load_task(n) {
     // I could use eval but nah
     switch(n) {
         case 1:
             task_1();
+            break;
+        case 2:
+            task_2();
             break;
     }
 }

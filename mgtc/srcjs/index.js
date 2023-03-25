@@ -27,5 +27,11 @@ function load_task(n) {
         case 2:
             task_2();
             break;
+        case 3:
+            task_3();
+            break;
+        case 4:
+            task_4();
+            break;
     }
 }

@@ -63,6 +63,7 @@ hr {
 }
 @font-face {font-family: Calamity;src: url(Calamity-Regular.otf);}
 @font-face {font-family: "Calamity Bold";src: url(CALAMITY-BOLD.TTF);}
+@font-face {font-family: "Ubunto Mono";src: url(UbuntuMono.ttf);}
 .big1 {
   font-size: 60px;
   margin-top: 50px;  

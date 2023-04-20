@@ -1,6 +1,21 @@
+:root {
+ --color-bg: #FFF;
+ --color-fg: #000;
+ --color-button-fg: #1a7ce2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #222;
+    --color-fg: #FFF;
+    --color-button-fg: #cccfff;
+  }
+}
+
 button {
     border-color: #1a7ce2;
-    background-color: #eeefff;
+    background-color: #333444;
+    color: var(--color-fg);
     font-family: 'Monospace','sans-serif';
     font-style: italic;
     font-weight: bold;
@@ -28,8 +43,8 @@ button {
     margin-right: calc(1vw + 5px);;
 }
 
-a:-webkit-any-link {
-    color: #1a7ce2;
+a {
+    color: var(--color-button-fg) !important;
 }
 
 hr {
@@ -37,7 +52,8 @@ hr {
     margin-bottom: 30px;
 }
 .background {
-    filter: sepia(100%) saturate(300%) brightness(50%) hue-rotate(198deg);
+    filter: brightness(50%);
+    /* filter: sepia(100%) saturate(300%) brightness(50%) hue-rotate(198deg); */
     min-height: 100%;
     min-width: 100%;
     position: fixed;
@@ -77,15 +93,15 @@ body {
     margin: 0 0 0 0;
     padding: 10px;
     /* width: 45rem;*/
-    background-color: white;
+    background-color: var(--color-bg);
     border-radius: 10px;
 
 
     box-sizing: border-box;
     border-style: solid;
-    border-color: white;
+    border-color: var(--color-bg);
     border-width: 0 .2rem .2rem .2rem;
-
+    color: var(--color-fg);
     line-height: 28px;
 
 

@@ -82,1138 +82,1033 @@ function load_task(n) {
         case 4:
             task_4();
             break;
+        case 5:
+            task_5();
+            break;
     }
 }
 
 // end srcjs/index.js
 // start srcjs/num_tasks.js
-function num_tasks() { return 4; }
+function num_tasks() { return 5; }
 
 // end srcjs/num_tasks.js
 // start srcjs/people.js
 function get_people() {
-    return [{
-            "name": "ERGC | Xander",
-            "roles": [
-                "SMG",
-                "SM64"
-            ]
-        },
-        {
-            "name": "Adeal",
-            "roles": [
-                "SM64DS",
-                "SM64"
-            ]
-        },
-        {
-            "name": "Chunk",
-            "roles": ["BfBB"]
-        },
-        {
-            "name": "Burpman",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "Arkes",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "Arthur - GT",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "ATG",
-            "roles": []
-        },
-        {
-            "name": "averge11",
-            "roles": [
-                "SMB1/2J",
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "benjae",
-            "roles": [
-                "Trackmania",
-                "Minecraft"
-            ]
-        },
-        {
-            "name": "BikerBones",
-            "roles": [
-                "SM64DS",
-                "BfBB",
-                "SM64"
-            ]
-        },
-        {
-            "name": "BillyWAR",
-            "roles": [
-                "SMG",
-                "SM64"
-            ]
-        },
-        {
-            "name": "Booshi",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Brokami",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Carl-bot",
-            "roles": [
-                "carl-bot"
-            ]
-        },
-        {
-            "name": "Citrinitas",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "cookievm",
-            "roles": [
-                "MKWii",
-                "SMG",
-                "Minecraft"
-            ]
-        },
-        {
-            "name": "Crackhex",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "d3rpybi11z",
-            "roles": []
-        },
-        {
-            "name": "darthfrongo",
-            "roles": ["BfBB"]
-        },
-        {
-            "name": "DavidYogi",
-            "roles": ["BfBB"]
-        },
-        {
-            "name": "DwainiumB",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Eribetra",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Experge25A",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "FallBackITA27",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Gaberboo",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Gaminator",
-            "roles": [
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "GlitchGod",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "glug27",
-            "roles": []
-        },
-        {
-            "name": "Gryzak",
-            "roles": [
-                "SMB1/2J",
-                "SM64"
-            ]
-        },
-        {
-            "name": "HGFRINK27",
-            "roles": []
-        },
-        {
-            "name": "hoogachakka",
-            "roles": ["SM64DS"]
-        },
-        {
-            "name": "Idonthaveagun",
-            "roles": []
-        },
-        {
-            "name": "JRTRCT",
-            "roles": []
-        },
-        {
-            "name": "Jsap",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "KaiMK",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Kim",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "Komali",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "LAze",
-            "roles": []
-        },
-        {
-            "name": "leader",
-            "roles": [
-                "MKWii",
-                "Trackmania",
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "LirWm",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Lud",
-            "roles": ["Minecraft"]
-        },
-        {
-            "name": "maB_",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "Malleo",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Maximiliano",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Memphote1246",
-            "roles": []
-        },
-        {
-            "name": "Meowximum",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Miku",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "mine_pvpkill",
-            "roles": [
-                "MKWii",
-                "Minecraft"
-            ]
-        },
-        {
-            "name": "Minty",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Mr. Frosty",
-            "roles": [
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "Noah-willy",
-            "roles": [
-                "MKWii"
-            ]
-        },
-        {
-            "name": "Noci27",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "NOKKY",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "OliverSR",
-            "roles": ["Minecraft"]
-        },
-        {
-            "name": "MCPfannkuchenYT",
-            "roles": ["Minecraft"]
-        },
-        {
-            "name": "Pearce",
-            "roles": []
-        },
-        {
-            "name": "Poguin",
-            "roles": [
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "Rewan Demontay",
-            "roles": []
-        },
-        {
-            "name": "Rogue",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "sear",
-            "roles": [
-                "MKWii",
-                "SMB1/2J",
-                "SM64"
-            ]
-        },
-        {
-            "name": "ShadoXFM",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Shweetz",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "Skypeerer",
-            "roles": [
-                "MKWii",
-                "BfBB",
-                "SMG"
-            ]
-        },
-        {
-            "name": "Sonk",
-            "roles": []
-        },
-        {
-            "name": "Splooze",
-            "roles": []
-        },
-        {
-            "name": "Stuntlover",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "threadd",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "UsernamesAreHard",
-            "roles": []
-        },
-        {
-            "name": "UwUme",
-            "roles": []
-        },
-        {
-            "name": "vabold",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Wade7",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "warmCabin",
-            "roles": []
-        },
-        {
-            "name": "xLeLucaus",
-            "roles": []
-        },
-        {
-            "name": "xnikmkw",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Yoshi",
-            "roles": [
-                "MKWii",
-                "SMB1/2J"
-            ]
-        },
-        {
-            "name": "Zyon",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "小貓與蜜糖",
-            "roles": []
-        },
-        {
-            "name": "Mizumaririn",
-            "roles": [
-                "SMB1/2J",
-                "SM64"
-            ]
-        },
-        {
-            "name": "!Hibyehello",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "108Pi",
-            "roles": [
-                "SMB1/2J"
-            ]
-        },
-        {
-            "name": "??????",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Alexpalix1",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "AlmostTWD98»",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Alpha97",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "ancient",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "ashggg",
-            "roles": []
-        },
-        {
-            "name": "Aston",
-            "roles": ["Minecraft"]
-        },
-        {
-            "name": "AStrongGuy",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Aylx",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "Battery",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "BirdBanana",
-            "roles": [
-                "Red Ball",
-                "SM64"
-            ]
-        },
-        {
-            "name": "Blazethe6",
-            "roles": []
-        },
-        {
-            "name": "bobbybob",
-            "roles": ["SM64DS"]
-        },
-        {
-            "name": "Broxzier",
-            "roles": []
-        },
-        {
-            "name": "bruhmoment",
-            "roles": [
-                "SMB1/2J"
-            ]
-        },
-        {
-            "name": "Cabi",
-            "roles": [
-                "SM64DS",
-                "MKWii",
-                "SM64"
-            ]
-        },
-        {
-            "name": "CHARL1E",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "chbld",
-            "roles": [
-                "SMB1/2J"
-            ]
-        },
-        {
-            "name": "Chocolatemilk",
-            "roles": []
-        },
-        {
-            "name": "chriss",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "combo_pig38 alt",
-            "roles": []
-        },
-        {
-            "name": "Cookie Eater",
-            "roles": [
-                "Red Ball"
-            ]
-        },
-        {
-            "name": "Coolestkid555",
-            "roles": []
-        },
-        {
-            "name": "CrashKenny",
-            "roles": []
-        },
-        {
-            "name": "CrizpyCheese",
-            "roles": ["Trackmania"]
-        },
-        {
-            "name": "cryptanalyst",
-            "roles": []
-        },
-        {
-            "name": "César",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "DanPark/DeRockProject",
-            "roles": [
-                "SMG",
-                "SM64"
-            ]
-        },
-        {
-            "name": "Dark-Crystal",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "DarkNight3141 (Superdavo0001)",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "DashQC",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "deleted",
-            "roles": []
-        },
-        {
-            "name": "DelphiX",
-            "roles": [
-                "SMB1/2J"
-            ]
-        },
-        {
-            "name": "Dyllon Stejakoski",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "Ejay B",
-            "roles": ["MKWii"]
-        },
-        {
-            "name": "emoyosh",
-            "roles": []
-        },
-        {
-            "name": "ErGinger",
-            "roles": []
-        },
-        {
-            "name": "Euler's Number",
-            "roles": []
-        },
-        {
-            "name": "exopta",
-            "roles": []
-        },
-        {
-            "name": "faizthemfsurprise",
-            "roles": []
-        },
-        {
-            "name": "FazDag",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "FeijoadaMolhada",
-            "roles": ["SM64"]
-        },
-        {
-            "name": "fella8",
-            "roles": [
-                "SMB1/2J"
-            ]
-        },
+    return [
         {
-            "name": "fernandothehorse",
-            "roles": []
+            name: "ERGC | Xander",
+            roles: ["SMG", "SM64"],
         },
         {
-            "name": "monion",
-            "roles": ["MKWii"]
+            name: "Adeal",
+            roles: ["SM64DS", "SM64"],
         },
         {
-            "name": "FireBreather",
-            "roles": ["SM64"]
+            name: "Chunk",
+            roles: ["BfBB"],
         },
         {
-            "name": "flurry",
-            "roles": ["MKWii"]
+            name: "Burpman",
+            roles: ["Trackmania"],
         },
         {
-            "name": "Frame",
-            "roles": ["SM64"]
+            name: "Arkes",
+            roles: ["Trackmania"],
         },
         {
-            "name": "FriendsWithFun",
-            "roles": ["MKWii"]
+            name: "Arthur - GT",
+            roles: ["MKWii"],
         },
         {
-            "name": "galoomba",
-            "roles": ["SM64"]
+            name: "ATG",
+            roles: [],
         },
         {
-            "name": "Hl M0M",
-            "roles": []
+            name: "averge11",
+            roles: ["SMB1/2J", "Red Ball"],
         },
         {
-            "name": "Iam0",
-            "roles": []
+            name: "benjae",
+            roles: ["Trackmania", "Minecraft"],
         },
         {
-            "name": "Ianwubby",
-            "roles": []
+            name: "BikerBones",
+            roles: ["SM64DS", "BfBB", "SM64"],
         },
         {
-            "name": "jcplay15",
-            "roles": []
+            name: "BillyWAR",
+            roles: ["SMG", "SM64"],
         },
         {
-            "name": "Jeffitus",
-            "roles": [
-                "SMB1/2J"
-            ]
+            name: "Booshi",
+            roles: ["MKWii"],
         },
         {
-            "name": "Johnelway76",
-            "roles": ["SM64"]
+            name: "Brokami",
+            roles: ["SM64"],
         },
         {
-            "name": "Jthespedcuber",
-            "roles": []
+            name: "Carl-bot",
+            roles: ["carl-bot"],
         },
         {
-            "name": "Kannolotl",
-            "roles": [
-                "Minecraft",
-                "SM64"
-            ]
+            name: "Citrinitas",
+            roles: ["MKWii"],
         },
         {
-            "name": "kierio04",
-            "roles": [
-                "MKWii",
-                "SMB1/2J",
-                "SM64"
-            ]
+            name: "cookievm",
+            roles: ["MKWii", "SMG", "Minecraft"],
         },
         {
-            "name": "[TAS] - λρ◆NJA",
-            "roles": ["MKWii"]
+            name: "Crackhex",
+            roles: ["SM64"],
         },
         {
-            "name": "kristian",
-            "roles": []
+            name: "d3rpybi11z",
+            roles: [],
         },
         {
-            "name": "Ktas",
-            "roles": []
+            name: "darthfrongo",
+            roles: ["BfBB"],
         },
         {
-            "name": "LaseyApow",
-            "roles": ["SM64"]
+            name: "DavidYogi",
+            roles: ["BfBB"],
         },
         {
-            "name": "Leon_green",
-            "roles": [
-                "MKWii",
-                "Minecraft"
-            ]
+            name: "DwainiumB",
+            roles: ["MKWii"],
         },
         {
-            "name": "LeonGamer_real",
-            "roles": ["SM64"]
+            name: "Eribetra",
+            roles: ["SM64"],
         },
         {
-            "name": "LetsGoAway",
-            "roles": ["SM64"]
+            name: "Experge25A",
+            roles: ["SM64"],
         },
         {
-            "name": "lordmagecar",
-            "roles": []
+            name: "FallBackITA27",
+            roles: ["MKWii"],
         },
         {
-            "name": "LoResEvil",
-            "roles": []
+            name: "Gaberboo",
+            roles: ["MKWii"],
         },
         {
-            "name": "LRFLEW",
-            "roles": ["SM64"]
+            name: "Gaminator",
+            roles: ["Red Ball"],
         },
         {
-            "name": "LSLees_",
-            "roles": ["BfBB"]
+            name: "GlitchGod",
+            roles: ["SM64"],
         },
         {
-            "name": "Lukalyc",
-            "roles": []
+            name: "glug27",
+            roles: [],
         },
         {
-            "name": "M4rkgmd",
-            "roles": ["MKWii"]
+            name: "Gryzak",
+            roles: ["SMB1/2J", "SM64"],
         },
         {
-            "name": "Madghostek",
-            "roles": ["SM64"]
+            name: "HGFRINK27",
+            roles: [],
         },
         {
-            "name": "MaG_NITud3",
-            "roles": ["Minecraft"]
+            name: "hoogachakka",
+            roles: ["SM64DS"],
         },
         {
-            "name": "mcw4v3-x",
-            "roles": []
+            name: "Idonthaveagun",
+            roles: [],
         },
         {
-            "name": "MGMLeo",
-            "roles": []
+            name: "JRTRCT",
+            roles: [],
         },
         {
-            "name": "mkwLuke",
-            "roles": ["MKWii"]
+            name: "Jsap",
+            roles: ["Trackmania"],
         },
         {
-            "name": "mnmcat",
-            "roles": []
+            name: "KaiMK",
+            roles: ["MKWii"],
         },
         {
-            "name": "MonsterDruide1",
-            "roles": []
+            name: "Kim",
+            roles: ["Trackmania"],
         },
         {
-            "name": "Mr.Wolf2007yrs",
-            "roles": []
+            name: "Komali",
+            roles: ["SM64"],
         },
         {
-            "name": "Nerdician",
-            "roles": ["SM64"]
+            name: "LAze",
+            roles: [],
         },
         {
-            "name": "novego",
-            "roles": [
-                "Red Ball"
-            ]
+            name: "leader",
+            roles: ["MKWii", "Trackmania", "Red Ball"],
         },
         {
-            "name": "nshade_",
-            "roles": []
+            name: "LirWm",
+            roles: ["SM64"],
         },
         {
-            "name": "Okopatie",
-            "roles": []
+            name: "Lud",
+            roles: ["Minecraft"],
         },
         {
-            "name": "p_yoshi",
-            "roles": ["SM64DS"]
+            name: "maB_",
+            roles: ["Trackmania"],
         },
         {
-            "name": "param_r06",
-            "roles": []
+            name: "Malleo",
+            roles: ["MKWii"],
         },
         {
-            "name": "Patinho",
-            "roles": []
+            name: "Maximiliano",
+            roles: ["MKWii"],
         },
         {
-            "name": "PCK",
-            "roles": []
+            name: "Memphote1246",
+            roles: [],
         },
         {
-            "name": "PurdyKillsYou",
-            "roles": []
+            name: "Meowximum",
+            roles: ["SM64"],
         },
         {
-            "name": "PurpleJuiceBox",
-            "roles": [
-                "Red Ball",
-                "SM64"
-            ]
+            name: "Miku",
+            roles: ["Trackmania"],
         },
         {
-            "name": "Pyraminxstars",
-            "roles": ["MKWii"]
+            name: "mine_pvpkill",
+            roles: ["MKWii", "Minecraft"],
         },
         {
-            "name": "queenbea",
-            "roles": [
-                "Red Ball"
-            ]
+            name: "Minty",
+            roles: ["SM64"],
         },
         {
-            "name": "Rayman Omega Player",
-            "roles": []
+            name: "Mr. Frosty",
+            roles: ["Red Ball"],
         },
         {
-            "name": "Razor",
-            "roles": []
+            name: "Noah-willy",
+            roles: ["MKWii"],
         },
         {
-            "name": "Really_Tall",
-            "roles": ["SM64DS"]
+            name: "Noci27",
+            roles: ["SM64"],
         },
         {
-            "name": "reiner",
-            "roles": ["MKWii"]
+            name: "NOKKY",
+            roles: ["MKWii"],
         },
         {
-            "name": "RepressedButton",
-            "roles": []
+            name: "OliverSR",
+            roles: ["Minecraft"],
         },
         {
-            "name": "RMED24",
-            "roles": ["MKWii"]
+            name: "MCPfannkuchenYT",
+            roles: ["Minecraft"],
         },
         {
-            "name": "RoBoBoB",
-            "roles": []
+            name: "Pearce",
+            roles: [],
         },
         {
-            "name": "RS",
-            "roles": ["MKWii"]
+            name: "Poguin",
+            roles: ["Red Ball"],
         },
         {
-            "name": "RSW",
-            "roles": ["SM64"]
+            name: "Rewan Demontay",
+            roles: [],
         },
         {
-            "name": "ruadath",
-            "roles": []
+            name: "Rogue",
+            roles: ["MKWii"],
         },
         {
-            "name": "Rxser",
-            "roles": []
+            name: "sear",
+            roles: ["MKWii", "SMB1/2J", "SM64"],
         },
         {
-            "name": "Ryzonno",
-            "roles": ["SM64"]
+            name: "ShadoXFM",
+            roles: ["SM64"],
         },
         {
-            "name": "SadEgg",
-            "roles": [
-                "MKWii",
-                "SMG",
-                "Minecraft"
-            ]
+            name: "Shweetz",
+            roles: ["Trackmania"],
         },
         {
-            "name": "SageKitten",
-            "roles": [
-                "Red Ball"
-            ]
+            name: "Skypeerer",
+            roles: ["MKWii", "BfBB", "SMG"],
         },
         {
-            "name": "Scribble",
-            "roles": ["Minecraft"]
+            name: "Sonk",
+            roles: [],
         },
         {
-            "name": "Shadow64",
-            "roles": []
+            name: "Splooze",
+            roles: [],
         },
         {
-            "name": "shatterdpixel",
-            "roles": []
+            name: "Stuntlover",
+            roles: ["Trackmania"],
         },
         {
-            "name": "slither",
-            "roles": [
-                "SMB1/2J",
-                "SM64"
-            ]
+            name: "threadd",
+            roles: ["Trackmania"],
         },
         {
-            "name": "Smiley",
-            "roles": ["BfBB"]
+            name: "UsernamesAreHard",
+            roles: [],
         },
         {
-            "name": "Sniperlol",
-            "roles": ["MKWii"]
+            name: "UwUme",
+            roles: [],
         },
         {
-            "name": "Snowookis",
-            "roles": []
+            name: "vabold",
+            roles: ["MKWii"],
         },
         {
-            "name": "Soulbest",
-            "roles": ["Minecraft"]
+            name: "Wade7",
+            roles: ["SM64"],
         },
         {
-            "name": "Spear960",
-            "roles": ["MKWii"]
+            name: "warmCabin",
+            roles: [],
         },
         {
-            "name": "Speedrun",
-            "roles": []
+            name: "xLeLucaus",
+            roles: [],
         },
         {
-            "name": "Sqidzilla",
-            "roles": []
+            name: "xnikmkw",
+            roles: ["MKWii"],
         },
         {
-            "name": "Sreekar",
-            "roles": ["MKWii"]
+            name: "Yoshi",
+            roles: ["MKWii", "SMB1/2J"],
         },
         {
-            "name": "Starline",
-            "roles": [
-                "Red Ball"
-            ]
+            name: "Zyon",
+            roles: ["SM64"],
         },
         {
-            "name": "Superemcow",
-            "roles": []
+            name: "小貓與蜜糖",
+            roles: [],
         },
         {
-            "name": "SuperM789",
-            "roles": ["SM64"]
+            name: "Mizumaririn",
+            roles: ["SMB1/2J", "SM64"],
         },
         {
-            "name": "Tets",
-            "roles": []
+            name: "!Hibyehello",
+            roles: ["MKWii"],
         },
         {
-            "name": "ThatsSlick",
-            "roles": ["MKWii"]
+            name: "108Pi",
+            roles: ["SMB1/2J"],
         },
         {
-            "name": "The Tactical TASer",
-            "roles": ["MKWii"]
+            name: "??????",
+            roles: ["MKWii"],
         },
         {
-            "name": "TheGreenPig321",
-            "roles": [
-                "MKWii",
-                "Minecraft"
-            ]
+            name: "Alexpalix1",
+            roles: ["SM64"],
         },
         {
-            "name": "TheSecondTry (luigidasonic)",
-            "roles": ["SM64"]
+            name: "AlmostTWD98»",
+            roles: ["MKWii"],
         },
         {
-            "name": "this is police",
-            "roles": ["MKWii"]
+            name: "Alpha97",
+            roles: ["SM64"],
         },
         {
-            "name": "Tillerson",
-            "roles": ["Minecraft"]
+            name: "ancient",
+            roles: ["MKWii"],
         },
         {
-            "name": "tjk",
-            "roles": ["SM64"]
+            name: "ashggg",
+            roles: [],
         },
         {
-            "name": "Tomothy",
-            "roles": ["MKWii"]
+            name: "Aston",
+            roles: ["Minecraft"],
         },
         {
-            "name": "Tonjiru",
-            "roles": []
+            name: "AStrongGuy",
+            roles: ["SM64"],
         },
         {
-            "name": "Tonkao87",
-            "roles": ["MKWii"]
+            name: "Aylx",
+            roles: ["MKWii"],
         },
         {
-            "name": "Toogs",
-            "roles": ["SMG"]
+            name: "Battery",
+            roles: ["SM64"],
         },
         {
-            "name": "tormi",
-            "roles": ["MKWii"]
+            name: "BirdBanana",
+            roles: ["Red Ball", "SM64"],
         },
         {
-            "name": "Unease",
-            "roles": ["Minecraft"]
+            name: "Blazethe6",
+            roles: [],
         },
         {
-            "name": "usernameispassword",
-            "roles": ["SMG"]
+            name: "bobbybob",
+            roles: ["SM64DS"],
         },
         {
-            "name": "Vbhnkl",
-            "roles": ["SM64"]
+            name: "Broxzier",
+            roles: [],
         },
         {
-            "name": "Vexxter",
-            "roles": []
+            name: "bruhmoment",
+            roles: ["SMB1/2J"],
         },
         {
-            "name": "VTMagno",
-            "roles": ["SM64DS"]
+            name: "Cabi",
+            roles: ["SM64DS", "MKWii", "SM64"],
         },
         {
-            "name": "Windows X",
-            "roles": [
-                "SMB1/2J",
-                "SM64"
-            ]
+            name: "CHARL1E",
+            roles: ["MKWii"],
         },
         {
-            "name": "Wizardo",
-            "roles": ["BfBB"]
+            name: "chbld",
+            roles: ["SMB1/2J"],
         },
         {
-            "name": "WowYouro",
-            "roles": [
-                "Red Ball"
-            ]
+            name: "Chocolatemilk",
+            roles: [],
         },
         {
-            "name": "YellowSkarmory",
-            "roles": []
+            name: "chriss",
+            roles: ["MKWii"],
         },
         {
-            "name": "Yentl",
-            "roles": ["MKWii"]
+            name: "combo_pig38 alt",
+            roles: [],
         },
         {
-            "name": "yesno",
-            "roles": []
+            name: "Cookie Eater",
+            roles: ["Red Ball"],
         },
         {
-            "name": "Zappg",
-            "roles": ["MKWii"]
+            name: "Coolestkid555",
+            roles: [],
         },
         {
-            "name": "zcarp7220",
-            "roles": []
+            name: "CrashKenny",
+            roles: [],
         },
         {
-            "name": "Zerolin (nathan10nathan)",
-            "roles": ["SM64"]
+            name: "CrizpyCheese",
+            roles: ["Trackmania"],
         },
         {
-            "name": "Beluga",
-            "roles": [
-                "SM64DS",
-                "MKWii",
-                "BfBB",
-                "SMG",
-                "SMB1/2J",
-                "Trackmania",
-                "Red Ball",
-                "Minecraft",
-                "SM64"
-            ]
+            name: "cryptanalyst",
+            roles: [],
         },
         {
-            name: "Spacewhale",
-            roles: ["MKWii"]
+            name: "César",
+            roles: ["MKWii"],
         },
         {
-            name: "thomas",
-            roles: ["MKWii"]
+            name: "DanPark/DeRockProject",
+            roles: ["SMG", "SM64"],
         },
         {
-            name: "Jellopuff",
-            roles: ["MKWii"]
+            name: "Dark-Crystal",
+            roles: ["SM64"],
         },
         {
-            name: "CampbellMop",
-            roles: ["MKWii"]
+            name: "DarkNight3141 (Superdavo0001)",
+            roles: ["SM64"],
         },
         {
             name: "DashQC",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
+        },
+        {
+            name: "deleted",
+            roles: [],
+        },
+        {
+            name: "DelphiX",
+            roles: ["SMB1/2J"],
+        },
+        {
+            name: "Dyllon Stejakoski",
+            roles: ["SM64"],
+        },
+        {
+            name: "Ejay B",
+            roles: ["MKWii"],
+        },
+        {
+            name: "emoyosh",
+            roles: [],
+        },
+        {
+            name: "ErGinger",
+            roles: [],
+        },
+        {
+            name: "Euler's Number",
+            roles: [],
+        },
+        {
+            name: "exopta",
+            roles: [],
+        },
+        {
+            name: "faizthemfsurprise",
+            roles: [],
+        },
+        {
+            name: "FazDag",
+            roles: ["SM64"],
+        },
+        {
+            name: "FeijoadaMolhada",
+            roles: ["SM64"],
+        },
+        {
+            name: "fella8",
+            roles: ["SMB1/2J"],
+        },
+        {
+            name: "fernandothehorse",
+            roles: [],
+        },
+        {
+            name: "monion",
+            roles: ["MKWii"],
+        },
+        {
+            name: "FireBreather",
+            roles: ["SM64"],
+        },
+        {
+            name: "flurry",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Frame",
+            roles: ["SM64"],
+        },
+        {
+            name: "FriendsWithFun",
+            roles: ["MKWii"],
+        },
+        {
+            name: "galoomba",
+            roles: ["SM64"],
+        },
+        {
+            name: "Hl M0M",
+            roles: [],
+        },
+        {
+            name: "Iam0",
+            roles: [],
+        },
+        {
+            name: "Ianwubby",
+            roles: [],
+        },
+        {
+            name: "jcplay15",
+            roles: [],
+        },
+        {
+            name: "Jeffitus",
+            roles: ["SMB1/2J"],
+        },
+        {
+            name: "Johnelway76",
+            roles: ["SM64"],
+        },
+        {
+            name: "Jthespedcuber",
+            roles: [],
+        },
+        {
+            name: "Kannolotl",
+            roles: ["Minecraft", "SM64"],
+        },
+        {
+            name: "kierio04",
+            roles: ["MKWii", "SMB1/2J", "SM64"],
+        },
+        {
+            name: "[TAS] - λρ◆NJA",
+            roles: ["MKWii"],
+        },
+        {
+            name: "kristian",
+            roles: [],
+        },
+        {
+            name: "Ktas",
+            roles: [],
+        },
+        {
+            name: "LaseyApow",
+            roles: ["SM64"],
+        },
+        {
+            name: "Leon_green",
+            roles: ["MKWii", "Minecraft"],
+        },
+        {
+            name: "LeonGamer_real",
+            roles: ["SM64"],
+        },
+        {
+            name: "LetsGoAway",
+            roles: ["SM64"],
+        },
+        {
+            name: "lordmagecar",
+            roles: [],
+        },
+        {
+            name: "LoResEvil",
+            roles: [],
+        },
+        {
+            name: "LRFLEW",
+            roles: ["SM64"],
+        },
+        {
+            name: "LSLees_",
+            roles: ["BfBB"],
+        },
+        {
+            name: "Lukalyc",
+            roles: [],
+        },
+        {
+            name: "M4rkgmd",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Madghostek",
+            roles: ["SM64"],
+        },
+        {
+            name: "MaG_NITud3",
+            roles: ["Minecraft"],
+        },
+        {
+            name: "mcw4v3-x",
+            roles: [],
+        },
+        {
+            name: "MGMLeo",
+            roles: [],
+        },
+        {
+            name: "mkwLuke",
+            roles: ["MKWii"],
+        },
+        {
+            name: "mnmcat",
+            roles: [],
+        },
+        {
+            name: "MonsterDruide1",
+            roles: [],
+        },
+        {
+            name: "Mr.Wolf2007yrs",
+            roles: [],
+        },
+        {
+            name: "Nerdician",
+            roles: ["SM64"],
+        },
+        {
+            name: "novego",
+            roles: ["Red Ball"],
+        },
+        {
+            name: "nshade_",
+            roles: [],
+        },
+        {
+            name: "Okopatie",
+            roles: [],
+        },
+        {
+            name: "p_yoshi",
+            roles: ["SM64DS"],
+        },
+        {
+            name: "param_r06",
+            roles: [],
+        },
+        {
+            name: "Patinho",
+            roles: [],
+        },
+        {
+            name: "PCK",
+            roles: [],
+        },
+        {
+            name: "PurdyKillsYou",
+            roles: [],
+        },
+        {
+            name: "PurpleJuiceBox",
+            roles: ["Red Ball", "SM64"],
+        },
+        {
+            name: "Pyraminxstars",
+            roles: ["MKWii"],
+        },
+        {
+            name: "queenbea",
+            roles: ["Red Ball"],
+        },
+        {
+            name: "Rayman Omega Player",
+            roles: [],
+        },
+        {
+            name: "Razor",
+            roles: [],
+        },
+        {
+            name: "Really_Tall",
+            roles: ["SM64DS"],
+        },
+        {
+            name: "reiner",
+            roles: ["MKWii"],
+        },
+        {
+            name: "RepressedButton",
+            roles: [],
+        },
+        {
+            name: "RMED24",
+            roles: ["MKWii"],
+        },
+        {
+            name: "RoBoBoB",
+            roles: [],
+        },
+        {
+            name: "RS",
+            roles: ["MKWii"],
+        },
+        {
+            name: "RSW",
+            roles: ["SM64"],
+        },
+        {
+            name: "ruadath",
+            roles: [],
+        },
+        {
+            name: "Rxser",
+            roles: [],
+        },
+        {
+            name: "Ryzonno",
+            roles: ["SM64"],
+        },
+        {
+            name: "SadEgg",
+            roles: ["MKWii", "SMG", "Minecraft"],
+        },
+        {
+            name: "SageKitten",
+            roles: ["Red Ball"],
+        },
+        {
+            name: "Scribble",
+            roles: ["Minecraft"],
+        },
+        {
+            name: "Shadow64",
+            roles: [],
+        },
+        {
+            name: "shatterdpixel",
+            roles: [],
+        },
+        {
+            name: "slither",
+            roles: ["SMB1/2J", "SM64"],
+        },
+        {
+            name: "Smiley",
+            roles: ["BfBB"],
+        },
+        {
+            name: "Sniperlol",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Snowookis",
+            roles: [],
+        },
+        {
+            name: "Soulbest",
+            roles: ["Minecraft"],
+        },
+        {
+            name: "Spear960",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Speedrun",
+            roles: [],
+        },
+        {
+            name: "Sqidzilla",
+            roles: [],
+        },
+        {
+            name: "Sreekar",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Starline",
+            roles: ["Red Ball"],
+        },
+        {
+            name: "Superemcow",
+            roles: [],
+        },
+        {
+            name: "SuperM789",
+            roles: ["SM64"],
+        },
+        {
+            name: "Tets",
+            roles: [],
+        },
+        {
+            name: "ThatsSlick",
+            roles: ["MKWii"],
+        },
+        {
+            name: "The Tactical TASer",
+            roles: ["MKWii"],
+        },
+        {
+            name: "TheGreenPig321",
+            roles: ["MKWii", "Minecraft"],
+        },
+        {
+            name: "TheSecondTry (luigidasonic)",
+            roles: ["SM64"],
+        },
+        {
+            name: "this is police",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Tillerson",
+            roles: ["Minecraft"],
+        },
+        {
+            name: "tjk",
+            roles: ["SM64"],
+        },
+        {
+            name: "Tomothy",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Tonjiru",
+            roles: [],
+        },
+        {
+            name: "Tonkao87",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Toogs",
+            roles: ["SMG"],
+        },
+        {
+            name: "tormi",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Unease",
+            roles: ["Minecraft"],
+        },
+        {
+            name: "usernameispassword",
+            roles: ["SMG"],
+        },
+        {
+            name: "Vbhnkl",
+            roles: ["SM64"],
+        },
+        {
+            name: "Vexxter",
+            roles: [],
+        },
+        {
+            name: "VTMagno",
+            roles: ["SM64DS"],
+        },
+        {
+            name: "Windows X",
+            roles: ["SMB1/2J", "SM64"],
+        },
+        {
+            name: "Wizardo",
+            roles: ["BfBB"],
+        },
+        {
+            name: "WowYouro",
+            roles: ["Red Ball"],
+        },
+        {
+            name: "YellowSkarmory",
+            roles: [],
+        },
+        {
+            name: "Yentl",
+            roles: ["MKWii"],
+        },
+        {
+            name: "yesno",
+            roles: [],
+        },
+        {
+            name: "Zappg",
+            roles: ["MKWii"],
+        },
+        {
+            name: "zcarp7220",
+            roles: [],
+        },
+        {
+            name: "Zerolin (nathan10nathan)",
+            roles: ["SM64"],
+        },
+        {
+            name: "Beluga",
+            roles: [
+                "SM64DS",
+                "MKWii",
+                "BfBB",
+                "SMG",
+                "SMB1/2J",
+                "Trackmania",
+                "Red Ball",
+                "Minecraft",
+                "SM64",
+            ],
+        },
+        {
+            name: "Spacewhale",
+            roles: ["MKWii"],
+        },
+        {
+            name: "thomas",
+            roles: ["MKWii"],
+        },
+        {
+            name: "Jellopuff",
+            roles: ["MKWii"],
+        },
+        {
+            name: "CampbellMop",
+            roles: ["MKWii"],
+        },
+        {
+            name: "DashQC",
+            roles: ["MKWii"],
         },
         {
             name: "Marth",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "G-Force",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "brooke",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "AlmostTWD98",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "FalB",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "GaelLazerYT",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "Colt",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "aaron",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "Firefanged",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "Sparky",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "Fire05",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "marvus",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "CCB",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
         },
         {
             name: "Hibyehello",
-            roles: ["MKWii"]
+            roles: ["MKWii"],
+        },
+        {
+            name: "DELETE_CLUB",
+            roles: ["Trackmania"],
+        },
+        {
+            name: "maB-TM",
+            roles: ["Trackmania"],
         }
-    ]
-
+    ];
 }
+
 // end srcjs/people.js
 // start srcjs/task1.js
 function task_1() {
@@ -1749,3 +1644,145 @@ document.querySelector(".score").innerHTML = prettify_users(score_after_task);
 
 }
 // end srcjs/task4.js
+// start srcjs/task5.js
+function task_5() {
+    let task_game = "Trackmania";
+    let task_description = `Finish the linked map as quickly as possible.
+
+Your TAS does not need to beat the world record.
+The replay must be valid.
+You are <b>NOT</b> allowed to cooperate with another player.
+You are only allowed to play with a stadium car. No environment mixes. 
+
+<img class="task_img" src="/mgtc/imgs/task5_0.png">
+`;
+    let results = 
+`1st. CrizpyCheese 00:14.200
+2nd. JaV 00:15.500
+3rd. Hordas 00:24.080
+4th. DELETE_CLUB 00:24.280
+5th. Arkes 00:24.400
+6th. Mizumaririn 00:24.480
+7th. Skycrafter 00:24.500
+8th. maB-TM 00:24.560
+9th. Luka 00:24.630
+10th. MufatTMF 00:24.640
+11th. Vortex 00:24.660
+12th. LittleD3mo 00:24.910
+13th. Starline 00:25.110
+14th. ResistTM 00:25.310
+15th. BillyWAR 00:25.850
+16th. FeijoadaMolhada 00:26.130
+17th. LRFLEW 00:26.440
+18th. Chunk 00:26.490
+19th. Noci27 00:28.910
+20th. LeonGamer1707 00:33.570
+
+DQ. Adrien 9:99.999 [Run could not be played back]`
+
+    let score_after_task = 
+`1st. Mizumaririn 130.4
+2nd. FeijoadaMolhada 114.0
+3rd. Chunk 103.2
+4th. Starline 97.9
+5th. Booshi 82.8
+6th. BillyWAR 82.3
+7th. LRFLEW 57.2
+8th. DashQC 55.8
+9th. kierio04 55.5
+10th. Spacewhale 50.0
+10th. Really_Tall 50.0
+10th. CrizpyCheese 50.0
+13th. thomas 47.3
+14th. roblox8192 46.2
+15th. CampbellMop 44.9
+16th. JaV 43.0
+17th. Jellopuff 42.5
+18th. Adeal 42.3
+19th. domrrred 39.7
+20th. Smiley 39.3
+21st. RawEggEnjoyer 38.2
+22nd. Hordas 37.2
+23rd. Noci27 37.1
+24th. InsaneJetman 36.9
+25th. flurry 34.7
+26th. BirdBanana 34.4
+26th. Taco Pinky 34.4
+28th. Pyraminxstars 33.0
+29th. Zappg 32.7
+30th. KaiMK 32.6
+31st. DELETE_CLUB 32.4
+32nd. CHARL1E 31.5
+33rd. SkicoNow 31.0
+34th. fella8 30.2
+35th. Marth 30.0
+36th. Soulbest 28.6
+37th. Arkes 28.4
+38th. Frame 28.1
+38th. queenbea 28.1
+40th. Vortex 28.0
+41st. Komali 27.6
+41st. Mr. Frosty 27.6
+43rd. Tomothy 27.4
+44th. Razor 26.5
+45th. this is police 25.9
+46th. 108Pi 25.2
+47th. César 25.1
+48th. Eribetra 24.9
+49th. p_yoshi 23.6
+50th. Cookie Eater 23.3
+51st. Skycrafter 22.4
+52nd. Firefanged 22.2
+53rd. Poguin 22.0
+53rd. ERGC | Xander 22.0
+55th. Sparky 21.4
+56th. relievedliberty 20.8
+57th. Rogue 20.6
+58th. maB-TM 20.1
+59th. marvus 19.8
+59th. Gaminator 19.8
+61st. VTMagno 18.6
+62nd. Aylx 18.5
+63rd. Luka 18.2
+64th. Fire05 17.8
+65th. icosahedron 17.0
+66th. M4rkgmd 16.7
+67th. MufatTMF 16.5
+68th. DultzyWaltzy 16.4
+69th. Skypeerer 16.1
+70th. slither 14.8
+71st. aaron 14.2
+72nd. LittleD3mo 13.8
+72nd. FalB 13.8
+74th. Windows X 13.6
+75th. tormi 13.3
+76th. Hibyehello 12.9
+77th. YG 12.2
+78th. qwertzuioppel 11.8
+79th. ResistTM 11.7
+80th. MPCGoD69 10.9
+81st. Meowximum 10.8
+82nd. Yentl 10.5
+83rd. SageKitten 10.4
+84th. Gaberboo 10.2
+85th. Sqidzilla 10.0
+86th. G-Force 9.9
+87th. brooke 9.3
+88th. bruhmoment 8.7
+89th. CaliUwU 8.5
+90th. Connor.P 8.3
+91st. leader 8.1
+92nd. Zyon 7.5
+93rd. GaelLazerYT 7.3
+94th. Colt 7.0
+95th. Bluely 6.8
+96th. LeonGamer1707 6.7
+97th. Lud 6.3 `;
+
+document.querySelector(".name").innerText = "Task 5 (" + task_game + ")";
+document.querySelector(".desc").innerHTML = task_description.replace(/\n/g,"<br>");
+document.querySelector(".results").innerHTML = prettify_users(results);
+document.querySelector(".score").innerHTML = prettify_users(score_after_task);
+
+}
+// end srcjs/task5.js

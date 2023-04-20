@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Multi-Game TAS Competition</title>
-        <link rel="icon" href="/mgtc/icon.png">
-        <link rel="stylesheet" href="/mgtc/main.css">
-    </head>
-    <body>
-        <div class="header">
-            <select></select><br>
-            
+
+<head>
+    <title>Multi-Game TAS Competition</title>
+    <link rel="icon" href="/mgtc/icon.png">
+    <link rel="stylesheet" href="/mgtc/main.css">
+    <meta name="description" content="The Multi-Game TAS Competition">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Multi-Game TAS Competition" />
+    <meta property="og:url" content="https://komali.dev/mgtc" />
+    <meta property="og:image" content="https://komali.dev/mgtc/icon.png" />
+    <meta name="theme-color" content="#1A7CE2">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+    <div class="header">
+        <select></select><br>
+
+    </div>
+    <div class="roles"></div>
+    <h1 class="name"></h1>
+    <div class="desc"></div><br>
+    <div class="box">
+        <div class="col">
+            <h2>Task Results</h2>
+            <div class='results'></div>
         </div>
-        <div class="roles"></div>
-        <h1 class="name"></h1>
-        <div class="desc"></div><br>
-        <div class="box">
-            <div class="col"><h2>Task Results</h2><div class='results'></div></div>
-            <div class="col"><h2>Score After Round</h2><div class='score'></div></div>
+        <div class="col">
+            <h2>Score After Round</h2>
+            <div class='score'></div>
         </div>
-        <script src="/mgtc/main.js"></script>
-    </body>
+    </div>
+    <script src="/mgtc/main.js"></script>
+</body>
+
 </html>

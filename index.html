@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="js/box.css" /> <!-- oops -->
     <script src="js/regex_html_parser.js"></script>
+    <script src="js/gen_bg.js"></script>
     <script src="js/drag.js"></script>
     <script src="js/alert.js"></script>
     <script src="js/specs.js"></script>
@@ -124,6 +125,13 @@
                 </div>
             </a>
             <hr />
+            <p>Blogs and Such</p>
+            <a href='blogs/haskell'>
+                <div class="widget">
+                    <span>Linking Haskell with C: The Wrong Way</span>
+                </div>
+            </a>
+            <hr />
             <p class="totk">0</p>
             <hr />
             <p>Random Buttons and Things</p>
@@ -141,19 +149,10 @@
             <p>Server Status: <span style="font-family:'Ubuntu Mono'" class="server_status">???</span></p>
             <div class="http_stella"></div>
             <script>
-                let NUMBER_OF_IMAGES = 13;
-
+                
                 window.onload = _ => {
                     document.querySelector("#flag").src = `https://flagcdn.com/w320/${['pm', 'io', 'sc'][Date.now() % 3]}.png`;
-                    let img_url = `https://komali.dev/background_images/${(Math.floor(Math.random() * NUMBER_OF_IMAGES) + 1)}.png`;
-                    let temp = new Image();
-                    temp.src = img_url;
-                    let bg = document.querySelector("#bg_img");
-                    temp.onload = _ => {
-                        bg.src = img_url;
-                        bg.classList.add('fadein');
-
-                    }
+                    gen_bg();
                     let fetch_link = "https://api.komali.dev/k2l?html=1";
                     fetch(fetch_link).then(s => {
                         let stat = document.querySelector(".server_status");

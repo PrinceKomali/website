@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Linking Haskell with C: The Wrong Way - Komali.dev</title>
+    <meta name="description" content="My journey of compiling Haskell with GCC" />
+    <!-- No idea how these things work -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://komali.dev/" />
+    <meta property="og:title" content="Komali.dev" />
+    <meta property="og:image" content="https://komali.dev/komali2Lurk.png" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/custom_hljs.css" />
+    <script src="/js/gen_bg.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/haskell.min.js"></script>
+
+
+    <style>
+        h1 {
+            font-family: 'Calamity Bold';
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="" id="bg_img" class="background" />
+    <img src="https://komali.dev/background_images/texture.png" class="background" style="opacity:.5" />
+
+    <div id="main">
+        <div style="height:35px; display:block;"></div>
+        <div id="inner">
+            <h1>Linking Haskell with C: The Wrong Way</h1>
+            Lately I've been messing with linking <code>.o</code> files produced by compilers... a lot. It all started
+            when I wanted to make an SDL project in D instead of C, which required me to make bindings for the library.
+            That mess of a project got me thinking: what other languages can I link? C and D were very easy to
+            implement, but what about others? To test this I rewrote my statusbar script (originally written in Rust) in
+            a combination of C, D, and Rust, and everything (mostly) worked without really that much effort.
+            Of course, after this I got curious: how many languages could I link at once?<br><br>
+            I created a new project, at the timed named simply "<code>o</code>", and started adding languages to it. C,
+            D, C++, Rust, Objective C, everything started out pretty well, with only a few hiccups here and there. By
+            the time I got to Ruby, I decided I wanted to try Haskell.
+
+            To quickly sum up my goal, I wanted to take these two snippets of code and combine them into one executable
+            <pre><code class="language-haskell">-- func.hs
+module S where
+foreign export ccall haskell :: IO ()
+haskell :: IO ()
+haskell = putStrLn "Sent from Haskell"
+</code></pre>
+            <pre><code class="language-c">// main.c
+int main() {
+    haskell();
+    return 0;
+}
+</code></pre>Doing a search for "embed Haskell in C" generates a bunch of results, some helpful, some not. <a
+                href="https://wiki.haskell.org/Calling_Haskell_from_C" target="_blank">The Haskell wiki's solution</a>
+            uses GHC's <code>ForeignFunctionInterface</code>, which sounded promising but seemed to only support
+            compiling your C with GHC, which was out of the question for this project as I had other languages than C to
+            add.
+            Compiling <code>func.hs</code> with <code>ghc func.hs</code> produces a <code>func.o</code> and
+            <code>func_stub.h</code> but I couldn't make much use of these at the time (more on this later).
+            I found a few examples of people trying to link this object, with the best example I could find being <a
+                href="https://github.com/jarrett/cpphs" target="_blank">this</a>, which unfortunately seemed like a
+            "Works on My Machine" moment.
+            <br><br>
+            After trying what felt like everything, I compiled a Hello, World! Haskell program with the <code>-v</code>
+            option and noticed that it actually calls <code>cc</code> at the end with an absolutely enormous mess of
+            compiler flags:
+            <pre
+                style="font-size:12px;line-height:1.1"><code class="language-shell">cc '-fuse-ld=gold' -Wl,--no-as-needed -o hw -no-pie -fno-PIC -Wl,--gc-sections hw.o -L/usr/lib/ghc-9.0.2/text-1.2.5.0 -L/usr/lib/ghc-9.0.2/integer-gmp-1.1 -L/usr/lib/ghc-9.0.2/ghc-9.0.2 -L/usr/lib/ghc-9.0.2/terminfo-0.4.1.5 -L/usr/lib/ghc-9.0.2/process-1.6.13.2 -L/usr/lib/ghc-9.0.2/hpc-0.6.1.0 -L/usr/lib/ghc-9.0.2/ghci-9.0.2 -L/usr/lib/ghc-9.0.2/ghc-heap-9.0.2 -L/usr/lib/ghc-9.0.2/ghc-boot-9.0.2 -L/usr/lib/ghc-9.0.2/exceptions-0.10.4 -L/usr/lib/ghc-9.0.2/template-haskell-2.17.0.0 -L/usr/lib/ghc-9.0.2/pretty-1.1.3.6 -L/usr/lib/ghc-9.0.2/ghc-boot-th-9.0.2 -L/usr/lib/ghc-9.0.2/stm-2.5.0.0 -L/usr/lib/ghc-9.0.2/mtl-2.2.2 -L/usr/lib/ghc-9.0.2/transformers-0.5.6.2 -L/usr/lib/ghc-9.0.2/directory-1.3.6.2 -L/usr/lib/ghc-9.0.2/unix-2.7.2.2 -L/usr/lib/ghc-9.0.2/time-1.9.3 -L/usr/lib/ghc-9.0.2/filepath-1.4.2.1 -L/usr/lib/ghc-9.0.2/binary-0.8.8.0 -L/usr/lib/ghc-9.0.2/containers-0.6.4.1 -L/usr/lib/ghc-9.0.2/bytestring-0.10.12.1 -L/usr/lib/ghc-9.0.2/deepseq-1.4.5.0 -L/usr/lib/ghc-9.0.2/array-0.5.4.0 -L/usr/lib/ghc-9.0.2/base-4.15.1.0 -L/usr/lib/ghc-9.0.2/ghc-bignum-1.1 -L/usr/lib/ghc-9.0.2/ghc-prim-0.7.0 -L/usr/lib/ghc-9.0.2/rts /tmp/ghc104289_0/ghc_5.o /tmp/ghc104289_0/ghc_8.o -Wl,-u,base_GHCziTopHandler_runIO_closure -Wl,-u,base_GHCziTopHandler_runNonIO_closure -Wl,-u,ghczmprim_GHCziTuple_Z0T_closure -Wl,-u,ghczmprim_GHCziTypes_True_closure -Wl,-u,ghczmprim_GHCziTypes_False_closure -Wl,-u,base_GHCziPack_unpackCString_closure -Wl,-u,base_GHCziWeak_runFinalizzerBatch_closure -Wl,-u,base_GHCziIOziException_stackOverflow_closure -Wl,-u,base_GHCziIOziException_heapOverflow_closure -Wl,-u,base_GHCziIOziException_allocationLimitExceeded_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnMVar_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnSTM_closure -Wl,-u,base_GHCziIOziException_cannotCompactFunction_closure -Wl,-u,base_GHCziIOziException_cannotCompactPinned_closure -Wl,-u,base_GHCziIOziException_cannotCompactMutable_closure -Wl,-u,base_GHCziIOPort_doubleReadException_closure -Wl,-u,base_ControlziExceptionziBase_nonTermination_closure -Wl,-u,base_ControlziExceptionziBase_nestedAtomically_closure -Wl,-u,base_GHCziEventziThread_blockedOnBadFD_closure -Wl,-u,base_GHCziExceptionziType_divZZeroException_closure -Wl,-u,base_GHCziExceptionziType_underflowException_closure -Wl,-u,base_GHCziExceptionziType_overflowException_closure -Wl,-u,base_GHCziConcziSync_runSparks_closure -Wl,-u,base_GHCziConcziIO_ensureIOManagerIsRunning_closure -Wl,-u,base_GHCziConcziIO_interruptIOManager_closure -Wl,-u,base_GHCziConcziIO_ioManagerCapabilitiesChanged_closure -Wl,-u,base_GHCziConcziSignal_runHandlersPtr_closure -Wl,-u,base_GHCziTopHandler_flushStdHandles_closure -Wl,-u,base_GHCziTopHandler_runMainIO_closure -Wl,-u,ghczmprim_GHCziTypes_Czh_con_info -Wl,-u,ghczmprim_GHCziTypes_Izh_con_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Wzh_con_info -Wl,-u,base_GHCziPtr_Ptr_con_info -Wl,-u,base_GHCziPtr_FunPtr_con_info -Wl,-u,base_GHCziInt_I8zh_con_info -Wl,-u,base_GHCziInt_I16zh_con_info -Wl,-u,base_GHCziInt_I32zh_con_info -Wl,-u,base_GHCziInt_I64zh_con_info -Wl,-u,base_GHCziWord_W8zh_con_info -Wl,-u,base_GHCziWord_W16zh_con_info -Wl,-u,base_GHCziWord_W32zh_con_info -Wl,-u,base_GHCziWord_W64zh_con_info -Wl,-u,base_GHCziStable_StablePtr_con_info -Wl,-u,hs_atomic_add8 -Wl,-u,hs_atomic_add16 -Wl,-u,hs_atomic_add32 -Wl,-u,hs_atomic_add64 -Wl,-u,hs_atomic_sub8 -Wl,-u,hs_atomic_sub16 -Wl,-u,hs_atomic_sub32 -Wl,-u,hs_atomic_sub64 -Wl,-u,hs_atomic_and8 -Wl,-u,hs_atomic_and16 -Wl,-u,hs_atomic_and32 -Wl,-u,hs_atomic_and64 -Wl,-u,hs_atomic_nand8 -Wl,-u,hs_atomic_nand16 -Wl,-u,hs_atomic_nand32 -Wl,-u,hs_atomic_nand64 -Wl,-u,hs_atomic_or8 -Wl,-u,hs_atomic_or16 -Wl,-u,hs_atomic_or32 -Wl,-u,hs_atomic_or64 -Wl,-u,hs_atomic_xor8 -Wl,-u,hs_atomic_xor16 -Wl,-u,hs_atomic_xor32 -Wl,-u,hs_atomic_xor64 -Wl,-u,hs_cmpxchg8 -Wl,-u,hs_cmpxchg16 -Wl,-u,hs_cmpxchg32 -Wl,-u,hs_cmpxchg64 -Wl,-u,hs_xchg8 -Wl,-u,hs_xchg16 -Wl,-u,hs_xchg32 -Wl,-u,hs_xchg64 -Wl,-u,hs_atomicread8 -Wl,-u,hs_atomicread16 -Wl,-u,hs_atomicread32 -Wl,-u,hs_atomicread64 -Wl,-u,hs_atomicwrite8 -Wl,-u,hs_atomicwrite16 -Wl,-u,hs_atomicwrite32 -Wl,-u,hs_atomicwrite64 -lHStext-1.2.5.0 -lHSinteger-gmp-1.1 -lHSghc-9.0.2 -lHSterminfo-0.4.1.5 -lHSprocess-1.6.13.2 -lHShpc-0.6.1.0 -lHSghci-9.0.2 -lHSghc-heap-9.0.2 -lHSghc-boot-9.0.2 -lHSexceptions-0.10.4 -lHStemplate-haskell-2.17.0.0 -lHSpretty-1.1.3.6 -lHSghc-boot-th-9.0.2 -lHSstm-2.5.0.0 -lHSmtl-2.2.2 -lHStransformers-0.5.6.2 -lHSdirectory-1.3.6.2 -lHSunix-2.7.2.2 -lHStime-1.9.3 -lHSfilepath-1.4.2.1 -lHSbinary-0.8.8.0 -lHScontainers-0.6.4.1 -lHSbytestring-0.10.12.1 -lHSdeepseq-1.4.5.0 -lHSarray-0.5.4.0 -lHSbase-4.15.1.0 -lHSghc-bignum-1.1 -lHSghc-prim-0.7.0 -lHSrts -ltinfo -lgmp -lc -lm -lm -lrt -ldl -lffi -lnuma</code></pre>
+            <br>
+            I instantly noticed that it was compiling a lot of files in my <code>/tmp</code> so I made a very hacky
+            script with fswatch to copy my entire tmp folder into the local directory, then realized that ghc's
+            <code>-tmpdir</code> and <code>-keep-tmp-files</code> exist. The directory it generates looks like this:
+            <pre><code>helpers/ghc83952_0
+├── ghc_2.s
+├── ghc_3.c
+├── ghc_4.s
+├── ghc_5.rsp
+├── ghc_6.o
+├── ghc_7.o
+└── ghc_8.ldscript
+    
+1 directory, 7 files</code></pre>
+            Compiling the objects here with our <code>main.c</code> with the flags that GHC specifies generates us a
+            valid executable! Great!<br><br>
+            ...Except not really. If we run the resulting binary, we get an error:
+            <pre><code class="language-plaintext">newBoundTask: RTS is not initialised; call hs_init() first</code></pre>
+            As you would expect, we can call <code>hs_init(&argc, &argv);</code> and our code runs without error.
+            However, this wasn't good enough for me, so I used <code>nm</code> to list the symbols, export those symbols
+            into a C file while also calling <code>hs_init()</code>, then add them both to a static archive. In my
+            amalgamation project (Haskell is language #19), the Makefile target is this:
+            <pre><code class="language-makefile">build/s.a: src/s.hs 
+	ghc -tmpdir helpers -keep-tmp-files -no-keep-hi-files -no-keep-o-files src/s.hs 
+	{ \
+		printf "_hs_init = 0;"; \
+		nm src/s.o | \
+			grep -E '^[0-9a-f]{16} T' | \
+			awk '{print $$3}' | \
+			xargs -I {} echo 'void {}() {  if(!_hs_init){_hs_init=1;int argc = 1;char **argv = (char **)malloc(sizeof(char *));argv[0] = strdup("hi");hs_init(&argc, &argv);}export_{}();}'; \
+	} > helpers/funcs.c 
+	gcc -c -o helpers/funcs.o helpers/funcs.c
+	ar r build/s.a helpers/ghc*/*.o
+	nm src/s.o | grep -E '^[0-9a-f]{16} T' | awk '{print $$3}' | xargs -I {} objcopy --redefine-sym {}=export_{} build/s.a build/s.a
+	ar r build/s.a helpers/funcs.o
+	rm -f helpers/ghc* src/*.o src/*.h src/*.hi</code></pre>
+            Yes, it's a chaotic mess but it works! You can find the rest of the Makefile <a href="https://github.com/PrinceKomali/amalgamation/blob/main/Makefile" target="_blank">here</a>
+            <br><br>
+            After I had this solution implemented into my project and working well, I realized you could also just directly compile the object generated by GHC when creating an executable... oops :)
+            <br><br>
+            Anyways that's my journey of linking Haskell into C; I hope I never have to do this again 
+        </div>
+    </div>
+    <script>
+        window.onload = _ => {
+            gen_bg();
+            hljs.highlightAll();
+        }
+    </script>
+</body>

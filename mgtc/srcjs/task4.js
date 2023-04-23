@@ -24,13 +24,13 @@ You are <b>NOT</b> allowed to use the warp after time starts
 8th. VTMagno 0:13.420
 10th. LRFLEW 0:14.530
 11th. Starline 0:15.390
-12th. ERGC Xander 0:15.490
+12th. ERGC | Xander 0:15.490
 13th. Komali 0:15.760
 14th. Noci27 0:17.570
 15th. Eribetra 0:18.160
 16th. CaliUwU 0:18.800
 17th. kierio04 0:19.770
-18th. BluelyTheFursona 0:24.620`
+18th. Bluely 0:24.620`
 
     let score_after_task = 
 `1st. Mizumaririn 105.3

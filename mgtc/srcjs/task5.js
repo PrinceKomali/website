@@ -21,7 +21,7 @@ You are only allowed to play with a stadium car. No environment mixes.
 9th. Luka 00:24.630
 10th. MufatTMF 00:24.640
 11th. Vortex 00:24.660
-12th. LittleD3mo 00:24.910
+12th. LittleD3m0 00:24.910
 13th. Starline 00:25.110
 14th. ResistTM 00:25.310
 15th. BillyWAR 00:25.850

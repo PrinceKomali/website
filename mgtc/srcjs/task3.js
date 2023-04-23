@@ -19,7 +19,7 @@ function task_3() {
 2nd. RawEggEnjoyer 0:14.550
 3rd. Smiley 0:15.200
 4th. FeijoadaMolhada 0:17.500
-5th. BillyWar 0:19.010
+5th. BillyWAR 0:19.010
 6th. DultzyWaltzy 0:31.320
 7th. Starline 0:31.550
 8th. Booshi 0:32.080

@@ -1,0 +1,19 @@
+{
+  "name": "webtest",
+  "version": "0.0.137",
+  "dependencies": {
+    "next": "latest",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-is": "^18",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "bun-framework-next": "^12.2",
+    "typescript": "latest",
+    "react-refresh": "0.10.0"
+  },
+  "module": "index.js"
+}

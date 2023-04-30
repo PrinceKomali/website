@@ -1,0 +1,44 @@
+.project {
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 13rem;
+    height: 3rem;
+    border-bottom: 5px solid;
+    background-color: rgba(0,0,0,.1);   
+    border-radius: .5rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transition: .2s;
+    .icon {
+        position: absolute;
+        width: calc(3rem - 10px);
+        max-height: calc(3rem - 10px);
+        bottom: 2.5px;   
+        left: 2px;
+    }
+    .rounded {
+        border-radius: 50%;
+    }
+    .logo_text {
+        margin-left: calc(3rem - 10px);
+        display: inline;
+        vertical-align: -12px;
+    }
+    
+
+}
+.project:hover {
+    background-color: #1a7ce280;
+    animation: flash 2s linear infinite;
+}
+@keyframes flash {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

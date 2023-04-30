@@ -1,4 +1,5 @@
 #!/bin/bash
+echo -e "\x1b[1;32mBuilding mgtc/main.js\x1b[0m"
 rm main.js && touch main.js
 touch srcjs/num_tasks.js 
 echo "function num_tasks() { return $(ls srcjs/task*.js | wc -l); }" > srcjs/num_tasks.js

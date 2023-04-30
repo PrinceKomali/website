@@ -16,3 +16,28 @@ a {
 * {
   box-sizing: border-box;
 }
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+button {
+    border-color: #1a7ce2;
+    background-color: #333444;
+    color: #ddd;
+    font-family: 'Ubuntu Mono', 'Monospace','sans-serif';
+    font-style: italic;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 1rem;
+}
+button:hover {
+    animation: flash 2s linear infinite;
+}
+@keyframes flash {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

@@ -7,4 +7,6 @@ index:
 	rm 404.html
 mgtc:
 	cd mgtc; ./build.sh
-.PHONY: mgtc index
+wrs: 
+	cd wrs; $(MAKE)
+.PHONY: mgtc index wrs

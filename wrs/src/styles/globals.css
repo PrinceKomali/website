@@ -1,0 +1,44 @@
+html,
+body {
+    background-color: #333444;
+  padding: 0;
+  padding-inline: 5px;
+  /* border: 5px blue solid; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+button {
+    border-color: #1a7ce2;
+    background-color: #333444;
+    color: #ddd;
+    font-family: 'Ubuntu Mono', 'Monospace','sans-serif';
+    font-style: italic;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 1rem;
+}
+button:hover {
+    animation: flash 2s linear infinite;
+}
+@keyframes flash {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

@@ -35,7 +35,9 @@ $link_color: #cccfff;
     border: 5px solid $fg_main;
     border-radius: 10px;
     width: min(60em, 100vw);
-    margin: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px; // aaaaaaa so much better
     display: flex;
     flex-direction: column;
     justify-content: center;

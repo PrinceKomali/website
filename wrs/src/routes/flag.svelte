@@ -1,7 +1,7 @@
 <script>
     export let code;
 </script>
-
+{#if code != ""}
 <div class="flag">
     <img
         class="flag_img"
@@ -9,6 +9,7 @@
         alt={`flag_${code}`}
     />
 </div>
+{/if}
 
 <style lang="scss">
     @import "../styles/flag.scss";

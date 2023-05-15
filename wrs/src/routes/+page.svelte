@@ -20,10 +20,9 @@
                             if (!users[runner])
                                 users[runner] = {
                                     colors: data.players[runner].colors,
-                                    location:
-                                        data.players[runner].location.split(
-                                            "/"
-                                        )[0],
+                                    location: (
+                                        data.players[runner].location || ""
+                                    ).split("/")[0],
                                     counts: {
                                         "Any%": 0,
                                         "No Major Glitches": 0,
@@ -39,35 +38,53 @@
                 }
             }
         }
+        document.querySelector("#switch_All").checked = true;
     };
     let c = 0;
     let comparison = "all";
     function switch_comparison() {
         comparison = [
+            "all",
             "Any%",
             "No Major Glitches",
             "100%",
             "No Major Glitches 100%",
-            "all",
-        ][c];
-        c = (c + 1) % 5;
+        ][
+            ["All", "Any", "NMG", "100", "NMG100"]
+                .map((x) => document.querySelector("#switch_" + x).checked)
+                .indexOf(true)
+        ];
     }
+    let nth = n => n + (["st","nd","rd"][(((n<0?-n:n)+90)%100-10)%10-1]||"th")
     onMount(onload);
 </script>
 
 <div class="container">
     <div class="background" />
     <div class="main">
-        <button on:click={switch_comparison}
-            >Current comparison: {comparison == "all" ? "All" : comparison}
-        </button>
+        <div class="selects">
+            {#each ["All", "Any%", "NMG", "100%", "NMG 100%"] as c}
+                <input
+                    class="labeled"
+                    type="radio"
+                    name="cat_switch"
+                    id="switch_{c.replace(/[% ]/g, '')}"
+                    on:click={switch_comparison}
+                />
+                <label for="switch_{c.replace(/[% ]/g, '')}">{c}</label>
+            {/each}
+        </div>
         <table>
             <tr>
-                <th>Name</th> <th>All</th> <th>Any%</th> <th>NMG</th>
+                <th class="place">#</th><th>Name</th> <th>All</th> <th>Any%</th> <th>NMG</th>
                 <th>100%</th> <th>NMG 100%</th>
             </tr>
             {#each Object.keys(users).sort((a, b) => users[b].counts[comparison] - users[a].counts[comparison]) as c}
                 <tr>
+                    <td class="place">{nth(
+                        // there's a better way to do this but don't feel like doing it
+                       Object.keys(users).sort((a, b) => users[b].counts[comparison] - users[a].counts[comparison]).map(x=>users[x].counts[comparison]).indexOf(users[c].counts[comparison]) + 1
+                    )}</td>
                     <td>
                         <Flag code={users[c].location} />
                         <User

@@ -12,8 +12,8 @@
   "devDependencies": {
     "@types/react": "^18",
     "bun-framework-next": "^12.2",
-    "typescript": "latest",
-    "react-refresh": "0.10.0"
+    "react-refresh": "0.10.0",
+    "typescript": "latest"
   },
   "module": "index.js"
 }

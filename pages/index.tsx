@@ -4,12 +4,18 @@ import styles from "../styles/Home.module.scss";
 
 import texture from "background_images/texture_nobg.png";
 import amalgamation_icon from "amalgamation.png";
+import src_icon from "src.png";
+
+import lior from "lior.png";
+import puperger from "puper.png";
+
 
 import Meta from "components/meta";
 import Flag from "components/flag";
 import Project from "components/project";
 import Person from "components/person";
-import TotKCountdown, { start_totk_countdown } from "components/totk";
+// import TotKCountdown, { start_totk_countdown } from "components/totk";
+import ServerStatus from "components/status";
 
 import funcs from "buttons";
 
@@ -192,6 +198,17 @@ export default function Home({}) {
                             ]} // oops
                             round={true}
                         />
+                        <Project 
+                            name="BotW IL WR Counts"
+                            href="wrs"
+                            image={src_icon.src}
+                            langs={[
+                                "Svelte",
+                                "SCSS",
+                                "HTML",
+                                "JavaScript"
+                            ]}
+                        />
                     </div>
                     <hr />
                     <h1 className={styles.subtitle}>Blogs and Such</h1>
@@ -217,17 +234,30 @@ export default function Home({}) {
                     <Person
                         name="Puperger"
                         href="https://puperger.github.io"
-                        image="puper.png"
+                        image={puperger.src}
                         round={true}
                         color="rgb(0, 255, 192)"
                     />
                     <Person
                         name="Lior"
                         href="https://underscore.wtf"
-                        image="lior.png"
+                        image={lior.src}
                         round={true}
                         color="rgb(240, 248, 255)"
                     />
+                    <hr />
+                    <h1 className={styles.subtitle}>API <span style={{fontSize: "0.5em"}}>(may or may not work)</span></h1>
+                    All endpoints are selfhosted at <a href="https://api.komali.dev"><code className={styles.code}>https://api.komali.dev</code></a> from an old Dell on my bookshelf. Don't go crazy with it, alright?<br />
+                    <div style={{marginTop:"1em"}}>Server Status:{" "}<ServerStatus /></div>
+                    <br />
+                    <table className={styles.table}>
+                            <tr><th className={styles.endp}>Endpoint</th><th>Description</th></tr>
+                            <tr><td><code className={styles.code}>/hi</code></td><td>Returns "hi" as a JSON (test endpoint)</td></tr>
+                            <tr><td><code className={styles.code}>/dl</code></td><td>Redirects to the raw video for the Youtube/Twitter URL specified with <code className={styles.code}>?url={"{url}"}</code>(Twitch is broken)</td></tr>
+                            <tr><td><code className={styles.code}>/ils</code></td><td>Returns the BotW IL leaderboard as a JSON, updated hourly</td></tr>
+                            <tr><td><code className={styles.code}>/k2l</code></td><td>Prints Stella to your terminal (add <code className={styles.code}>?html=1</code> for an HTML version)</td></tr>
+                    </table>
+                    
                     <hr />
                     <h1 className={styles.subtitle}>Random Buttons</h1>
                     <button onClick={() => funcs[0]()}>Mic</button>
@@ -239,8 +269,7 @@ export default function Home({}) {
                     <button onClick={() => funcs[6]()}>
                         Parse HTML (regex method)
                     </button>
-                    <hr />
-                    <TotKCountdown />
+                    {/* <hr /> <TotKCountdown /> */} {/* what do i put here now */}
                 </p>
             </main>
         </div>

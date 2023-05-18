@@ -6,9 +6,10 @@
 
     let counts = {};
     let users = {};
+    let lb = {};
     let onload = async () => {
         let data = await (await fetch("https://api.komali.dev/ils")).json();
-        let { lb } = data;
+        lb = data.lb;
         let allowed = Object.keys(lb);
         for (let item of allowed) {
             for (let level of Object.keys(lb[item])) {
@@ -38,10 +39,21 @@
                 }
             }
         }
+        
         document.querySelector("#switch_All").checked = true;
     };
-    let c = 0;
     let comparison = "all";
+    function get_selectors() {
+            [...document.querySelector(".checks").children]
+                .filter((x) => x.tagName == "INPUT" && x.type == "checkbox")
+                .map((x) =>
+                    Object.keys(lb).find(
+                        (y) =>
+                            y.replace(/[% ]/g, "") ==
+                            x.id.replace("switch_", "")
+                    )
+                );
+        }
     function switch_comparison() {
         comparison = [
             "all",
@@ -55,13 +67,41 @@
                 .indexOf(true)
         ];
     }
-    let nth = n => n + (["st","nd","rd"][(((n<0?-n:n)+90)%100-10)%10-1]||"th")
+    let nth = (n) =>
+        n +
+        (["st", "nd", "rd"][
+            (((((n < 0 ? -n : n) + 90) % 100) - 10) % 10) - 1
+        ] || "th"); // formatter doesn't like this
+    let idp = (s) =>
+        s
+            .replace(" Shrines", "")
+            .replace("Divine Beast Vah ", "")
+            .replace("Great Plateau Revisit", "Obliterator")
+            .replace("Stranded on ", "");
+    
     onMount(onload);
 </script>
 
 <div class="container">
     <div class="background" />
     <div class="main">
+        <div class="checks">
+            <input class="labeled" id="switch_all_level" />
+            <label for="switch_all_level">All </label>
+            <input class="labeled" id="switch_none_level" />
+            <label for="switch_none_level">None </label>
+            {#each Object.keys(lb) as c, i}
+                <input
+                    class="labeled"
+                    type="checkbox"
+                    name="level_switch"
+                    id="switch_{c.replace(/[% ]/g, '')}"
+                    on:click={switch_comparison}
+                />
+                <label for="switch_{c.replace(/[% ]/g, '')}"> {idp(c)} </label>
+                <!-- {#if (i + 1) % 3 == 0}<br />{/if} -->
+            {/each}
+        </div>
         <div class="selects">
             {#each ["All", "Any%", "NMG", "100%", "NMG 100%"] as c}
                 <input
@@ -76,15 +116,25 @@
         </div>
         <table>
             <tr>
-                <th class="place">#</th><th>Name</th> <th>All</th> <th>Any%</th> <th>NMG</th>
+                <th class="place">#</th><th>Name</th> <th>All</th> <th>Any%</th>
+                <th>NMG</th>
                 <th>100%</th> <th>NMG 100%</th>
             </tr>
             {#each Object.keys(users).sort((a, b) => users[b].counts[comparison] - users[a].counts[comparison]) as c}
                 <tr>
-                    <td class="place">{nth(
-                        // there's a better way to do this but don't feel like doing it
-                       Object.keys(users).sort((a, b) => users[b].counts[comparison] - users[a].counts[comparison]).map(x=>users[x].counts[comparison]).indexOf(users[c].counts[comparison]) + 1
-                    )}</td>
+                    <td class="place"
+                        >{nth(
+                            // there's a better way to do this but don't feel like doing it
+                            Object.keys(users)
+                                .sort(
+                                    (a, b) =>
+                                        users[b].counts[comparison] -
+                                        users[a].counts[comparison]
+                                )
+                                .map((x) => users[x].counts[comparison])
+                                .indexOf(users[c].counts[comparison]) + 1
+                        )}
+                    </td>
                     <td>
                         <Flag code={users[c].location} />
                         <User

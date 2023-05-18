@@ -47,6 +47,15 @@ $link_color: #cccfff;
     color: $fg_main;
     padding: 10px;
 }
+.code {
+    font-family: "Ubuntu Mono", monospace;
+    color: #ec812a;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
 .link {
     color: $link_color;
 }
@@ -96,6 +105,29 @@ $link_color: #cccfff;
     line-height: 1.5;
     font-size: 1.5rem;
 }
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    .endp {
+        width: 6em;
+    }
+    td,
+    th {
+        border: 1px solid $fg_main;
+        text-align: left;
+        padding: 8px;
+    }
+    tr {
+        height: 1em;
+
+        // &:nth-child(even) {
+        //     background-color: #00000080;
+        // }
+    }
+}
+
 @keyframes flash {
     0% {
         filter: hue-rotate(0deg);

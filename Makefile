@@ -1,6 +1,6 @@
-all: index mgtc
+all: index mgtc wrs
 index: 
-	bun run next build
+	bun run next build --no-lint
 	rm _next -rf
 	mv out/* .
 	rmdir out

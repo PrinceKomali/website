@@ -85,7 +85,7 @@
 <div class="container">
     <div class="background" />
     <div class="main">
-        <div class="checks">
+        <!-- <div class="checks">
             <input class="labeled" id="switch_all_level" />
             <label for="switch_all_level">All </label>
             <input class="labeled" id="switch_none_level" />
@@ -99,9 +99,8 @@
                     on:click={switch_comparison}
                 />
                 <label for="switch_{c.replace(/[% ]/g, '')}"> {idp(c)} </label>
-                <!-- {#if (i + 1) % 3 == 0}<br />{/if} -->
             {/each}
-        </div>
+        </div> -->
         <div class="selects">
             {#each ["All", "Any%", "NMG", "100%", "NMG 100%"] as c}
                 <input

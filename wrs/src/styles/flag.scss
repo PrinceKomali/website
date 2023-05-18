@@ -1,13 +1,17 @@
 .flag {
-    display: inline-block;
+    display: inline-flex;
     max-height: 1em;
     max-width: 1.5em;
-    vertical-align: -0.15em;
+    // vertical-align: -0.15em;
     height: 100%;
+    align-items: center;
+    // align-self: center;
 
     .flag_img {
         max-width: 100%;
         height: 100%;
         border-radius: 4px;
+        max-height: 100%; 
+        overflow: hidden; // ios safari is not happy with the flags
     }
 }

@@ -68,7 +68,6 @@ function get_people() {
         { name: "Stuntlover", roles: ["Trackmania"] },
         { name: "threadd", roles: ["Trackmania"] },
         { name: "UsernamesAreHard", roles: [] },
-        { name: "UwUme", roles: [] },
         { name: "vabold", roles: ["MKWii"] },
         { name: "Wade7", roles: ["SM64"] },
         { name: "warmCabin", roles: [] },
@@ -270,6 +269,17 @@ function get_people() {
         { name: "Quotatta", roles: ["BfBB"] },
         { name: "SkicoNow", roles: ["SM64DS"] },
         { name: "relievedliberty", roles: ["SM64DS"] },
+        { name: "Zejoant", roles: ["SMB1/2J"] },
+        { name: "AntimonySM51", roles: ["SMB1/2J"] },
+        { name: "periwinkle", roles: ["SMB1/2J"] },
+        { name: "SeraphmIII", roles: ["SMB1/2J"] },
+        { name: "WolfAeterni", roles: ["SMB1/2J"] },
+        { name: "RawEggEnjoyer", roles: ["Trackmania"] },
+        { name: "OgYardel", roles: ["SMB1/2J", "Red Ball"] },
+        { name: "GuanlongX", roles: ["SMB1/2J"] },
+        { name: "Mr.TASer", roles: ["SMB1/2J"] },
+        { name: "UwUme", roles: ["SMB1/2J"] },
+        { name: "LucasWiese6", roles: ["SMB1/2J"] },
 
 
     ];

@@ -129,7 +129,7 @@ DQ. Adrien 9:99.999 [Run could not be played back]`
 93rd. GaelLazerYT 7.3
 94th. Colt 7.0
 95th. Bluely 6.8
-96th. LeonGamer1707 6.7
+96th. LeonGame_real 6.7
 97th. Lud 6.3 `;
 
 document.querySelector(".name").innerText = "Task 5 (" + task_game + ")";

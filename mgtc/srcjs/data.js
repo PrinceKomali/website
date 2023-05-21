@@ -32,10 +32,10 @@ function prettify_users(str) {
     let people_in_dq = null;
     if(dq.length > 0) {
         people_in_dq = dq.split("\n").filter(x=>x.trim().length > 1).map(x=>x.split(/^DQ[\.:] /)[1].split(/ [\d:\.]+ .*$/)[0]);
-            for(let user of p) {
-                let n = user.roles.length > 0 ? user.name.split("").map((c,i)=>
-                    `<span style="color:rgb(${cl[user.roles[i%user.roles.length]].join(",")});">${c}</span>`
-                ).join("") : user.name
+        for(let user of p) {
+            let n = user.roles.length > 0 ? user.name.split("").map((c,i)=>
+            `<span style="color:rgb(${cl[user.roles[i%user.roles.length]].join(",")});">${c}</span>`
+            ).join("") : user.name
             n = "<span class='user'>" + n + "</span>"
             if(people_in_dq.includes(user.name)) people_in_dq[people_in_dq.indexOf(user.name)] = n
         }

@@ -36,5 +36,8 @@ function load_task(n) {
         case 5:
             task_5();
             break;
+        case 6:
+            task_6();
+            break;
     }
 }

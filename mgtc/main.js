@@ -1216,10 +1216,11 @@ DQ. Buphead 9:99.999 [Missed 2 coins and powerups]
 109th. LeonGamer1707 6.7
 110th. Lud 6.3`;
 
-document.querySelector(".name").innerText = "Task 5 (" + task_game + ")";
+document.querySelector(".name").innerText = "Task 6 (" + task_game + ")";
 document.querySelector(".desc").innerHTML = task_description.replace(/\n/g,"<br>");
 document.querySelector(".results").innerHTML = prettify_users(results);
 document.querySelector(".score").innerHTML = prettify_users(score_after_task);
 
 }
+
 // end srcjs/task6.js

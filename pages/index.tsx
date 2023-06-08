@@ -5,10 +5,10 @@ import styles from "../styles/Home.module.scss";
 import texture from "background_images/texture_nobg.png";
 import amalgamation_icon from "amalgamation.png";
 import src_icon from "src.png";
+import il_icon from "ils.png";
 
 import lior from "lior.png";
 import puperger from "puper.png";
-
 
 import Meta from "components/meta";
 import Flag from "components/flag";
@@ -64,8 +64,8 @@ export default function Home({}) {
                     <Flag code="us" />. I like programming, geography, and most
                     computer/robotics stuff, and have been speedrunning Breath
                     of the Wild for about 4 years. I also like other games like
-                    Super Mario 64, Terraria, and other Zelda games, and my
-                    favorite languages are{" "}
+                    Super Mario 64, Tears of the Kingdom, Terraria, and other
+                    Zelda games, and my favorite languages are{" "}
                     <span
                         style={{
                             fontWeight: "bold",
@@ -198,16 +198,17 @@ export default function Home({}) {
                             ]} // oops
                             round={true}
                         />
-                        <Project 
-                            name="BotW IL WR Counts"
+                        <Project
+                            name="IL WR Counts"
                             href="wrs"
+                            image={il_icon.src}
+                            langs={["Svelte", "SCSS", "HTML", "JavaScript"]}
+                        />
+                        <Project
+                            name="Verification"
+                            href="https://verification.komali.dev"
                             image={src_icon.src}
-                            langs={[
-                                "Svelte",
-                                "SCSS",
-                                "HTML",
-                                "JavaScript"
-                            ]}
+                            langs={["JavaScript", "HTML"]}
                         />
                     </div>
                     <hr />
@@ -246,18 +247,73 @@ export default function Home({}) {
                         color="rgb(240, 248, 255)"
                     />
                     <hr />
-                    <h1 className={styles.subtitle}>API <span style={{fontSize: "0.5em"}}>(may or may not work)</span></h1>
-                    All endpoints are selfhosted at <a href="https://api.komali.dev"><code className={styles.code}>https://api.komali.dev</code></a> from an old Dell on my bookshelf. Don't go crazy with it, alright?<br />
-                    <div style={{marginTop:"1em"}}>Server Status:{" "}<ServerStatus /></div>
+                    <h1 className={styles.subtitle}>
+                        API{" "}
+                        <span style={{ fontSize: "0.5em" }}>
+                            (may or may not work)
+                        </span>
+                    </h1>
+                    All endpoints are selfhosted at{" "}
+                    <a href="https://api.komali.dev">
+                        <code className={styles.code}>
+                            https://api.komali.dev
+                        </code>
+                    </a>{" "}
+                    from an old Dell on my bookshelf. Don't go crazy with it,
+                    alright?
+                    <br />
+                    <div style={{ marginTop: "1em" }}>
+                        Server Status: <ServerStatus />
+                    </div>
                     <br />
                     <table className={styles.table}>
-                            <tr><th className={styles.endp}>Endpoint</th><th>Description</th></tr>
-                            <tr><td><code className={styles.code}>/hi</code></td><td>Returns "hi" as a JSON (test endpoint)</td></tr>
-                            <tr><td><code className={styles.code}>/dl</code></td><td>Redirects to the raw video for the Youtube/Twitter URL specified with <code className={styles.code}>?url={"{url}"}</code>(Twitch is broken)</td></tr>
-                            <tr><td><code className={styles.code}>/ils</code></td><td>Returns the BotW IL leaderboard as a JSON, updated hourly</td></tr>
-                            <tr><td><code className={styles.code}>/k2l</code></td><td>Prints Stella to your terminal (add <code className={styles.code}>?html=1</code> for an HTML version)</td></tr>
+                        <tr>
+                            <th className={styles.endp}>Endpoint</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code className={styles.code}>/hi</code>
+                            </td>
+                            <td>Returns "hi" as a JSON (test endpoint)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code className={styles.code}>/dl</code>
+                            </td>
+                            <td>
+                                Redirects to the raw video for the
+                                Youtube/Twitter URL specified with{" "}
+                                <code className={styles.code}>
+                                    ?url={"{url}"}
+                                </code>
+                                (Twitch is broken)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code className={styles.code}>/ils</code>
+                            </td>
+                            <td>
+                                Returns the BotW/Totk IL leaderboard as a JSON,
+                                updated hourly. Specify{" "}
+                                <code className={styles.code}>
+                                    ?mode={"[botw, totk, all]"}
+                                </code>{" "}
+                                to select game.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code className={styles.code}>/k2l</code>
+                            </td>
+                            <td>
+                                Prints Stella to your terminal (add{" "}
+                                <code className={styles.code}>?html=1</code> for
+                                an HTML version)
+                            </td>
+                        </tr>
                     </table>
-                    
                     <hr />
                     <h1 className={styles.subtitle}>Random Buttons</h1>
                     <button onClick={() => funcs[0]()}>Mic</button>
@@ -269,7 +325,8 @@ export default function Home({}) {
                     <button onClick={() => funcs[6]()}>
                         Parse HTML (regex method)
                     </button>
-                    {/* <hr /> <TotKCountdown /> */} {/* what do i put here now */}
+                    {/* <hr /> <TotKCountdown /> */}{" "}
+                    {/* what do i put here now */}
                 </p>
             </main>
         </div>

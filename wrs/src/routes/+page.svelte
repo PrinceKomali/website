@@ -7,8 +7,32 @@
     let counts = {};
     let users = {};
     let lb = {};
-    let onload = async () => {
-        let data = await (await fetch("https://api.komali.dev/ils")).json();
+    let game = "botw";
+    let selectors = ["All", "Any%", "NMG", "100%", "NMG 100%"];
+    let data_cache = {botw:{},all:{},totk:{}};
+    
+    let get_data = async mode => {
+        let out = {};
+        let api_root =
+        window.location.hostname == "localhost"
+        ? "http://localhost:3000"
+        : "https://api.komali.dev";
+        if(Object.keys(data_cache[mode]).length > 0) {
+            return data_cache[mode];
+        }
+        
+        let data = await (await fetch(api_root + "/ils?mode=" + mode)).json();
+        data_cache[mode] = data;
+        console.log(data_cache)
+        return data;
+    }
+
+    let load_runs = async (mode) => {
+        counts = users = lb = {};
+        if (mode == "totk") {
+            selectors = ["All", "Any%", "100%"];
+        } else selectors = ["All", "Any%", "NMG", "100%", "NMG 100%"];
+        let data = await get_data(mode);
         lb = data.lb;
         let allowed = Object.keys(lb);
         for (let item of allowed) {
@@ -39,21 +63,24 @@
                 }
             }
         }
+
         
+        
+    };
+    $: users = load_runs(game);
+    let onload = async () => {
         document.querySelector("#switch_All").checked = true;
+        document.querySelector("#switch_mode_BotW").checked = true;
+        // await load_runs();
     };
     let comparison = "all";
-    function get_selectors() {
-            [...document.querySelector(".checks").children]
-                .filter((x) => x.tagName == "INPUT" && x.type == "checkbox")
-                .map((x) =>
-                    Object.keys(lb).find(
-                        (y) =>
-                            y.replace(/[% ]/g, "") ==
-                            x.id.replace("switch_", "")
-                    )
-                );
-        }
+    function switch_game() {
+        game = [
+            "All",
+            "BotW",
+            "TotK"
+        ].find(x=>document.querySelector("#switch_mode_" + x).checked).toLowerCase()
+    }
     function switch_comparison() {
         comparison = [
             "all",
@@ -61,8 +88,13 @@
             "No Major Glitches",
             "100%",
             "No Major Glitches 100%",
-        ][
-            ["All", "Any", "NMG", "100", "NMG100"]
+        ].filter((x) =>
+            selectors
+                .map((y) => y.toLowerCase().replace(/[% ]/g, ""))
+                .includes(x.toLowerCase().replace(/[% ]/g, ""))
+        )[
+            selectors
+                .map((x) => x.replace(/[% ]/g, ""))
                 .map((x) => document.querySelector("#switch_" + x).checked)
                 .indexOf(true)
         ];
@@ -72,13 +104,8 @@
         (["st", "nd", "rd"][
             (((((n < 0 ? -n : n) + 90) % 100) - 10) % 10) - 1
         ] || "th"); // formatter doesn't like this
-    let idp = (s) =>
-        s
-            .replace(" Shrines", "")
-            .replace("Divine Beast Vah ", "")
-            .replace("Great Plateau Revisit", "Obliterator")
-            .replace("Stranded on ", "");
-    
+
+
     onMount(onload);
 </script>
 
@@ -101,8 +128,20 @@
                 <label for="switch_{c.replace(/[% ]/g, '')}"> {idp(c)} </label>
             {/each}
         </div> -->
+        <div class="selects_mode">
+            {#each ["All", "BotW", "TotK"] as c}
+                <input
+                    class="labeled"
+                    type="radio"
+                    name="cat_switch"
+                    id="switch_mode_{c.replace(/[% ]/g, '')}"
+                    on:click={switch_game}
+                />
+                <label for="switch_mode_{c.replace(/[% ]/g, '')}">{c}</label>
+            {/each}
+        </div>
         <div class="selects">
-            {#each ["All", "Any%", "NMG", "100%", "NMG 100%"] as c}
+            {#each selectors as c}
                 <input
                     class="labeled"
                     type="radio"

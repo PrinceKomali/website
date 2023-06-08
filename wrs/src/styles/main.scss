@@ -70,7 +70,7 @@ tr {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.selects {
+.selects, .selects_mode {
     display: flex;
     padding: 10px;
 }

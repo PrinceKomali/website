@@ -117,7 +117,7 @@ DQ. Buphead 9:99.999 [Missed 2 coins and powerups]
 74th. MufatTMF 16.5
 75th. DultzyWaltzy 16.4
 76th. Skypeerer 16.1
-77th. DanPark 15.1
+77th. DanPark/DeRockProject 15.1
 77th. GuanlongX 15.1
 79th. aaron 14.2
 80th. LittleD3mo 13.8

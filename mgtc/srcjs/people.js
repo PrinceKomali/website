@@ -144,6 +144,7 @@ function get_people() {
         { name: "LaseyApow", roles: ["SM64"] },
         { name: "Leon_green", roles: ["MKWii", "Minecraft"] },
         { name: "LeonGamer_real", roles: ["SM64"] },
+        { name: "K1ngGr33n", roles: ["SM64"] },
         { name: "LetsGoAway", roles: ["SM64"] },
         { name: "lordmagecar", roles: [] },
         { name: "LoResEvil", roles: [] },
@@ -180,6 +181,7 @@ function get_people() {
         { name: "RoBoBoB", roles: [] },
         { name: "RS", roles: ["MKWii"] },
         { name: "RSW", roles: ["SM64"] },
+        { name: "RSw", roles: ["SM64"] },
         { name: "ruadath", roles: [] },
         { name: "Rxser", roles: [] },
         { name: "Ryzonno", roles: ["SM64"] },
@@ -280,6 +282,11 @@ function get_people() {
         { name: "Mr.TASer", roles: ["SMB1/2J"] },
         { name: "UwUme", roles: ["SMB1/2J"] },
         { name: "LucasWiese6", roles: ["SMB1/2J"] },
+        { name: "Fritzafella", roles: ["SM64"] },
+        { name: "SR", roles: ["SM64"] },
+        { name: "Rush57", roles: ["SM64"] },
+        { name: "wRadion", roles: ["SM64"] },
+        { name: "icecream17", roles: ["SM64"] },
 
 
     ];

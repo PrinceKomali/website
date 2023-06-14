@@ -9,23 +9,25 @@
     let lb = {};
     let game = "botw";
     let selectors = ["All", "Any%", "NMG", "100%", "NMG 100%"];
-    let data_cache = {botw:{},all:{},totk:{}};
-    
-    let get_data = async mode => {
+    let data_cache = { botw: {}, all: {}, totk: {} };
+
+    let get_data = async (mode) => {
         let out = {};
         let api_root =
-        window.location.hostname == "localhost"
-        ? "http://localhost:3000"
-        : "https://api.komali.dev";
-        if(Object.keys(data_cache[mode]).length > 0) {
+            // window.location.hostname
+            // == "localhost"
+            // ? "http://localhost:3000"
+            // :
+            "https://api.komali.dev";
+        if (Object.keys(data_cache[mode]).length > 0) {
             return data_cache[mode];
         }
-        
+
         let data = await (await fetch(api_root + "/ils?mode=" + mode)).json();
         data_cache[mode] = data;
-        console.log(data_cache)
+        // console.log(data_cache)
         return data;
-    }
+    };
 
     let load_runs = async (mode) => {
         counts = users = lb = {};
@@ -63,9 +65,6 @@
                 }
             }
         }
-
-        
-        
     };
     $: users = load_runs(game);
     let onload = async () => {
@@ -75,11 +74,9 @@
     };
     let comparison = "all";
     function switch_game() {
-        game = [
-            "All",
-            "BotW",
-            "TotK"
-        ].find(x=>document.querySelector("#switch_mode_" + x).checked).toLowerCase()
+        game = ["All", "BotW", "TotK"]
+            .find((x) => document.querySelector("#switch_mode_" + x).checked)
+            .toLowerCase();
     }
     function switch_comparison() {
         comparison = [
@@ -90,7 +87,7 @@
             "No Major Glitches 100%",
         ].filter((x) =>
             selectors
-                .map((y) => y.toLowerCase().replace(/[% ]/g, ""))
+                .map((y) => y.replace("NMG","No Major Glitches").toLowerCase().replace(/[% ]/g, ""))
                 .includes(x.toLowerCase().replace(/[% ]/g, ""))
         )[
             selectors
@@ -104,7 +101,6 @@
         (["st", "nd", "rd"][
             (((((n < 0 ? -n : n) + 90) % 100) - 10) % 10) - 1
         ] || "th"); // formatter doesn't like this
-
 
     onMount(onload);
 </script>
@@ -133,7 +129,7 @@
                 <input
                     class="labeled"
                     type="radio"
-                    name="cat_switch"
+                    name="switch"
                     id="switch_mode_{c.replace(/[% ]/g, '')}"
                     on:click={switch_game}
                 />

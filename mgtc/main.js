@@ -183,7 +183,7 @@ function get_people() {
         { name: "108Pi", roles: ["SMB1/2J"] },
         { name: "??????", roles: ["MKWii"] },
         { name: "Alexpalix1", roles: ["SM64"] },
-        { name: "AlmostTWD98»", roles: ["MKWii"] },
+        { name: "AlmostTWD98»", roles: ["MKWii", "SM64"] },
         { name: "Alpha97", roles: ["SM64"] },
         { name: "ancient", roles: ["MKWii"] },
         { name: "ashggg", roles: [] },

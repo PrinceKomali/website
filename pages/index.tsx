@@ -195,6 +195,7 @@ export default function Home({}) {
                                 "C",
                                 "Nim",
                                 "Rust",
+                                "V"
                             ]} // oops
                             round={true}
                         />

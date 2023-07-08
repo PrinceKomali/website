@@ -103,9 +103,9 @@ export default function Home({}) {
                     <div>
                         <Project
                             name={"IL Timer"}
-                            href={"BotW-IL-Timer"}
+                            href={"https://timer.komali.dev"}
                             image={"timer.png"}
-                            langs={["HTML", "JavaScript"]}
+                            langs={["Svelte", "SCSS", "JavaScript", "HTML"]}
                             round={true}
                         />
                         <Project

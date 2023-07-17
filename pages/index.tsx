@@ -2,7 +2,8 @@ import Head from "next/head";
 import React from "react";
 import styles from "../styles/Home.module.scss";
 
-import texture from "background_images/texture_nobg.png";
+// import texture from "background_images/texture_nobg.png";
+import texture from "../../../Pictures/wallpapers/wallpaper_tex.png";
 import amalgamation_icon from "amalgamation.png";
 import src_icon from "src.png";
 import il_icon from "ils.png";
@@ -195,7 +196,8 @@ export default function Home({}) {
                                 "C",
                                 "Nim",
                                 "Rust",
-                                "V"
+                                "V",
+                                "Haxe"
                             ]} // oops
                             round={true}
                         />

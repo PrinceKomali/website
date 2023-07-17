@@ -15,3 +15,8 @@
         overflow: hidden; // ios safari is not happy with the flags
     }
 }
+@media (max-width: 838px) {
+    .flag { 
+        display:none;
+    }   
+}

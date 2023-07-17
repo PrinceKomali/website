@@ -97,10 +97,10 @@
         ];
     }
     let nth = (n) =>
-        n +
+        n + (window.innerWidth < 838 ? "." :
         (["st", "nd", "rd"][
             (((((n < 0 ? -n : n) + 90) % 100) - 10) % 10) - 1
-        ] || "th"); // formatter doesn't like this
+        ] || "th")); // formatter doesn't like this
 
     onMount(onload);
 </script>

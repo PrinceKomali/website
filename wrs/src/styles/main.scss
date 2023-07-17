@@ -74,7 +74,16 @@ tr {
     display: flex;
     padding: 10px;
 }
-
+@media (max-width: 838px) {
+    table {
+        font-size: .8em;
+        // display: grid;
+        td {
+            max-width: 25vw;
+        }
+        // grid-template-columns: repeat(6, 1fr);
+    }
+}
 .main {
     margin-inline: auto;
     border: 5px solid $fg_main;

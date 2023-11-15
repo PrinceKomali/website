@@ -27,7 +27,7 @@ let funcs: Function[] = [
     },
     function () {
         document.write(
-            "Hi, I'm Komali, and this is an example of a perfectly simply HTML Website"
+            "Hi, I'm Komali, and this is an example of a perfectly simple HTML Website"
         );
     },
     function () {

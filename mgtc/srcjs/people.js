@@ -213,7 +213,7 @@ function get_people() {
         { name: "Tomothy", roles: ["MKWii"] },
         { name: "Tonjiru", roles: [] },
         { name: "Tonkao87", roles: ["MKWii"] },
-        { name: "Toogs", roles: ["SMG"] },
+        { name: "ToogsX", roles: ["SMG"] },
         { name: "tormi", roles: ["MKWii"] },
         { name: "Unease", roles: ["Minecraft"] },
         { name: "usernameispassword", roles: ["SMG"] },

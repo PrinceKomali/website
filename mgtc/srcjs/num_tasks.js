@@ -1,1 +1,1 @@
-function num_tasks() { return 7; }
+function num_tasks() { return 9; }

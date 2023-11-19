@@ -62,11 +62,8 @@ export default function Home({}) {
                 </h1>
                 <p>
                     Your average nerd, coming to you from Tennessee,{" "}
-                    <Flag code="us" />. I like programming, geography, and most
-                    computer/robotics stuff, and have been speedrunning Breath
-                    of the Wild for about 4 years. I also like other games like
-                    Super Mario 64, Tears of the Kingdom, Terraria, and other
-                    Zelda games, and my favorite languages are{" "}
+                    <Flag code="us" />. I'm a freshman Software Engineering major, and I like programming, geography, and most
+                    computer/robotics stuff. I did my first Breath of the Wild IL speedrun in March of 2019 and have been running it on and off ever since. I also play other games such as Tears of the Kingdom, Terraria, Skyrim, etc., and routinely enter Super Mario 64 TAS Competitions (though I'm not very good at them). My favorite programming languages are{" "}
                     <span
                         style={{
                             fontWeight: "bold",

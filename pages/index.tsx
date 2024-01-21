@@ -7,6 +7,7 @@ import texture from "../../../Pictures/wallpapers/wallpaper_tex.png";
 import amalgamation_icon from "amalgamation.png";
 import src_icon from "src.png";
 import il_icon from "ils.png";
+import prompt_img from "prompt.png";
 
 import lior from "lior.png";
 import puperger from "puper.png";
@@ -61,9 +62,11 @@ export default function Home({}) {
                     <span className={styles.big}>Hi!</span> I'm Komali
                 </h1>
                 <p>
-                    Your average nerd, coming to you from Tennessee,{" "}
-                    <Flag code="us" />. I'm a freshman Software Engineering major, and I like programming, geography, and most
-                    computer/robotics stuff. I did my first Breath of the Wild IL speedrun in March of 2019 and have been running it on and off ever since. I also play other games such as Tears of the Kingdom, Terraria, Skyrim, etc., and routinely enter Super Mario 64 TAS Competitions (though I'm not very good at them). My favorite programming languages are{" "}
+                    I'm a freshman Software Engineering major, coming to you from Tennessee,{" "}
+                    <Flag code="us" />. I like programming, geography, and most computer/robotics 
+                    stuff. My favorite games are Breath of the Wild, Super Mario 64, Tears of the Kingdom, 
+                    Terraria, and Skyrim, and I routinely enter Super Mario 64 TAS Competitions 
+                    (though I'm not very good at them). My favorite programming languages are{" "}
                     <span
                         style={{
                             fontWeight: "bold",
@@ -135,7 +138,7 @@ export default function Home({}) {
                             name={"Kib"}
                             href={"https://github.com/PrinceKomali/kib"}
                             image={"d.png"}
-                            langs={["Makefile", "D"]}
+                            langs={["D"]}
                             round={true}
                         />
                         <Project
@@ -144,6 +147,14 @@ export default function Home({}) {
                             image={"ca-qc.png"}
                             langs={["Shell", "JavaScript", "HTML"]}
                             round={true}
+                        />
+                        <Project 
+                            name={"My Prompt"}
+                            href={"https://github.com/PrinceKomali/komaliprompt"}
+                            image={prompt_img.src}
+                            langs={["D"]}
+                            round={true}
+
                         />
                         <Project
                             name={"Autowiggler"}
